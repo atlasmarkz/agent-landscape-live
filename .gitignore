@@ -8,3 +8,6 @@ preview/
 __pycache__/
 *.pyc
 .DS_Store
+
+# font build temp
+.fontbuild/

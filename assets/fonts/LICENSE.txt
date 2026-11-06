@@ -1,0 +1,6 @@
+Inter — SIL Open Font License 1.1 (Rasmus Andersson)
+JetBrains Mono — SIL Open Font License 1.1 (JetBrains)
+Noto Sans SC — SIL Open Font License 1.1 (Google)
+
+All three families are licensed under the SIL Open Font License 1.1.
+The CJK file is a subset restricted to the characters this site renders.
