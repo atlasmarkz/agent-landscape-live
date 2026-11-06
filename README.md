@@ -1,0 +1,132 @@
+# Agent Landscape · Live
+
+> 一张图看懂 Agent 全链路，再用一份每 6 小时更新的榜单追踪它。
+
+**Live site:** https://atlasmarkz.github.io/agent-landscape-live/
+
+![Agent Landscape · Live](assets/og.png)
+
+## 这是什么
+
+Agent Landscape 把 Agent 系统拆成 9 层：
+
+`评测与任务定义 → 算力与集群 → 数据与训练 → 模型与架构 → 推理与服务 → Harness 与运行时 → Agent 平台与框架 → 安全与对齐 → 可观测与运维`
+
+站点提供三种视角：
+
+| 模式 | 来源 | 排序 |
+| --- | --- | --- |
+| **精选 Curated** | 架构图中的 100 个代表项目 | 按阶段覆盖度编排，不按 Stars |
+| **最热 Hot** | GitHub Search + topic 查询 | Stars 降序 |
+| **新锐 Rising** | 最近 12 个月创建的仓库 | Stars 降序 |
+
+精选仓库附带实时 Stars、语言、最近 push 时间与 topics。最热 / 新锐每 6 小时由 GitHub Actions 重新抓取，前端只读取同源静态 JSON，不会暴露 Token。
+
+## 数据管线
+
+```text
+scripts/queries.json
+        │  45 组 topic 查询
+        ▼
+scripts/fetch-live.mjs ── GitHub REST Search API
+        │  质量过滤 / 去重 / 元数据补全
+        ▼
+data/live.json ── GitHub Actions（每 6 小时）
+        │
+        ▼
+GitHub Pages ── index.html + assets + data
+```
+
+质量过滤会排除 awesome 榜单、课程、教程、书籍、面试材料、已归档 / 停止维护的项目，以及明显跑题的仓库。它不是完美的推荐系统，而是一份可追溯的索引。
+
+## 本地预览
+
+```bash
+# Python 3
+python -m http.server 8000
+
+# 或 Node
+npx serve .
+```
+
+打开 <http://localhost:8000>。
+
+## 本地刷新数据
+
+需要 GitHub Token（只读 public repo 即可）：
+
+```powershell
+# Windows PowerShell
+$env:GITHUB_TOKEN = gh auth token
+node scripts/fetch-live.mjs
+```
+
+```bash
+# macOS / Linux
+export GITHUB_TOKEN=$(gh auth token)
+node scripts/fetch-live.mjs
+```
+
+脚本会读取 `data/curated.json` 中的 100 个仓库，补全元数据，并生成 hot / rising 结果到 `data/live.json`。GitHub 认证搜索限制为 30 次/分钟，脚本内置 2.2 秒间隔，完整运行约 2 分钟。
+
+## 部署
+
+仓库已配置 `.github/workflows/pages.yml`：
+
+1. push 到 `main`，或手动触发 `workflow_dispatch`；
+2. Actions 运行 `node scripts/fetch-live.mjs`；
+3. 将 `index.html`、`assets/`、`data/` 打包为 Pages artifact；
+4. 部署到 GitHub Pages。
+
+定时任务：
+
+```yaml
+schedule:
+  - cron: "17 */6 * * *"
+```
+
+首次部署时，在仓库 **Settings → Pages → Build and deployment** 中选择 **GitHub Actions** 即可。后续 cron 会自动刷新数据并重新部署。
+
+## 目录
+
+```text
+.
+├─ index.html                 页面结构
+├─ assets/
+│  ├─ app.js                  数据加载、筛选、渲染、交互
+│  ├─ styles.css              视觉系统与响应式
+│  ├─ agent-architecture.svg  可编辑架构图
+│  ├─ agent-architecture.pdf  矢量 PDF（30 × 50.42 in）
+│  ├─ agent-architecture-a1.pdf
+│  ├─ agent-architecture.png  预览图
+│  ├─ favicon.svg
+│  └─ og.png                  社交分享图
+├─ data/
+│  ├─ curated.json            9 个阶段 / 100 个精选仓库
+│  └─ live.json               实时元数据与 hot / rising 结果
+├─ architecture/
+│  ├─ agent-architecture.svg  Figma 可编辑源文件
+│  ├─ build_svg.py            架构图生成脚本
+│  ├─ export_pdf.py           SVG → 矢量 PDF
+│  ├─ figma-plugin/           批量添加原生 Hyperlink
+│  └─ README.md               架构图说明
+├─ scripts/
+│  ├─ queries.json            45 组 GitHub topic 查询
+│  ├─ fetch-live.mjs          抓取、过滤、生成 live.json
+│  ├─ export_curated.py       从架构图生成 curated.json
+│  └─ make_og.py              生成社交分享图
+└─ .github/workflows/pages.yml
+```
+
+## 架构图
+
+- **SVG**：`assets/agent-architecture.svg`，可直接导入 Figma 编辑，包含 100 个 GitHub 超链接。
+- **矢量 PDF**：`assets/agent-architecture.pdf`，30 × 50.42 in，适合评审与打印。
+- **A1 海报**：`assets/agent-architecture-a1.pdf`，594 × 841 mm。
+- **Figma 插件**：`architecture/figma-plugin/` 可在 SVG 导入后为仓库文本批量添加原生超链接。
+
+## 说明
+
+- Stars 与活跃度会变化，榜单只代表抓取时刻的快照。
+- 精选是编辑视角，不构成对任何项目的推荐或背书。
+- 各仓库遵循其各自的许可证。

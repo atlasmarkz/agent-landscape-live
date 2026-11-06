@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2880" height="4840" viewBox="0 0 2880 4840" font-family="Inter, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif">
+<title>Agent 全链路技术架构</title>
+<desc>从 GPU 集群、数据与训练、模型设计、推理服务到 Agent Harness、Agent 平台与 Token 输出的全链路架构图，含各阶段代表 GitHub 仓库（可点击）。</desc>
+<rect width="2880" height="4840" fill="#F4F5F7"/>
+<path d="M 136 3954 H 100 V 1286 H 128" fill="none" stroke="#6E56CF" stroke-width="1.4" stroke-dasharray="5 5"/>
+<polygon points="136,1286 129,1281.8823529411766 129,1290.1176470588234" fill="#6E56CF"/>
+<circle cx="136" cy="3954" r="3.5" fill="#6E56CF"/>
+<text transform="translate(84,2620) rotate(-90)" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="2" fill="#6E56CF">PRODUCTION TRACE → RETRAIN</text>
+<rect x="140" y="40" width="2660" height="260" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="24"/>
+<text x="176" y="82" font-size="11" fill="#6E56CF" font-weight="700" letter-spacing="2.2">AGENT SYSTEM ARCHITECTURE · 2026</text>
+<text x="176" y="150" font-size="52" fill="#18181B" font-weight="700" letter-spacing="-0.6">Agent 全链路技术架构</text>
+<text x="176" y="190" font-size="14.5" fill="#5F5F6B" font-weight="400">从 GPU 集群到 Token 输出：模型、推理、Harness 与数据飞轮的完整拼图</text>
+<text x="176" y="214" font-size="12.5" fill="#8A8A95" font-weight="400">适用：Coding Agent · Computer Use · Deep Research · 企业自动化</text>
+<rect x="2132" y="80" width="200" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="14"/>
+<text x="2150" y="136" font-size="34" fill="#6E56CF" font-weight="700">9</text>
+<text x="2150" y="160" font-size="9" fill="#8A8A95" font-weight="700" letter-spacing="1.3">LAYERS</text>
+<text x="2150" y="181" font-size="10.5" fill="#5F5F6B" font-weight="400">评测 → 观测</text>
+<rect x="2348" y="80" width="200" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="14"/>
+<text x="2366" y="136" font-size="34" fill="#14AE5C" font-weight="700">100</text>
+<text x="2366" y="160" font-size="9" fill="#8A8A95" font-weight="700" letter-spacing="1.3">GITHUB REPOS</text>
+<text x="2366" y="181" font-size="10.5" fill="#5F5F6B" font-weight="400">各阶段代表项目</text>
+<rect x="2564" y="80" width="200" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="14"/>
+<text x="2582" y="136" font-size="34" fill="#F24E1E" font-weight="700">1</text>
+<text x="2582" y="160" font-size="9" fill="#8A8A95" font-weight="700" letter-spacing="1.3">FLYWHEEL</text>
+<text x="2582" y="181" font-size="10.5" fill="#5F5F6B" font-weight="400">trace → retrain</text>
+<rect x="176" y="240" width="145" height="30" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="15"/>
+<circle cx="193" cy="255" r="4" fill="#6E56CF"/>
+<text x="205" y="260" font-size="11.5" fill="#18181B" font-weight="600">00  评测</text>
+<rect x="331" y="240" width="145" height="30" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="15"/>
+<circle cx="348" cy="255" r="4" fill="#0D99FF"/>
+<text x="360" y="260" font-size="11.5" fill="#18181B" font-weight="600">01  算力</text>
+<rect x="486" y="240" width="145" height="30" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="15"/>
+<circle cx="503" cy="255" r="4" fill="#14AE5C"/>
+<text x="515" y="260" font-size="11.5" fill="#18181B" font-weight="600">02  训练</text>
+<rect x="641" y="240" width="145" height="30" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="15"/>
+<circle cx="658" cy="255" r="4" fill="#F24E1E"/>
+<text x="670" y="260" font-size="11.5" fill="#18181B" font-weight="600">03  模型</text>
+<rect x="796" y="240" width="145" height="30" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="15"/>
+<circle cx="813" cy="255" r="4" fill="#FFA629"/>
+<text x="825" y="260" font-size="11.5" fill="#18181B" font-weight="600">04  推理</text>
+<rect x="951" y="240" width="145" height="30" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="15"/>
+<circle cx="968" cy="255" r="4" fill="#D946EF"/>
+<text x="980" y="260" font-size="11.5" fill="#18181B" font-weight="600">05  Harness</text>
+<rect x="1106" y="240" width="145" height="30" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="15"/>
+<circle cx="1123" cy="255" r="4" fill="#65A30D"/>
+<text x="1135" y="260" font-size="11.5" fill="#18181B" font-weight="600">06  平台</text>
+<rect x="1261" y="240" width="145" height="30" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="15"/>
+<circle cx="1278" cy="255" r="4" fill="#EF4444"/>
+<text x="1290" y="260" font-size="11.5" fill="#18181B" font-weight="600">07  安全</text>
+<rect x="1416" y="240" width="145" height="30" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="15"/>
+<circle cx="1433" cy="255" r="4" fill="#0F766E"/>
+<text x="1445" y="260" font-size="11.5" fill="#18181B" font-weight="600">08  观测</text>
+<text x="1580" y="260" font-size="10.5" fill="#8A8A95" font-weight="700" letter-spacing="1.3">9 LAYERS · 100 REPOS · 1 FLYWHEEL</text>
+<rect x="140" y="330" width="2660" height="300" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<rect x="176" y="360" width="48" height="4" fill="#6E56CF" rx="2"/>
+<text x="176" y="388" font-size="12" fill="#6E56CF" font-weight="700" letter-spacing="1.4">00</text>
+<text x="176" y="424" font-size="27" fill="#18181B" font-weight="700">评测与任务定义</text>
+<text x="176" y="450" font-size="12.5" fill="#5F5F6B" font-weight="400">先定义“什么算完成”，再谈模型</text>
+<rect x="526" y="360" width="473" height="105" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="384" r="3.5" fill="#6E56CF"/>
+<text x="556" y="388" font-size="14.5" fill="#18181B" font-weight="600">任务域</text>
+<text x="544" y="413" font-size="12" fill="#5F5F6B" font-weight="400">Coding · 终端 · 浏览器 · 客服</text>
+<text x="544" y="432" font-size="12" fill="#5F5F6B" font-weight="400">Deep Research · 数据分析</text>
+<rect x="1029" y="360" width="473" height="105" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="384" r="3.5" fill="#6E56CF"/>
+<text x="1059" y="388" font-size="14.5" fill="#18181B" font-weight="600">公开基准</text>
+<text x="1047" y="413" font-size="12" fill="#5F5F6B" font-weight="400">SWE-bench Verified · Terminal-Bench</text>
+<text x="1047" y="432" font-size="12" fill="#5F5F6B" font-weight="400">OSWorld · WebArena · GAIA · τ-bench</text>
+<rect x="1532" y="360" width="473" height="105" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="384" r="3.5" fill="#6E56CF"/>
+<text x="1562" y="388" font-size="14.5" fill="#18181B" font-weight="600">私有 Eval</text>
+<text x="1550" y="413" font-size="12" fill="#5F5F6B" font-weight="400">黄金集 · 回归集 · 对抗集</text>
+<text x="1550" y="432" font-size="12" fill="#5F5F6B" font-weight="400">线上失败回流 → 新用例</text>
+<rect x="526" y="481" width="473" height="105" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="505" r="3.5" fill="#6E56CF"/>
+<text x="556" y="509" font-size="14.5" fill="#18181B" font-weight="600">核心指标</text>
+<text x="544" y="534" font-size="12" fill="#5F5F6B" font-weight="400">任务成功率 · 步数 · $/task</text>
+<text x="544" y="553" font-size="12" fill="#5F5F6B" font-weight="400">P95 时延 · 人工接管率</text>
+<rect x="1029" y="481" width="473" height="105" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="505" r="3.5" fill="#6E56CF"/>
+<text x="1059" y="509" font-size="14.5" fill="#18181B" font-weight="600">发布门禁</text>
+<text x="1047" y="534" font-size="12" fill="#5F5F6B" font-weight="400">离线回归 + 在线 canary</text>
+<text x="1047" y="553" font-size="12" fill="#5F5F6B" font-weight="400">A/B · 自动回滚</text>
+<rect x="1532" y="481" width="473" height="105" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="505" r="3.5" fill="#6E56CF"/>
+<text x="1562" y="509" font-size="14.5" fill="#18181B" font-weight="600">评测驱动开发</text>
+<text x="1550" y="534" font-size="12" fill="#5F5F6B" font-weight="400">先写 eval，再写 prompt / 训模型</text>
+<text x="1550" y="553" font-size="12" fill="#5F5F6B" font-weight="400">每个失败都变成测试用例</text>
+<rect x="2036" y="354" width="728" height="252" fill="#17171C" rx="16"/>
+<text x="2056" y="384" font-size="10.5" fill="#85858F" font-weight="700" letter-spacing="1.6">GITHUB REPOS</text>
+<text x="2744" y="384" font-size="9.5" fill="#5E5E68" font-weight="700" text-anchor="end" letter-spacing="0.8">8 REPOS</text>
+<line x1="2056" y1="395" x2="2744" y2="395" stroke="#2A2A32" stroke-width="1"/>
+<a href="https://github.com/openai/evals" xlink:href="https://github.com/openai/evals" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open openai/evals on GitHub">
+<rect x="2056" y="406" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="418" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 418 V 432 M 2075 423 H 2077.5 M 2075 426 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="430" font-size="12" font-weight="500" fill="#ECECF2">openai/evals</text>
+<text x="2376" y="430" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/EleutherAI/lm-evaluation-harness" xlink:href="https://github.com/EleutherAI/lm-evaluation-harness" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open EleutherAI/lm-evaluation-harness on GitHub">
+<rect x="2407" y="406" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="418" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 418 V 432 M 2426 423 H 2428.5 M 2426 426 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="430" font-size="11.2" font-weight="500" fill="#ECECF2">EleutherAI/lm-evaluation-harness</text>
+<text x="2727" y="430" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/UKGovernmentBEIS/inspect_ai" xlink:href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open UKGovernmentBEIS/inspect_ai on GitHub">
+<rect x="2056" y="452" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="464" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 464 V 478 M 2075 469 H 2077.5 M 2075 472 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="476" font-size="12" font-weight="500" fill="#ECECF2">UKGovernmentBEIS/inspect_ai</text>
+<text x="2376" y="476" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/SWE-bench/SWE-bench" xlink:href="https://github.com/SWE-bench/SWE-bench" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open SWE-bench/SWE-bench on GitHub">
+<rect x="2407" y="452" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="464" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 464 V 478 M 2426 469 H 2428.5 M 2426 472 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="476" font-size="12" font-weight="500" fill="#ECECF2">SWE-bench/SWE-bench</text>
+<text x="2727" y="476" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/web-arena-x/webarena" xlink:href="https://github.com/web-arena-x/webarena" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open web-arena-x/webarena on GitHub">
+<rect x="2056" y="498" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="510" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 510 V 524 M 2075 515 H 2077.5 M 2075 518 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="522" font-size="12" font-weight="500" fill="#ECECF2">web-arena-x/webarena</text>
+<text x="2376" y="522" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/sierra-research/tau-bench" xlink:href="https://github.com/sierra-research/tau-bench" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open sierra-research/tau-bench on GitHub">
+<rect x="2407" y="498" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="510" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 510 V 524 M 2426 515 H 2428.5 M 2426 518 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="522" font-size="12" font-weight="500" fill="#ECECF2">sierra-research/tau-bench</text>
+<text x="2727" y="522" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/THUDM/AgentBench" xlink:href="https://github.com/THUDM/AgentBench" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open THUDM/AgentBench on GitHub">
+<rect x="2056" y="544" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="556" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 556 V 570 M 2075 561 H 2077.5 M 2075 564 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="568" font-size="12" font-weight="500" fill="#ECECF2">THUDM/AgentBench</text>
+<text x="2376" y="568" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/huggingface/lighteval" xlink:href="https://github.com/huggingface/lighteval" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open huggingface/lighteval on GitHub">
+<rect x="2407" y="544" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="556" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 556 V 570 M 2426 561 H 2428.5 M 2426 564 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="568" font-size="12" font-weight="500" fill="#ECECF2">huggingface/lighteval</text>
+<text x="2727" y="568" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<rect x="140" y="658" width="2660" height="350" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<rect x="176" y="688" width="48" height="4" fill="#0D99FF" rx="2"/>
+<text x="176" y="716" font-size="12" fill="#0D99FF" font-weight="700" letter-spacing="1.4">01</text>
+<text x="176" y="752" font-size="27" fill="#18181B" font-weight="700">算力与集群</text>
+<text x="176" y="778" font-size="12.5" fill="#5F5F6B" font-weight="400">稳定、可调度、可恢复的算力底座</text>
+<rect x="526" y="688" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="712" r="3.5" fill="#0D99FF"/>
+<text x="556" y="716" font-size="14.5" fill="#18181B" font-weight="600">GPU 节点</text>
+<text x="544" y="741" font-size="12" fill="#5F5F6B" font-weight="400">H100 / H200 / B200 / GB200</text>
+<text x="544" y="760" font-size="12" fill="#5F5F6B" font-weight="400">NVLink / NVSwitch · 液冷</text>
+<rect x="1029" y="688" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="712" r="3.5" fill="#0D99FF"/>
+<text x="1059" y="716" font-size="14.5" fill="#18181B" font-weight="600">集群网络</text>
+<text x="1047" y="741" font-size="12" fill="#5F5F6B" font-weight="400">InfiniBand NDR/XDR · RoCEv2</text>
+<text x="1047" y="760" font-size="12" fill="#5F5F6B" font-weight="400">rail-optimized · 无损 · 拥塞控制</text>
+<rect x="1532" y="688" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="712" r="3.5" fill="#0D99FF"/>
+<text x="1562" y="716" font-size="14.5" fill="#18181B" font-weight="600">存储</text>
+<text x="1550" y="741" font-size="12" fill="#5F5F6B" font-weight="400">Lustre / WEKA / GPFS 并行文件系统</text>
+<text x="1550" y="760" font-size="12" fill="#5F5F6B" font-weight="400">对象存储 · checkpoint TB/s 写入</text>
+<rect x="526" y="834" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="858" r="3.5" fill="#0D99FF"/>
+<text x="556" y="862" font-size="14.5" fill="#18181B" font-weight="600">调度</text>
+<text x="544" y="887" font-size="12" fill="#5F5F6B" font-weight="400">Slurm / K8s + Volcano / Kueue</text>
+<text x="544" y="906" font-size="12" fill="#5F5F6B" font-weight="400">gang scheduling · 拓扑感知 · 配额</text>
+<rect x="1029" y="834" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="858" r="3.5" fill="#0D99FF"/>
+<text x="1059" y="862" font-size="14.5" fill="#18181B" font-weight="600">可靠性</text>
+<text x="1047" y="887" font-size="12" fill="#5F5F6B" font-weight="400">NCCL watchdog · XID/ECC 监控</text>
+<text x="1047" y="906" font-size="12" fill="#5F5F6B" font-weight="400">静默错误检测 · 异步 ckpt · 弹性训练</text>
+<rect x="1532" y="834" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="858" r="3.5" fill="#0D99FF"/>
+<text x="1562" y="862" font-size="14.5" fill="#18181B" font-weight="600">三池隔离</text>
+<text x="1550" y="887" font-size="12" fill="#5F5F6B" font-weight="400">预训练 / RL rollout / 在线推理</text>
+<text x="1550" y="906" font-size="12" fill="#5F5F6B" font-weight="400">电力 · 散热 · 容量规划</text>
+<rect x="2036" y="682" width="728" height="302" fill="#17171C" rx="16"/>
+<text x="2056" y="712" font-size="10.5" fill="#85858F" font-weight="700" letter-spacing="1.6">GITHUB REPOS</text>
+<text x="2744" y="712" font-size="9.5" fill="#5E5E68" font-weight="700" text-anchor="end" letter-spacing="0.8">8 REPOS</text>
+<line x1="2056" y1="723" x2="2744" y2="723" stroke="#2A2A32" stroke-width="1"/>
+<a href="https://github.com/NVIDIA/nccl" xlink:href="https://github.com/NVIDIA/nccl" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/nccl on GitHub">
+<rect x="2056" y="734" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="746" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 746 V 760 M 2075 751 H 2077.5 M 2075 754 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="758" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/nccl</text>
+<text x="2376" y="758" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/NVIDIA/gpu-operator" xlink:href="https://github.com/NVIDIA/gpu-operator" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/gpu-operator on GitHub">
+<rect x="2407" y="734" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="746" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 746 V 760 M 2426 751 H 2428.5 M 2426 754 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="758" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/gpu-operator</text>
+<text x="2727" y="758" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/volcano-sh/volcano" xlink:href="https://github.com/volcano-sh/volcano" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open volcano-sh/volcano on GitHub">
+<rect x="2056" y="780" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="792" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 792 V 806 M 2075 797 H 2077.5 M 2075 800 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="804" font-size="12" font-weight="500" fill="#ECECF2">volcano-sh/volcano</text>
+<text x="2376" y="804" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/kubernetes-sigs/kueue" xlink:href="https://github.com/kubernetes-sigs/kueue" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open kubernetes-sigs/kueue on GitHub">
+<rect x="2407" y="780" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="792" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 792 V 806 M 2426 797 H 2428.5 M 2426 800 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="804" font-size="12" font-weight="500" fill="#ECECF2">kubernetes-sigs/kueue</text>
+<text x="2727" y="804" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/ray-project/ray" xlink:href="https://github.com/ray-project/ray" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open ray-project/ray on GitHub">
+<rect x="2056" y="826" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="838" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 838 V 852 M 2075 843 H 2077.5 M 2075 846 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="850" font-size="12" font-weight="500" fill="#ECECF2">ray-project/ray</text>
+<text x="2376" y="850" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/NVIDIA/DCGM" xlink:href="https://github.com/NVIDIA/DCGM" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/DCGM on GitHub">
+<rect x="2407" y="826" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="838" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 838 V 852 M 2426 843 H 2428.5 M 2426 846 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="850" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/DCGM</text>
+<text x="2727" y="850" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/ofiwg/libfabric" xlink:href="https://github.com/ofiwg/libfabric" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open ofiwg/libfabric on GitHub">
+<rect x="2056" y="872" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="884" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 884 V 898 M 2075 889 H 2077.5 M 2075 892 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="896" font-size="12" font-weight="500" fill="#ECECF2">ofiwg/libfabric</text>
+<text x="2376" y="896" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/kubeflow/training-operator" xlink:href="https://github.com/kubeflow/training-operator" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open kubeflow/training-operator on GitHub">
+<rect x="2407" y="872" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="884" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 884 V 898 M 2426 889 H 2428.5 M 2426 892 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="896" font-size="12" font-weight="500" fill="#ECECF2">kubeflow/training-operator</text>
+<text x="2727" y="896" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<circle cx="2058" cy="964" r="3" fill="#0D99FF"/>
+<text x="2068" y="968" font-size="10.5" fill="#85858F" font-weight="400">万卡集群的瓶颈通常在网络与存储</text>
+<rect x="140" y="1036" width="2660" height="500" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<rect x="176" y="1066" width="48" height="4" fill="#14AE5C" rx="2"/>
+<text x="176" y="1094" font-size="12" fill="#14AE5C" font-weight="700" letter-spacing="1.4">02</text>
+<text x="176" y="1130" font-size="27" fill="#18181B" font-weight="700">数据与训练</text>
+<text x="176" y="1156" font-size="12.5" fill="#5F5F6B" font-weight="400">Agent 能力的真正来源：</text>
+<text x="176" y="1174" font-size="12.5" fill="#5F5F6B" font-weight="400">数据 × 环境 × RL</text>
+<rect x="526" y="1066" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="1090" r="3.5" fill="#14AE5C"/>
+<text x="556" y="1094" font-size="14.5" fill="#18181B" font-weight="600">预训练语料</text>
+<text x="544" y="1119" font-size="12" fill="#5F5F6B" font-weight="400">网页 · 代码 · 数学 · 多语</text>
+<text x="544" y="1138" font-size="12" fill="#5F5F6B" font-weight="400">去重 · 质量分类 · benchmark 去污染</text>
+<rect x="1029" y="1066" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="1090" r="3.5" fill="#14AE5C"/>
+<text x="1059" y="1094" font-size="14.5" fill="#18181B" font-weight="600">中期训练</text>
+<text x="1047" y="1119" font-size="12" fill="#5F5F6B" font-weight="400">32k → 256k / 1M 长上下文</text>
+<text x="1047" y="1138" font-size="12" fill="#5F5F6B" font-weight="400">工具调用格式 · 合成 Agent 轨迹</text>
+<rect x="1532" y="1066" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="1090" r="3.5" fill="#14AE5C"/>
+<text x="1562" y="1094" font-size="14.5" fill="#18181B" font-weight="600">SFT</text>
+<text x="1550" y="1119" font-size="12" fill="#5F5F6B" font-weight="400">专家 plan-act-observe 轨迹</text>
+<text x="1550" y="1138" font-size="12" fill="#5F5F6B" font-weight="400">失败恢复 · 拒绝采样</text>
+<rect x="526" y="1212" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="1236" r="3.5" fill="#14AE5C"/>
+<text x="556" y="1240" font-size="14.5" fill="#18181B" font-weight="600">偏好优化</text>
+<text x="544" y="1265" font-size="12" fill="#5F5F6B" font-weight="400">DPO / RLHF</text>
+<text x="544" y="1284" font-size="12" fill="#5F5F6B" font-weight="400">有用性 · 安全性 · 风格</text>
+<rect x="1029" y="1212" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="1236" r="3.5" fill="#14AE5C"/>
+<text x="1059" y="1240" font-size="14.5" fill="#18181B" font-weight="600">RLVR</text>
+<text x="1047" y="1265" font-size="12" fill="#5F5F6B" font-weight="400">单测通过 · 数学对答案</text>
+<text x="1047" y="1284" font-size="12" fill="#5F5F6B" font-weight="400">规则奖励 · 防 reward hacking</text>
+<rect x="1532" y="1212" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="1236" r="3.5" fill="#14AE5C"/>
+<text x="1562" y="1240" font-size="14.5" fill="#18181B" font-weight="600">Agentic RL</text>
+<text x="1550" y="1265" font-size="12" fill="#5F5F6B" font-weight="400">环境 rollout · 异步采样</text>
+<text x="1550" y="1284" font-size="12" fill="#5F5F6B" font-weight="400">off-policy 修正 · 成功率 + 效率</text>
+<rect x="526" y="1358" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="1382" r="3.5" fill="#14AE5C"/>
+<text x="556" y="1386" font-size="14.5" fill="#18181B" font-weight="600">环境工场</text>
+<text x="544" y="1411" font-size="12" fill="#5F5F6B" font-weight="400">浏览器 / 终端 / IDE / API mock</text>
+<text x="544" y="1430" font-size="12" fill="#5F5F6B" font-weight="400">可重置 · 可判定 · 万级并发</text>
+<rect x="1029" y="1358" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="1382" r="3.5" fill="#14AE5C"/>
+<text x="1059" y="1386" font-size="14.5" fill="#18181B" font-weight="600">训练栈</text>
+<text x="1047" y="1411" font-size="12" fill="#5F5F6B" font-weight="400">Megatron / FSDP2 / DeepSpeed</text>
+<text x="1047" y="1430" font-size="12" fill="#5F5F6B" font-weight="400">FP8 · 序列并行 · 激活重算</text>
+<rect x="1532" y="1358" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="1382" r="3.5" fill="#14AE5C"/>
+<text x="1562" y="1386" font-size="14.5" fill="#18181B" font-weight="600">训练中评测</text>
+<text x="1550" y="1411" font-size="12" fill="#5F5F6B" font-weight="400">held-out 私有集 · 失败分类</text>
+<text x="1550" y="1430" font-size="12" fill="#5F5F6B" font-weight="400">checkpoint 选择 · 回归门禁</text>
+<rect x="2036" y="1060" width="728" height="452" fill="#17171C" rx="16"/>
+<text x="2056" y="1090" font-size="10.5" fill="#85858F" font-weight="700" letter-spacing="1.6">GITHUB REPOS</text>
+<text x="2744" y="1090" font-size="9.5" fill="#5E5E68" font-weight="700" text-anchor="end" letter-spacing="0.8">16 REPOS</text>
+<line x1="2056" y1="1101" x2="2744" y2="1101" stroke="#2A2A32" stroke-width="1"/>
+<a href="https://github.com/huggingface/datatrove" xlink:href="https://github.com/huggingface/datatrove" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open huggingface/datatrove on GitHub">
+<rect x="2056" y="1112" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1124" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1124 V 1138 M 2075 1129 H 2077.5 M 2075 1132 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1136" font-size="12" font-weight="500" fill="#ECECF2">huggingface/datatrove</text>
+<text x="2376" y="1136" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/allenai/dolma" xlink:href="https://github.com/allenai/dolma" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open allenai/dolma on GitHub">
+<rect x="2407" y="1112" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1124" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1124 V 1138 M 2426 1129 H 2428.5 M 2426 1132 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1136" font-size="12" font-weight="500" fill="#ECECF2">allenai/dolma</text>
+<text x="2727" y="1136" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/NVIDIA/NeMo-Curator" xlink:href="https://github.com/NVIDIA/NeMo-Curator" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/NeMo-Curator on GitHub">
+<rect x="2056" y="1158" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1170" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1170 V 1184 M 2075 1175 H 2077.5 M 2075 1178 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1182" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/NeMo-Curator</text>
+<text x="2376" y="1182" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/modelscope/data-juicer" xlink:href="https://github.com/modelscope/data-juicer" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open modelscope/data-juicer on GitHub">
+<rect x="2407" y="1158" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1170" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1170 V 1184 M 2426 1175 H 2428.5 M 2426 1178 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1182" font-size="12" font-weight="500" fill="#ECECF2">modelscope/data-juicer</text>
+<text x="2727" y="1182" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/NVIDIA/Megatron-LM" xlink:href="https://github.com/NVIDIA/Megatron-LM" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/Megatron-LM on GitHub">
+<rect x="2056" y="1204" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1216" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1216 V 1230 M 2075 1221 H 2077.5 M 2075 1224 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1228" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/Megatron-LM</text>
+<text x="2376" y="1228" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/pytorch/torchtitan" xlink:href="https://github.com/pytorch/torchtitan" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open pytorch/torchtitan on GitHub">
+<rect x="2407" y="1204" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1216" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1216 V 1230 M 2426 1221 H 2428.5 M 2426 1224 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1228" font-size="12" font-weight="500" fill="#ECECF2">pytorch/torchtitan</text>
+<text x="2727" y="1228" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/deepspeedai/DeepSpeed" xlink:href="https://github.com/deepspeedai/DeepSpeed" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open deepspeedai/DeepSpeed on GitHub">
+<rect x="2056" y="1250" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1262" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1262 V 1276 M 2075 1267 H 2077.5 M 2075 1270 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1274" font-size="12" font-weight="500" fill="#ECECF2">deepspeedai/DeepSpeed</text>
+<text x="2376" y="1274" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/volcengine/verl" xlink:href="https://github.com/volcengine/verl" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open volcengine/verl on GitHub">
+<rect x="2407" y="1250" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1262" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1262 V 1276 M 2426 1267 H 2428.5 M 2426 1270 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1274" font-size="12" font-weight="500" fill="#ECECF2">volcengine/verl</text>
+<text x="2727" y="1274" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/OpenRLHF/OpenRLHF" xlink:href="https://github.com/OpenRLHF/OpenRLHF" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open OpenRLHF/OpenRLHF on GitHub">
+<rect x="2056" y="1296" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1308" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1308 V 1322 M 2075 1313 H 2077.5 M 2075 1316 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1320" font-size="12" font-weight="500" fill="#ECECF2">OpenRLHF/OpenRLHF</text>
+<text x="2376" y="1320" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/huggingface/trl" xlink:href="https://github.com/huggingface/trl" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open huggingface/trl on GitHub">
+<rect x="2407" y="1296" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1308" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1308 V 1322 M 2426 1313 H 2428.5 M 2426 1316 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1320" font-size="12" font-weight="500" fill="#ECECF2">huggingface/trl</text>
+<text x="2727" y="1320" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/NovaSky-AI/SkyRL" xlink:href="https://github.com/NovaSky-AI/SkyRL" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NovaSky-AI/SkyRL on GitHub">
+<rect x="2056" y="1342" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1354" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1354 V 1368 M 2075 1359 H 2077.5 M 2075 1362 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1366" font-size="12" font-weight="500" fill="#ECECF2">NovaSky-AI/SkyRL</text>
+<text x="2376" y="1366" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/inclusionAI/AReaL" xlink:href="https://github.com/inclusionAI/AReaL" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open inclusionAI/AReaL on GitHub">
+<rect x="2407" y="1342" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1354" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1354 V 1368 M 2426 1359 H 2428.5 M 2426 1362 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1366" font-size="12" font-weight="500" fill="#ECECF2">inclusionAI/AReaL</text>
+<text x="2727" y="1366" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/unslothai/unsloth" xlink:href="https://github.com/unslothai/unsloth" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open unslothai/unsloth on GitHub">
+<rect x="2056" y="1388" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1400" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1400 V 1414 M 2075 1405 H 2077.5 M 2075 1408 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1412" font-size="12" font-weight="500" fill="#ECECF2">unslothai/unsloth</text>
+<text x="2376" y="1412" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/axolotl-ai-cloud/axolotl" xlink:href="https://github.com/axolotl-ai-cloud/axolotl" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open axolotl-ai-cloud/axolotl on GitHub">
+<rect x="2407" y="1388" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1400" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1400 V 1414 M 2426 1405 H 2428.5 M 2426 1408 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1412" font-size="12" font-weight="500" fill="#ECECF2">axolotl-ai-cloud/axolotl</text>
+<text x="2727" y="1412" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/firecracker-microvm/firecracker" xlink:href="https://github.com/firecracker-microvm/firecracker" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open firecracker-microvm/firecracker on GitHub">
+<rect x="2056" y="1434" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1446" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1446 V 1460 M 2075 1451 H 2077.5 M 2075 1454 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1458" font-size="11.2" font-weight="500" fill="#ECECF2">firecracker-microvm/firecracker</text>
+<text x="2376" y="1458" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/e2b-dev/E2B" xlink:href="https://github.com/e2b-dev/E2B" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open e2b-dev/E2B on GitHub">
+<rect x="2407" y="1434" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1446" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1446 V 1460 M 2426 1451 H 2428.5 M 2426 1454 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1458" font-size="12" font-weight="500" fill="#ECECF2">e2b-dev/E2B</text>
+<text x="2727" y="1458" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<circle cx="2058" cy="1492" r="3" fill="#14AE5C"/>
+<text x="2068" y="1496" font-size="10.5" fill="#85858F" font-weight="400">环境与轨迹数据 = Agent 时代的护城河</text>
+<rect x="140" y="1564" width="2660" height="340" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<rect x="176" y="1594" width="48" height="4" fill="#F24E1E" rx="2"/>
+<text x="176" y="1622" font-size="12" fill="#F24E1E" font-weight="700" letter-spacing="1.4">03</text>
+<text x="176" y="1658" font-size="27" fill="#18181B" font-weight="700">模型设计</text>
+<text x="176" y="1684" font-size="12.5" fill="#5F5F6B" font-weight="400">围绕 Agent 场景做架构与能力取舍</text>
+<rect x="526" y="1594" width="473" height="125" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="1618" r="3.5" fill="#F24E1E"/>
+<text x="556" y="1622" font-size="14.5" fill="#18181B" font-weight="600">架构选择</text>
+<text x="544" y="1647" font-size="12" fill="#5F5F6B" font-weight="400">Dense vs MoE · GQA / MLA</text>
+<text x="544" y="1666" font-size="12" fill="#5F5F6B" font-weight="400">128k–1M context · KV 成本</text>
+<rect x="1029" y="1594" width="473" height="125" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="1618" r="3.5" fill="#F24E1E"/>
+<text x="1059" y="1622" font-size="14.5" fill="#18181B" font-weight="600">推理能力</text>
+<text x="1047" y="1647" font-size="12" fill="#5F5F6B" font-weight="400">长 CoT · 可控 thinking budget</text>
+<text x="1047" y="1666" font-size="12" fill="#5F5F6B" font-weight="400">自检 · 回溯 · 计划分解</text>
+<rect x="1532" y="1594" width="473" height="125" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="1618" r="3.5" fill="#F24E1E"/>
+<text x="1562" y="1622" font-size="14.5" fill="#18181B" font-weight="600">工具原生</text>
+<text x="1550" y="1647" font-size="12" fill="#5F5F6B" font-weight="400">tool-call 格式进训练分布</text>
+<text x="1550" y="1666" font-size="12" fill="#5F5F6B" font-weight="400">JSON Schema · 并行调用</text>
+<rect x="526" y="1735" width="473" height="125" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="1759" r="3.5" fill="#F24E1E"/>
+<text x="556" y="1763" font-size="14.5" fill="#18181B" font-weight="600">多模态</text>
+<text x="544" y="1788" font-size="12" fill="#5F5F6B" font-weight="400">截图理解 · GUI grounding</text>
+<text x="544" y="1807" font-size="12" fill="#5F5F6B" font-weight="400">坐标输出 · OCR</text>
+<rect x="1029" y="1735" width="473" height="125" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="1759" r="3.5" fill="#F24E1E"/>
+<text x="1059" y="1763" font-size="14.5" fill="#18181B" font-weight="600">模型梯队</text>
+<text x="1047" y="1788" font-size="12" fill="#5F5F6B" font-weight="400">旗舰 + 蒸馏小模型</text>
+<text x="1047" y="1807" font-size="12" fill="#5F5F6B" font-weight="400">路由器按任务难度分流</text>
+<rect x="1532" y="1735" width="473" height="125" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="1759" r="3.5" fill="#F24E1E"/>
+<text x="1562" y="1763" font-size="14.5" fill="#18181B" font-weight="600">开源基座</text>
+<text x="1550" y="1788" font-size="12" fill="#5F5F6B" font-weight="400">Qwen3 · Llama · DeepSeek-V3</text>
+<text x="1550" y="1807" font-size="12" fill="#5F5F6B" font-weight="400">Gemma · Mistral · MiniCPM</text>
+<rect x="2036" y="1588" width="728" height="292" fill="#17171C" rx="16"/>
+<text x="2056" y="1618" font-size="10.5" fill="#85858F" font-weight="700" letter-spacing="1.6">GITHUB REPOS</text>
+<text x="2744" y="1618" font-size="9.5" fill="#5E5E68" font-weight="700" text-anchor="end" letter-spacing="0.8">8 REPOS</text>
+<line x1="2056" y1="1629" x2="2744" y2="1629" stroke="#2A2A32" stroke-width="1"/>
+<a href="https://github.com/QwenLM/Qwen3" xlink:href="https://github.com/QwenLM/Qwen3" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open QwenLM/Qwen3 on GitHub">
+<rect x="2056" y="1640" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1652" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1652 V 1666 M 2075 1657 H 2077.5 M 2075 1660 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1664" font-size="12" font-weight="500" fill="#ECECF2">QwenLM/Qwen3</text>
+<text x="2376" y="1664" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/meta-llama/llama-models" xlink:href="https://github.com/meta-llama/llama-models" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open meta-llama/llama-models on GitHub">
+<rect x="2407" y="1640" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1652" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1652 V 1666 M 2426 1657 H 2428.5 M 2426 1660 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1664" font-size="12" font-weight="500" fill="#ECECF2">meta-llama/llama-models</text>
+<text x="2727" y="1664" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/deepseek-ai/DeepSeek-V3" xlink:href="https://github.com/deepseek-ai/DeepSeek-V3" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open deepseek-ai/DeepSeek-V3 on GitHub">
+<rect x="2056" y="1686" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1698" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1698 V 1712 M 2075 1703 H 2077.5 M 2075 1706 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1710" font-size="12" font-weight="500" fill="#ECECF2">deepseek-ai/DeepSeek-V3</text>
+<text x="2376" y="1710" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/huggingface/transformers" xlink:href="https://github.com/huggingface/transformers" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open huggingface/transformers on GitHub">
+<rect x="2407" y="1686" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1698" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1698 V 1712 M 2426 1703 H 2428.5 M 2426 1706 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1710" font-size="12" font-weight="500" fill="#ECECF2">huggingface/transformers</text>
+<text x="2727" y="1710" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/Dao-AILab/flash-attention" xlink:href="https://github.com/Dao-AILab/flash-attention" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open Dao-AILab/flash-attention on GitHub">
+<rect x="2056" y="1732" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1744" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1744 V 1758 M 2075 1749 H 2077.5 M 2075 1752 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1756" font-size="12" font-weight="500" fill="#ECECF2">Dao-AILab/flash-attention</text>
+<text x="2376" y="1756" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/deepseek-ai/DeepEP" xlink:href="https://github.com/deepseek-ai/DeepEP" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open deepseek-ai/DeepEP on GitHub">
+<rect x="2407" y="1732" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1744" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1744 V 1758 M 2426 1749 H 2428.5 M 2426 1752 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1756" font-size="12" font-weight="500" fill="#ECECF2">deepseek-ai/DeepEP</text>
+<text x="2727" y="1756" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/NVIDIA/TransformerEngine" xlink:href="https://github.com/NVIDIA/TransformerEngine" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/TransformerEngine on GitHub">
+<rect x="2056" y="1778" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="1790" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 1790 V 1804 M 2075 1795 H 2077.5 M 2075 1798 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="1802" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/TransformerEngine</text>
+<text x="2376" y="1802" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/huggingface/tokenizers" xlink:href="https://github.com/huggingface/tokenizers" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open huggingface/tokenizers on GitHub">
+<rect x="2407" y="1778" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="1790" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 1790 V 1804 M 2426 1795 H 2428.5 M 2426 1798 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="1802" font-size="12" font-weight="500" fill="#ECECF2">huggingface/tokenizers</text>
+<text x="2727" y="1802" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<circle cx="2058" cy="1860" r="3" fill="#F24E1E"/>
+<text x="2068" y="1864" font-size="10.5" fill="#85858F" font-weight="400">架构选择决定推理成本的上限</text>
+<rect x="140" y="1932" width="2660" height="440" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<rect x="176" y="1962" width="48" height="4" fill="#FFA629" rx="2"/>
+<text x="176" y="1990" font-size="12" fill="#FFA629" font-weight="700" letter-spacing="1.4">04</text>
+<text x="176" y="2026" font-size="27" fill="#18181B" font-weight="700">推理服务</text>
+<text x="176" y="2052" font-size="12.5" fill="#5F5F6B" font-weight="400">把权重变成低延迟、低成本的 Token</text>
+<rect x="526" y="1962" width="473" height="145" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="1986" r="3.5" fill="#FFA629"/>
+<text x="556" y="1990" font-size="14.5" fill="#18181B" font-weight="600">推理引擎</text>
+<text x="544" y="2015" font-size="12" fill="#5F5F6B" font-weight="400">vLLM · SGLang</text>
+<text x="544" y="2034" font-size="12" fill="#5F5F6B" font-weight="400">TensorRT-LLM · LMDeploy</text>
+<rect x="1029" y="1962" width="473" height="145" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="1986" r="3.5" fill="#FFA629"/>
+<text x="1059" y="1990" font-size="14.5" fill="#18181B" font-weight="600">批处理</text>
+<text x="1047" y="2015" font-size="12" fill="#5F5F6B" font-weight="400">continuous batching</text>
+<text x="1047" y="2034" font-size="12" fill="#5F5F6B" font-weight="400">chunked prefill · prefix caching</text>
+<rect x="1532" y="1962" width="473" height="145" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="1986" r="3.5" fill="#FFA629"/>
+<text x="1562" y="1990" font-size="14.5" fill="#18181B" font-weight="600">KV Cache</text>
+<text x="1550" y="2015" font-size="12" fill="#5F5F6B" font-weight="400">PagedAttention · PD 分离</text>
+<text x="1550" y="2034" font-size="12" fill="#5F5F6B" font-weight="400">HBM → DRAM → SSD 分层</text>
+<rect x="526" y="2123" width="473" height="145" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="2147" r="3.5" fill="#FFA629"/>
+<text x="556" y="2151" font-size="14.5" fill="#18181B" font-weight="600">解码加速</text>
+<text x="544" y="2176" font-size="12" fill="#5F5F6B" font-weight="400">投机解码 · FP8 / INT4</text>
+<text x="544" y="2195" font-size="12" fill="#5F5F6B" font-weight="400">MoE EP · CUDA Graph</text>
+<rect x="1029" y="2123" width="473" height="145" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="2147" r="3.5" fill="#FFA629"/>
+<text x="1059" y="2151" font-size="14.5" fill="#18181B" font-weight="600">网关路由</text>
+<text x="1047" y="2176" font-size="12" fill="#5F5F6B" font-weight="400">模型级联 · 会话粘性</text>
+<text x="1047" y="2195" font-size="12" fill="#5F5F6B" font-weight="400">限流 · 多副本 · 多区域</text>
+<rect x="1532" y="2123" width="473" height="145" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="2147" r="3.5" fill="#FFA629"/>
+<text x="1562" y="2151" font-size="14.5" fill="#18181B" font-weight="600">SLO</text>
+<text x="1550" y="2176" font-size="12" fill="#5F5F6B" font-weight="400">TTFT · TPOT · cache hit</text>
+<text x="1550" y="2195" font-size="12" fill="#5F5F6B" font-weight="400">$/task · P99 · 可用性</text>
+<rect x="526" y="2286" width="1480" height="52" fill="#FFF9F0" rx="10"/>
+<rect x="526" y="2286" width="4" height="52" fill="#FFA629" rx="2"/>
+<text x="544" y="2317" font-size="12.5" fill="#5F5F6B"><tspan font-weight="700" fill="#FFA629">成本关键：</tspan>Agent 负载 = 长 system prompt + 多轮工具调用 → prefix cache 命中率直接决定单位成本</text>
+<rect x="2036" y="1956" width="728" height="392" fill="#17171C" rx="16"/>
+<text x="2056" y="1986" font-size="10.5" fill="#85858F" font-weight="700" letter-spacing="1.6">GITHUB REPOS</text>
+<text x="2744" y="1986" font-size="9.5" fill="#5E5E68" font-weight="700" text-anchor="end" letter-spacing="0.8">12 REPOS</text>
+<line x1="2056" y1="1997" x2="2744" y2="1997" stroke="#2A2A32" stroke-width="1"/>
+<a href="https://github.com/vllm-project/vllm" xlink:href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open vllm-project/vllm on GitHub">
+<rect x="2056" y="2008" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2020" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2020 V 2034 M 2075 2025 H 2077.5 M 2075 2028 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2032" font-size="12" font-weight="500" fill="#ECECF2">vllm-project/vllm</text>
+<text x="2376" y="2032" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/sgl-project/sglang" xlink:href="https://github.com/sgl-project/sglang" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open sgl-project/sglang on GitHub">
+<rect x="2407" y="2008" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2020" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2020 V 2034 M 2426 2025 H 2428.5 M 2426 2028 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2032" font-size="12" font-weight="500" fill="#ECECF2">sgl-project/sglang</text>
+<text x="2727" y="2032" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/NVIDIA/TensorRT-LLM" xlink:href="https://github.com/NVIDIA/TensorRT-LLM" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/TensorRT-LLM on GitHub">
+<rect x="2056" y="2054" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2066" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2066 V 2080 M 2075 2071 H 2077.5 M 2075 2074 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2078" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/TensorRT-LLM</text>
+<text x="2376" y="2078" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/InternLM/lmdeploy" xlink:href="https://github.com/InternLM/lmdeploy" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open InternLM/lmdeploy on GitHub">
+<rect x="2407" y="2054" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2066" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2066 V 2080 M 2426 2071 H 2428.5 M 2426 2074 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2078" font-size="12" font-weight="500" fill="#ECECF2">InternLM/lmdeploy</text>
+<text x="2727" y="2078" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/LMCache/LMCache" xlink:href="https://github.com/LMCache/LMCache" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open LMCache/LMCache on GitHub">
+<rect x="2056" y="2100" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2112" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2112 V 2126 M 2075 2117 H 2077.5 M 2075 2120 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2124" font-size="12" font-weight="500" fill="#ECECF2">LMCache/LMCache</text>
+<text x="2376" y="2124" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/ai-dynamo/dynamo" xlink:href="https://github.com/ai-dynamo/dynamo" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open ai-dynamo/dynamo on GitHub">
+<rect x="2407" y="2100" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2112" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2112 V 2126 M 2426 2117 H 2428.5 M 2426 2120 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2124" font-size="12" font-weight="500" fill="#ECECF2">ai-dynamo/dynamo</text>
+<text x="2727" y="2124" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/NVIDIA/Triton-Inference-Server" xlink:href="https://github.com/NVIDIA/Triton-Inference-Server" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/Triton-Inference-Server on GitHub">
+<rect x="2056" y="2146" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2158" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2158 V 2172 M 2075 2163 H 2077.5 M 2075 2166 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2170" font-size="11.2" font-weight="500" fill="#ECECF2">NVIDIA/Triton-Inference-Server</text>
+<text x="2376" y="2170" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/BerriAI/litellm" xlink:href="https://github.com/BerriAI/litellm" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open BerriAI/litellm on GitHub">
+<rect x="2407" y="2146" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2158" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2158 V 2172 M 2426 2163 H 2428.5 M 2426 2166 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2170" font-size="12" font-weight="500" fill="#ECECF2">BerriAI/litellm</text>
+<text x="2727" y="2170" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/ggml-org/llama.cpp" xlink:href="https://github.com/ggml-org/llama.cpp" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open ggml-org/llama.cpp on GitHub">
+<rect x="2056" y="2192" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2204" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2204 V 2218 M 2075 2209 H 2077.5 M 2075 2212 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2216" font-size="12" font-weight="500" fill="#ECECF2">ggml-org/llama.cpp</text>
+<text x="2376" y="2216" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/ollama/ollama" xlink:href="https://github.com/ollama/ollama" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open ollama/ollama on GitHub">
+<rect x="2407" y="2192" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2204" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2204 V 2218 M 2426 2209 H 2428.5 M 2426 2212 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2216" font-size="12" font-weight="500" fill="#ECECF2">ollama/ollama</text>
+<text x="2727" y="2216" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/huggingface/text-generation-inference" xlink:href="https://github.com/huggingface/text-generation-inference" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open huggingface/text-generation-inference on GitHub">
+<rect x="2056" y="2238" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2250" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2250 V 2264 M 2075 2255 H 2077.5 M 2075 2258 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2262" font-size="11.2" font-weight="500" fill="#ECECF2">huggingface/text-generation-inference</text>
+<text x="2376" y="2262" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/llm-d/llm-d" xlink:href="https://github.com/llm-d/llm-d" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open llm-d/llm-d on GitHub">
+<rect x="2407" y="2238" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2250" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2250 V 2264 M 2426 2255 H 2428.5 M 2426 2258 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2262" font-size="12" font-weight="500" fill="#ECECF2">llm-d/llm-d</text>
+<text x="2727" y="2262" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<circle cx="2058" cy="2328" r="3" fill="#FFA629"/>
+<text x="2068" y="2332" font-size="10.5" fill="#85858F" font-weight="400">prefix cache 是 Agent 推理的命门</text>
+<rect x="140" y="2400" width="2660" height="520" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<rect x="176" y="2430" width="48" height="4" fill="#D946EF" rx="2"/>
+<text x="176" y="2458" font-size="12" fill="#D946EF" font-weight="700" letter-spacing="1.4">05</text>
+<text x="176" y="2494" font-size="27" fill="#18181B" font-weight="700">Agent Harness</text>
+<text x="176" y="2520" font-size="12.5" fill="#5F5F6B" font-weight="400">模型之外的体验分水岭</text>
+<rect x="526" y="2430" width="473" height="160" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="2454" r="3.5" fill="#D946EF"/>
+<text x="556" y="2458" font-size="14.5" fill="#18181B" font-weight="600">Agent Loop</text>
+<text x="544" y="2483" font-size="12" fill="#5F5F6B" font-weight="400">observe → plan → act → observe</text>
+<text x="544" y="2502" font-size="12" fill="#5F5F6B" font-weight="400">步数 / token / 时间预算 · 取消与恢复</text>
+<rect x="1029" y="2430" width="473" height="160" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="2454" r="3.5" fill="#D946EF"/>
+<text x="1059" y="2458" font-size="14.5" fill="#18181B" font-weight="600">上下文工程</text>
+<text x="1047" y="2483" font-size="12" fill="#5F5F6B" font-weight="400">系统提示 · 工具描述 · 压缩/摘要</text>
+<text x="1047" y="2502" font-size="12" fill="#5F5F6B" font-weight="400">长期记忆 · 子 Agent · RAG</text>
+<rect x="1532" y="2430" width="473" height="160" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="2454" r="3.5" fill="#D946EF"/>
+<text x="1562" y="2458" font-size="14.5" fill="#18181B" font-weight="600">工具层</text>
+<text x="1550" y="2483" font-size="12" fill="#5F5F6B" font-weight="400">JSON Schema · 幂等 · 超时/重试</text>
+<text x="1550" y="2502" font-size="12" fill="#5F5F6B" font-weight="400">给模型看的可读错误 · 权限</text>
+<rect x="526" y="2606" width="473" height="160" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="2630" r="3.5" fill="#D946EF"/>
+<text x="556" y="2634" font-size="14.5" fill="#18181B" font-weight="600">沙箱</text>
+<text x="544" y="2659" font-size="12" fill="#5F5F6B" font-weight="400">Firecracker / gVisor · 快照恢复</text>
+<text x="544" y="2678" font-size="12" fill="#5F5F6B" font-weight="400">网络出口白名单 · 资源限额</text>
+<rect x="1029" y="2606" width="473" height="160" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="2630" r="3.5" fill="#D946EF"/>
+<text x="1059" y="2634" font-size="14.5" fill="#18181B" font-weight="600">编排</text>
+<text x="1047" y="2659" font-size="12" fill="#5F5F6B" font-weight="400">durable execution · 队列</text>
+<text x="1047" y="2678" font-size="12" fill="#5F5F6B" font-weight="400">human-in-the-loop · 审批</text>
+<rect x="1532" y="2606" width="473" height="160" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="2630" r="3.5" fill="#D946EF"/>
+<text x="1562" y="2634" font-size="14.5" fill="#18181B" font-weight="600">输出控制</text>
+<text x="1550" y="2659" font-size="12" fill="#5F5F6B" font-weight="400">grammar / JSON 约束解码</text>
+<text x="1550" y="2678" font-size="12" fill="#5F5F6B" font-weight="400">流式 SSE · 引用 · 审计</text>
+<rect x="526" y="2786" width="1480" height="76" fill="#FCF2FE" rx="10"/>
+<rect x="526" y="2786" width="4" height="76" fill="#D946EF" rx="2"/>
+<text x="544" y="2817" font-size="12.5" fill="#5F5F6B"><tspan font-weight="700" fill="#D946EF">体验分水岭：</tspan>同一模型，工具设计与上下文管理可带来数倍任务成功率差异</text>
+<text x="544" y="2838" font-size="11.5" fill="#5F5F6B" font-weight="400">评估重点：长任务完成率 · 工具调用正确率 · 失败恢复 · $/task</text>
+<rect x="2036" y="2424" width="728" height="472" fill="#17171C" rx="16"/>
+<text x="2056" y="2454" font-size="10.5" fill="#85858F" font-weight="700" letter-spacing="1.6">GITHUB REPOS</text>
+<text x="2744" y="2454" font-size="9.5" fill="#5E5E68" font-weight="700" text-anchor="end" letter-spacing="0.8">16 REPOS</text>
+<line x1="2056" y1="2465" x2="2744" y2="2465" stroke="#2A2A32" stroke-width="1"/>
+<a href="https://github.com/langchain-ai/langgraph" xlink:href="https://github.com/langchain-ai/langgraph" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open langchain-ai/langgraph on GitHub">
+<rect x="2056" y="2476" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2488" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2488 V 2502 M 2075 2493 H 2077.5 M 2075 2496 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2500" font-size="12" font-weight="500" fill="#ECECF2">langchain-ai/langgraph</text>
+<text x="2376" y="2500" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/openai/openai-agents-python" xlink:href="https://github.com/openai/openai-agents-python" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open openai/openai-agents-python on GitHub">
+<rect x="2407" y="2476" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2488" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2488 V 2502 M 2426 2493 H 2428.5 M 2426 2496 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2500" font-size="12" font-weight="500" fill="#ECECF2">openai/openai-agents-python</text>
+<text x="2727" y="2500" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/huggingface/smolagents" xlink:href="https://github.com/huggingface/smolagents" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open huggingface/smolagents on GitHub">
+<rect x="2056" y="2522" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2534" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2534 V 2548 M 2075 2539 H 2077.5 M 2075 2542 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2546" font-size="12" font-weight="500" fill="#ECECF2">huggingface/smolagents</text>
+<text x="2376" y="2546" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/microsoft/autogen" xlink:href="https://github.com/microsoft/autogen" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open microsoft/autogen on GitHub">
+<rect x="2407" y="2522" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2534" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2534 V 2548 M 2426 2539 H 2428.5 M 2426 2542 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2546" font-size="12" font-weight="500" fill="#ECECF2">microsoft/autogen</text>
+<text x="2727" y="2546" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/SWE-agent/SWE-agent" xlink:href="https://github.com/SWE-agent/SWE-agent" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open SWE-agent/SWE-agent on GitHub">
+<rect x="2056" y="2568" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2580" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2580 V 2594 M 2075 2585 H 2077.5 M 2075 2588 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2592" font-size="12" font-weight="500" fill="#ECECF2">SWE-agent/SWE-agent</text>
+<text x="2376" y="2592" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/All-Hands-AI/OpenHands" xlink:href="https://github.com/All-Hands-AI/OpenHands" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open All-Hands-AI/OpenHands on GitHub">
+<rect x="2407" y="2568" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2580" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2580 V 2594 M 2426 2585 H 2428.5 M 2426 2588 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2592" font-size="12" font-weight="500" fill="#ECECF2">All-Hands-AI/OpenHands</text>
+<text x="2727" y="2592" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/browser-use/browser-use" xlink:href="https://github.com/browser-use/browser-use" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open browser-use/browser-use on GitHub">
+<rect x="2056" y="2614" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2626" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2626 V 2640 M 2075 2631 H 2077.5 M 2075 2634 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2638" font-size="12" font-weight="500" fill="#ECECF2">browser-use/browser-use</text>
+<text x="2376" y="2638" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/modelcontextprotocol/servers" xlink:href="https://github.com/modelcontextprotocol/servers" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open modelcontextprotocol/servers on GitHub">
+<rect x="2407" y="2614" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2626" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2626 V 2640 M 2426 2631 H 2428.5 M 2426 2634 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2638" font-size="12" font-weight="500" fill="#ECECF2">modelcontextprotocol/servers</text>
+<text x="2727" y="2638" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/microsoft/playwright-mcp" xlink:href="https://github.com/microsoft/playwright-mcp" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open microsoft/playwright-mcp on GitHub">
+<rect x="2056" y="2660" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2672" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2672 V 2686 M 2075 2677 H 2077.5 M 2075 2680 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2684" font-size="12" font-weight="500" fill="#ECECF2">microsoft/playwright-mcp</text>
+<text x="2376" y="2684" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/mem0ai/mem0" xlink:href="https://github.com/mem0ai/mem0" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open mem0ai/mem0 on GitHub">
+<rect x="2407" y="2660" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2672" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2672 V 2686 M 2426 2677 H 2428.5 M 2426 2680 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2684" font-size="12" font-weight="500" fill="#ECECF2">mem0ai/mem0</text>
+<text x="2727" y="2684" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/letta-ai/letta" xlink:href="https://github.com/letta-ai/letta" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open letta-ai/letta on GitHub">
+<rect x="2056" y="2706" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2718" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2718 V 2732 M 2075 2723 H 2077.5 M 2075 2726 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2730" font-size="12" font-weight="500" fill="#ECECF2">letta-ai/letta</text>
+<text x="2376" y="2730" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/temporalio/temporal" xlink:href="https://github.com/temporalio/temporal" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open temporalio/temporal on GitHub">
+<rect x="2407" y="2706" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2718" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2718 V 2732 M 2426 2723 H 2428.5 M 2426 2726 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2730" font-size="12" font-weight="500" fill="#ECECF2">temporalio/temporal</text>
+<text x="2727" y="2730" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/google/gvisor" xlink:href="https://github.com/google/gvisor" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open google/gvisor on GitHub">
+<rect x="2056" y="2752" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2764" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2764 V 2778 M 2075 2769 H 2077.5 M 2075 2772 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2776" font-size="12" font-weight="500" fill="#ECECF2">google/gvisor</text>
+<text x="2376" y="2776" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/sst/opencode" xlink:href="https://github.com/sst/opencode" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open sst/opencode on GitHub">
+<rect x="2407" y="2752" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2764" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2764 V 2778 M 2426 2769 H 2428.5 M 2426 2772 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2776" font-size="12" font-weight="500" fill="#ECECF2">sst/opencode</text>
+<text x="2727" y="2776" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/cline/cline" xlink:href="https://github.com/cline/cline" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open cline/cline on GitHub">
+<rect x="2056" y="2798" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="2810" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 2810 V 2824 M 2075 2815 H 2077.5 M 2075 2818 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="2822" font-size="12" font-weight="500" fill="#ECECF2">cline/cline</text>
+<text x="2376" y="2822" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/block/goose" xlink:href="https://github.com/block/goose" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open block/goose on GitHub">
+<rect x="2407" y="2798" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="2810" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 2810 V 2824 M 2426 2815 H 2428.5 M 2426 2818 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="2822" font-size="12" font-weight="500" fill="#ECECF2">block/goose</text>
+<text x="2727" y="2822" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<circle cx="2058" cy="2876" r="3" fill="#D946EF"/>
+<text x="2068" y="2880" font-size="10.5" fill="#85858F" font-weight="400">Harness 迭代速度 &gt; 模型换代速度</text>
+<rect x="140" y="2948" width="2660" height="480" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<rect x="176" y="2978" width="48" height="4" fill="#65A30D" rx="2"/>
+<text x="176" y="3006" font-size="12" fill="#65A30D" font-weight="700" letter-spacing="1.4">06</text>
+<text x="176" y="3042" font-size="27" fill="#18181B" font-weight="700">Agent 平台与框架</text>
+<text x="176" y="3068" font-size="12.5" fill="#5F5F6B" font-weight="400">把原型变成可运营的产品</text>
+<text x="176" y="3086" font-size="12.5" fill="#5F5F6B" font-weight="400">低代码与代码优先两条路线</text>
+<rect x="526" y="2978" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="3002" r="3.5" fill="#65A30D"/>
+<text x="556" y="3006" font-size="14.5" fill="#18181B" font-weight="600">代码优先框架</text>
+<text x="544" y="3031" font-size="12" fill="#5F5F6B" font-weight="400">LangGraph · OpenAI Agents SDK</text>
+<text x="544" y="3050" font-size="12" fill="#5F5F6B" font-weight="400">Pydantic AI · Mastra · Agno</text>
+<rect x="1029" y="2978" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="3002" r="3.5" fill="#65A30D"/>
+<text x="1059" y="3006" font-size="14.5" fill="#18181B" font-weight="600">多 Agent 协作</text>
+<text x="1047" y="3031" font-size="12" fill="#5F5F6B" font-weight="400">AutoGen · CrewAI</text>
+<text x="1047" y="3050" font-size="12" fill="#5F5F6B" font-weight="400">Semantic Kernel · Google ADK</text>
+<rect x="1532" y="2978" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="3002" r="3.5" fill="#65A30D"/>
+<text x="1562" y="3006" font-size="14.5" fill="#18181B" font-weight="600">低代码编排</text>
+<text x="1550" y="3031" font-size="12" fill="#5F5F6B" font-weight="400">Dify · Coze · n8n</text>
+<text x="1550" y="3050" font-size="12" fill="#5F5F6B" font-weight="400">Langflow · Flowise</text>
+<rect x="526" y="3124" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="3148" r="3.5" fill="#65A30D"/>
+<text x="556" y="3152" font-size="14.5" fill="#18181B" font-weight="600">RAG 与知识库</text>
+<text x="544" y="3177" font-size="12" fill="#5F5F6B" font-weight="400">RAGFlow · FastGPT · LlamaIndex</text>
+<text x="544" y="3196" font-size="12" fill="#5F5F6B" font-weight="400">Haystack · 文档解析 · 混合检索</text>
+<rect x="1029" y="3124" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1047" cy="3148" r="3.5" fill="#65A30D"/>
+<text x="1059" y="3152" font-size="14.5" fill="#18181B" font-weight="600">发布与运营</text>
+<text x="1047" y="3177" font-size="12" fill="#5F5F6B" font-weight="400">Web / API / SDK · 多渠道</text>
+<text x="1047" y="3196" font-size="12" fill="#5F5F6B" font-weight="400">多租户 · RBAC · SSO</text>
+<rect x="1532" y="3124" width="473" height="130" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1550" cy="3148" r="3.5" fill="#65A30D"/>
+<text x="1562" y="3152" font-size="14.5" fill="#18181B" font-weight="600">协议与集成</text>
+<text x="1550" y="3177" font-size="12" fill="#5F5F6B" font-weight="400">MCP · A2A · OpenAPI · OAuth</text>
+<text x="1550" y="3196" font-size="12" fill="#5F5F6B" font-weight="400">插件市场 · 模板 DSL</text>
+<rect x="526" y="3278" width="1480" height="76" fill="#F4F9EE" rx="10"/>
+<rect x="526" y="3278" width="4" height="76" fill="#65A30D" rx="2"/>
+<text x="544" y="3309" font-size="12.5" fill="#5F5F6B"><tspan font-weight="700" fill="#65A30D">选型分叉：</tspan>Dify / Coze / n8n 适合快速交付；LangGraph / OpenAI Agents SDK 适合深水区</text>
+<text x="544" y="3330" font-size="11.5" fill="#5F5F6B" font-weight="400">企业常见组合 = 低代码编排 + 自建 Harness + 私有模型</text>
+<rect x="2036" y="2972" width="728" height="432" fill="#17171C" rx="16"/>
+<text x="2056" y="3002" font-size="10.5" fill="#85858F" font-weight="700" letter-spacing="1.6">GITHUB REPOS</text>
+<text x="2744" y="3002" font-size="9.5" fill="#5E5E68" font-weight="700" text-anchor="end" letter-spacing="0.8">16 REPOS</text>
+<line x1="2056" y1="3013" x2="2744" y2="3013" stroke="#2A2A32" stroke-width="1"/>
+<a href="https://github.com/langgenius/dify" xlink:href="https://github.com/langgenius/dify" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open langgenius/dify on GitHub">
+<rect x="2056" y="3024" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3036" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3036 V 3050 M 2075 3041 H 2077.5 M 2075 3044 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3048" font-size="12" font-weight="500" fill="#ECECF2">langgenius/dify</text>
+<text x="2376" y="3048" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/coze-dev/coze-studio" xlink:href="https://github.com/coze-dev/coze-studio" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open coze-dev/coze-studio on GitHub">
+<rect x="2407" y="3024" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3036" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3036 V 3050 M 2426 3041 H 2428.5 M 2426 3044 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3048" font-size="12" font-weight="500" fill="#ECECF2">coze-dev/coze-studio</text>
+<text x="2727" y="3048" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/n8n-io/n8n" xlink:href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open n8n-io/n8n on GitHub">
+<rect x="2056" y="3070" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3082" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3082 V 3096 M 2075 3087 H 2077.5 M 2075 3090 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3094" font-size="12" font-weight="500" fill="#ECECF2">n8n-io/n8n</text>
+<text x="2376" y="3094" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/langflow-ai/langflow" xlink:href="https://github.com/langflow-ai/langflow" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open langflow-ai/langflow on GitHub">
+<rect x="2407" y="3070" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3082" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3082 V 3096 M 2426 3087 H 2428.5 M 2426 3090 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3094" font-size="12" font-weight="500" fill="#ECECF2">langflow-ai/langflow</text>
+<text x="2727" y="3094" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/FlowiseAI/Flowise" xlink:href="https://github.com/FlowiseAI/Flowise" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open FlowiseAI/Flowise on GitHub">
+<rect x="2056" y="3116" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3128" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3128 V 3142 M 2075 3133 H 2077.5 M 2075 3136 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3140" font-size="12" font-weight="500" fill="#ECECF2">FlowiseAI/Flowise</text>
+<text x="2376" y="3140" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/infiniflow/ragflow" xlink:href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open infiniflow/ragflow on GitHub">
+<rect x="2407" y="3116" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3128" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3128 V 3142 M 2426 3133 H 2428.5 M 2426 3136 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3140" font-size="12" font-weight="500" fill="#ECECF2">infiniflow/ragflow</text>
+<text x="2727" y="3140" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/labring/FastGPT" xlink:href="https://github.com/labring/FastGPT" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open labring/FastGPT on GitHub">
+<rect x="2056" y="3162" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3174" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3174 V 3188 M 2075 3179 H 2077.5 M 2075 3182 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3186" font-size="12" font-weight="500" fill="#ECECF2">labring/FastGPT</text>
+<text x="2376" y="3186" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/open-webui/open-webui" xlink:href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open open-webui/open-webui on GitHub">
+<rect x="2407" y="3162" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3174" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3174 V 3188 M 2426 3179 H 2428.5 M 2426 3182 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3186" font-size="12" font-weight="500" fill="#ECECF2">open-webui/open-webui</text>
+<text x="2727" y="3186" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/danny-avila/LibreChat" xlink:href="https://github.com/danny-avila/LibreChat" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open danny-avila/LibreChat on GitHub">
+<rect x="2056" y="3208" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3220" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3220 V 3234 M 2075 3225 H 2077.5 M 2075 3228 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3232" font-size="12" font-weight="500" fill="#ECECF2">danny-avila/LibreChat</text>
+<text x="2376" y="3232" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/run-llama/llama_index" xlink:href="https://github.com/run-llama/llama_index" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open run-llama/llama_index on GitHub">
+<rect x="2407" y="3208" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3220" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3220 V 3234 M 2426 3225 H 2428.5 M 2426 3228 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3232" font-size="12" font-weight="500" fill="#ECECF2">run-llama/llama_index</text>
+<text x="2727" y="3232" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/deepset-ai/haystack" xlink:href="https://github.com/deepset-ai/haystack" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open deepset-ai/haystack on GitHub">
+<rect x="2056" y="3254" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3266" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3266 V 3280 M 2075 3271 H 2077.5 M 2075 3274 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3278" font-size="12" font-weight="500" fill="#ECECF2">deepset-ai/haystack</text>
+<text x="2376" y="3278" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/microsoft/semantic-kernel" xlink:href="https://github.com/microsoft/semantic-kernel" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open microsoft/semantic-kernel on GitHub">
+<rect x="2407" y="3254" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3266" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3266 V 3280 M 2426 3271 H 2428.5 M 2426 3274 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3278" font-size="12" font-weight="500" fill="#ECECF2">microsoft/semantic-kernel</text>
+<text x="2727" y="3278" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/pydantic/pydantic-ai" xlink:href="https://github.com/pydantic/pydantic-ai" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open pydantic/pydantic-ai on GitHub">
+<rect x="2056" y="3300" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3312" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3312 V 3326 M 2075 3317 H 2077.5 M 2075 3320 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3324" font-size="12" font-weight="500" fill="#ECECF2">pydantic/pydantic-ai</text>
+<text x="2376" y="3324" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/google/adk-python" xlink:href="https://github.com/google/adk-python" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open google/adk-python on GitHub">
+<rect x="2407" y="3300" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3312" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3312 V 3326 M 2426 3317 H 2428.5 M 2426 3320 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3324" font-size="12" font-weight="500" fill="#ECECF2">google/adk-python</text>
+<text x="2727" y="3324" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/mastra-ai/mastra" xlink:href="https://github.com/mastra-ai/mastra" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open mastra-ai/mastra on GitHub">
+<rect x="2056" y="3346" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3358" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3358 V 3372 M 2075 3363 H 2077.5 M 2075 3366 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3370" font-size="12" font-weight="500" fill="#ECECF2">mastra-ai/mastra</text>
+<text x="2376" y="3370" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/agno-agi/agno" xlink:href="https://github.com/agno-agi/agno" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open agno-agi/agno on GitHub">
+<rect x="2407" y="3346" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3358" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3358 V 3372 M 2426 3363 H 2428.5 M 2426 3366 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3370" font-size="12" font-weight="500" fill="#ECECF2">agno-agi/agno</text>
+<text x="2727" y="3370" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<rect x="140" y="3456" width="2660" height="300" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<rect x="176" y="3486" width="48" height="4" fill="#EF4444" rx="2"/>
+<text x="176" y="3514" font-size="12" fill="#EF4444" font-weight="700" letter-spacing="1.4">07</text>
+<text x="176" y="3550" font-size="27" fill="#18181B" font-weight="700">安全与权限</text>
+<text x="176" y="3576" font-size="12.5" fill="#5F5F6B" font-weight="400">能执行代码和转账时，</text>
+<text x="176" y="3594" font-size="12.5" fill="#5F5F6B" font-weight="400">安全不是附加项</text>
+<rect x="176" y="3606" width="141" height="22" fill="#FDECEC" rx="11"/>
+<text x="187" y="3621" font-size="9" fill="#EF4444" font-weight="700" letter-spacing="1.1">CROSS-CUTTING</text>
+<rect x="526" y="3486" width="355" height="100" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="3510" r="3.5" fill="#EF4444"/>
+<text x="556" y="3514" font-size="14.5" fill="#18181B" font-weight="600">最小权限</text>
+<text x="544" y="3539" font-size="12" fill="#5F5F6B" font-weight="400">工具白名单 · 短期凭证</text>
+<text x="544" y="3558" font-size="12" fill="#5F5F6B" font-weight="400">按租户 / 会话隔离</text>
+<rect x="901" y="3486" width="355" height="100" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="919" cy="3510" r="3.5" fill="#EF4444"/>
+<text x="931" y="3514" font-size="14.5" fill="#18181B" font-weight="600">策略引擎</text>
+<text x="919" y="3539" font-size="12" fill="#5F5F6B" font-weight="400">OPA 策略 · 出站管控</text>
+<text x="919" y="3558" font-size="12" fill="#5F5F6B" font-weight="400">配额 · 审批流</text>
+<rect x="1276" y="3486" width="355" height="100" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1294" cy="3510" r="3.5" fill="#EF4444"/>
+<text x="1306" y="3514" font-size="14.5" fill="#18181B" font-weight="600">注入防御</text>
+<text x="1294" y="3539" font-size="12" fill="#5F5F6B" font-weight="400">不可信内容隔离 · 双 LLM</text>
+<text x="1294" y="3558" font-size="12" fill="#5F5F6B" font-weight="400">URL / 文件 / 网页沙箱</text>
+<rect x="1651" y="3486" width="355" height="100" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1669" cy="3510" r="3.5" fill="#EF4444"/>
+<text x="1681" y="3514" font-size="14.5" fill="#18181B" font-weight="600">动作确认</text>
+<text x="1669" y="3539" font-size="12" fill="#5F5F6B" font-weight="400">高风险操作二次确认</text>
+<text x="1669" y="3558" font-size="12" fill="#5F5F6B" font-weight="400">转账 / 删除 / 发布</text>
+<rect x="526" y="3600" width="355" height="100" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="3624" r="3.5" fill="#EF4444"/>
+<text x="556" y="3628" font-size="14.5" fill="#18181B" font-weight="600">数据安全</text>
+<text x="544" y="3653" font-size="12" fill="#5F5F6B" font-weight="400">PII 脱敏 · 留存策略</text>
+<text x="544" y="3672" font-size="12" fill="#5F5F6B" font-weight="400">数据出境 · 密钥托管</text>
+<rect x="901" y="3600" width="355" height="100" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="919" cy="3624" r="3.5" fill="#EF4444"/>
+<text x="931" y="3628" font-size="14.5" fill="#18181B" font-weight="600">审计</text>
+<text x="919" y="3653" font-size="12" fill="#5F5F6B" font-weight="400">全量动作日志</text>
+<text x="919" y="3672" font-size="12" fill="#5F5F6B" font-weight="400">可追溯 · 可回放</text>
+<rect x="1276" y="3600" width="355" height="100" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1294" cy="3624" r="3.5" fill="#EF4444"/>
+<text x="1306" y="3628" font-size="14.5" fill="#18181B" font-weight="600">持续红队</text>
+<text x="1294" y="3653" font-size="12" fill="#5F5F6B" font-weight="400">garak · promptfoo</text>
+<text x="1294" y="3672" font-size="12" fill="#5F5F6B" font-weight="400">注入 / 越狱 / 工具滥用</text>
+<rect x="1651" y="3600" width="355" height="100" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1669" cy="3624" r="3.5" fill="#EF4444"/>
+<text x="1681" y="3628" font-size="14.5" fill="#18181B" font-weight="600">供应链</text>
+<text x="1669" y="3653" font-size="12" fill="#5F5F6B" font-weight="400">依赖扫描 · 模型来源</text>
+<text x="1669" y="3672" font-size="12" fill="#5F5F6B" font-weight="400">镜像签名 · SBOM</text>
+<rect x="2036" y="3480" width="728" height="252" fill="#17171C" rx="16"/>
+<text x="2056" y="3510" font-size="10.5" fill="#85858F" font-weight="700" letter-spacing="1.6">GITHUB REPOS</text>
+<text x="2744" y="3510" font-size="9.5" fill="#5E5E68" font-weight="700" text-anchor="end" letter-spacing="0.8">8 REPOS</text>
+<line x1="2056" y1="3521" x2="2744" y2="3521" stroke="#2A2A32" stroke-width="1"/>
+<a href="https://github.com/guardrails-ai/guardrails" xlink:href="https://github.com/guardrails-ai/guardrails" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open guardrails-ai/guardrails on GitHub">
+<rect x="2056" y="3532" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3544" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3544 V 3558 M 2075 3549 H 2077.5 M 2075 3552 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3556" font-size="12" font-weight="500" fill="#ECECF2">guardrails-ai/guardrails</text>
+<text x="2376" y="3556" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/NVIDIA/NeMo-Guardrails" xlink:href="https://github.com/NVIDIA/NeMo-Guardrails" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/NeMo-Guardrails on GitHub">
+<rect x="2407" y="3532" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3544" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3544 V 3558 M 2426 3549 H 2428.5 M 2426 3552 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3556" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/NeMo-Guardrails</text>
+<text x="2727" y="3556" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/meta-llama/PurpleLlama" xlink:href="https://github.com/meta-llama/PurpleLlama" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open meta-llama/PurpleLlama on GitHub">
+<rect x="2056" y="3578" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3590" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3590 V 3604 M 2075 3595 H 2077.5 M 2075 3598 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3602" font-size="12" font-weight="500" fill="#ECECF2">meta-llama/PurpleLlama</text>
+<text x="2376" y="3602" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/microsoft/presidio" xlink:href="https://github.com/microsoft/presidio" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open microsoft/presidio on GitHub">
+<rect x="2407" y="3578" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3590" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3590 V 3604 M 2426 3595 H 2428.5 M 2426 3598 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3602" font-size="12" font-weight="500" fill="#ECECF2">microsoft/presidio</text>
+<text x="2727" y="3602" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/promptfoo/promptfoo" xlink:href="https://github.com/promptfoo/promptfoo" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open promptfoo/promptfoo on GitHub">
+<rect x="2056" y="3624" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3636" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3636 V 3650 M 2075 3641 H 2077.5 M 2075 3644 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3648" font-size="12" font-weight="500" fill="#ECECF2">promptfoo/promptfoo</text>
+<text x="2376" y="3648" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/NVIDIA/garak" xlink:href="https://github.com/NVIDIA/garak" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/garak on GitHub">
+<rect x="2407" y="3624" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3636" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3636 V 3650 M 2426 3641 H 2428.5 M 2426 3644 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3648" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/garak</text>
+<text x="2727" y="3648" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/protectai/rebuff" xlink:href="https://github.com/protectai/rebuff" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open protectai/rebuff on GitHub">
+<rect x="2056" y="3670" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3682" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3682 V 3696 M 2075 3687 H 2077.5 M 2075 3690 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3694" font-size="12" font-weight="500" fill="#ECECF2">protectai/rebuff</text>
+<text x="2376" y="3694" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/open-policy-agent/opa" xlink:href="https://github.com/open-policy-agent/opa" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open open-policy-agent/opa on GitHub">
+<rect x="2407" y="3670" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3682" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3682 V 3696 M 2426 3687 H 2428.5 M 2426 3690 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3694" font-size="12" font-weight="500" fill="#ECECF2">open-policy-agent/opa</text>
+<text x="2727" y="3694" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<rect x="140" y="3784" width="2660" height="340" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<rect x="176" y="3814" width="48" height="4" fill="#0F766E" rx="2"/>
+<text x="176" y="3842" font-size="12" fill="#0F766E" font-weight="700" letter-spacing="1.4">08</text>
+<text x="176" y="3878" font-size="27" fill="#18181B" font-weight="700">观测与数据飞轮</text>
+<text x="176" y="3904" font-size="12.5" fill="#5F5F6B" font-weight="400">让每一次生产调用</text>
+<text x="176" y="3922" font-size="12.5" fill="#5F5F6B" font-weight="400">变成下一轮训练数据</text>
+<rect x="176" y="3934" width="141" height="22" fill="#E7F1F0" rx="11"/>
+<text x="187" y="3949" font-size="9" fill="#0F766E" font-weight="700" letter-spacing="1.1">DATA FLYWHEEL</text>
+<rect x="526" y="3814" width="355" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="3838" r="3.5" fill="#0F766E"/>
+<text x="556" y="3842" font-size="14.5" fill="#18181B" font-weight="600">全链路 Trace</text>
+<text x="544" y="3867" font-size="12" fill="#5F5F6B" font-weight="400">每步 token · 时延</text>
+<text x="544" y="3886" font-size="12" fill="#5F5F6B" font-weight="400">工具结果 · 成本</text>
+<rect x="901" y="3814" width="355" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="919" cy="3838" r="3.5" fill="#0F766E"/>
+<text x="931" y="3842" font-size="14.5" fill="#18181B" font-weight="600">任务指标</text>
+<text x="919" y="3867" font-size="12" fill="#5F5F6B" font-weight="400">成功率 · 步数 · 接管率</text>
+<text x="919" y="3886" font-size="12" fill="#5F5F6B" font-weight="400">$/task · 失败分类</text>
+<rect x="1276" y="3814" width="355" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1294" cy="3838" r="3.5" fill="#0F766E"/>
+<text x="1306" y="3842" font-size="14.5" fill="#18181B" font-weight="600">成本核算</text>
+<text x="1294" y="3867" font-size="12" fill="#5F5F6B" font-weight="400">token 明细 · 缓存命中</text>
+<text x="1294" y="3886" font-size="12" fill="#5F5F6B" font-weight="400">GPU 利用率 · 分摊</text>
+<rect x="1651" y="3814" width="355" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1669" cy="3838" r="3.5" fill="#0F766E"/>
+<text x="1681" y="3842" font-size="14.5" fill="#18181B" font-weight="600">失败归因</text>
+<text x="1669" y="3867" font-size="12" fill="#5F5F6B" font-weight="400">工具 / 推理 / 环境</text>
+<text x="1669" y="3886" font-size="12" fill="#5F5F6B" font-weight="400">自动聚类 · 回归用例</text>
+<rect x="526" y="3948" width="355" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="544" cy="3972" r="3.5" fill="#0F766E"/>
+<text x="556" y="3976" font-size="14.5" fill="#18181B" font-weight="600">离线回归</text>
+<text x="544" y="4001" font-size="12" fill="#5F5F6B" font-weight="400">黄金集 · 私有 eval</text>
+<text x="544" y="4020" font-size="12" fill="#5F5F6B" font-weight="400">版本对比 · 门禁</text>
+<rect x="901" y="3948" width="355" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="919" cy="3972" r="3.5" fill="#0F766E"/>
+<text x="931" y="3976" font-size="14.5" fill="#18181B" font-weight="600">在线实验</text>
+<text x="919" y="4001" font-size="12" fill="#5F5F6B" font-weight="400">A/B · canary</text>
+<text x="919" y="4020" font-size="12" fill="#5F5F6B" font-weight="400">自动回滚 · 灰度</text>
+<rect x="1276" y="3948" width="355" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1294" cy="3972" r="3.5" fill="#0F766E"/>
+<text x="1306" y="3976" font-size="14.5" fill="#18181B" font-weight="600">数据精选</text>
+<text x="1294" y="4001" font-size="12" fill="#5F5F6B" font-weight="400">脱敏 · 去重 · 难度分层</text>
+<text x="1294" y="4020" font-size="12" fill="#5F5F6B" font-weight="400">轨迹质量打分</text>
+<rect x="1651" y="3948" width="355" height="120" fill="#FAFAFB" stroke="#ECECF1" stroke-width="1" rx="12"/>
+<circle cx="1669" cy="3972" r="3.5" fill="#0F766E"/>
+<text x="1681" y="3976" font-size="14.5" fill="#18181B" font-weight="600">再训练</text>
+<text x="1669" y="4001" font-size="12" fill="#5F5F6B" font-weight="400">SFT / RL → 新 ckpt</text>
+<text x="1669" y="4020" font-size="12" fill="#5F5F6B" font-weight="400">再评测 → 再发布</text>
+<rect x="2036" y="3808" width="728" height="292" fill="#17171C" rx="16"/>
+<text x="2056" y="3838" font-size="10.5" fill="#85858F" font-weight="700" letter-spacing="1.6">GITHUB REPOS</text>
+<text x="2744" y="3838" font-size="9.5" fill="#5E5E68" font-weight="700" text-anchor="end" letter-spacing="0.8">8 REPOS</text>
+<line x1="2056" y1="3849" x2="2744" y2="3849" stroke="#2A2A32" stroke-width="1"/>
+<a href="https://github.com/langfuse/langfuse" xlink:href="https://github.com/langfuse/langfuse" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open langfuse/langfuse on GitHub">
+<rect x="2056" y="3860" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3872" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3872 V 3886 M 2075 3877 H 2077.5 M 2075 3880 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3884" font-size="12" font-weight="500" fill="#ECECF2">langfuse/langfuse</text>
+<text x="2376" y="3884" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/Arize-ai/phoenix" xlink:href="https://github.com/Arize-ai/phoenix" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open Arize-ai/phoenix on GitHub">
+<rect x="2407" y="3860" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3872" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3872 V 3886 M 2426 3877 H 2428.5 M 2426 3880 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3884" font-size="12" font-weight="500" fill="#ECECF2">Arize-ai/phoenix</text>
+<text x="2727" y="3884" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/comet-ml/opik" xlink:href="https://github.com/comet-ml/opik" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open comet-ml/opik on GitHub">
+<rect x="2056" y="3906" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3918" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3918 V 3932 M 2075 3923 H 2077.5 M 2075 3926 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3930" font-size="12" font-weight="500" fill="#ECECF2">comet-ml/opik</text>
+<text x="2376" y="3930" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/Helicone/helicone" xlink:href="https://github.com/Helicone/helicone" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open Helicone/helicone on GitHub">
+<rect x="2407" y="3906" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3918" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3918 V 3932 M 2426 3923 H 2428.5 M 2426 3926 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3930" font-size="12" font-weight="500" fill="#ECECF2">Helicone/helicone</text>
+<text x="2727" y="3930" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/open-telemetry/opentelemetry-python" xlink:href="https://github.com/open-telemetry/opentelemetry-python" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open open-telemetry/opentelemetry-python on GitHub">
+<rect x="2056" y="3952" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="3964" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 3964 V 3978 M 2075 3969 H 2077.5 M 2075 3972 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="3976" font-size="11.2" font-weight="500" fill="#ECECF2">open-telemetry/opentelemetry-python</text>
+<text x="2376" y="3976" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/HumanSignal/label-studio" xlink:href="https://github.com/HumanSignal/label-studio" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open HumanSignal/label-studio on GitHub">
+<rect x="2407" y="3952" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="3964" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 3964 V 3978 M 2426 3969 H 2428.5 M 2426 3972 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="3976" font-size="12" font-weight="500" fill="#ECECF2">HumanSignal/label-studio</text>
+<text x="2727" y="3976" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/wandb/wandb" xlink:href="https://github.com/wandb/wandb" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open wandb/wandb on GitHub">
+<rect x="2056" y="3998" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2069" y="4010" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2072.5 4010 V 4024 M 2075 4015 H 2077.5 M 2075 4018 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2088" y="4022" font-size="12" font-weight="500" fill="#ECECF2">wandb/wandb</text>
+<text x="2376" y="4022" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<a href="https://github.com/confident-ai/deepeval" xlink:href="https://github.com/confident-ai/deepeval" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open confident-ai/deepeval on GitHub">
+<rect x="2407" y="3998" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
+<rect x="2420" y="4010" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
+<path d="M 2423.5 4010 V 4024 M 2426 4015 H 2428.5 M 2426 4018 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
+<text x="2439" y="4022" font-size="12" font-weight="500" fill="#ECECF2">confident-ai/deepeval</text>
+<text x="2727" y="4022" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
+</a>
+<circle cx="2058" cy="4080" r="3" fill="#0F766E"/>
+<text x="2068" y="4084" font-size="10.5" fill="#85858F" font-weight="400">没有 trace 就没有飞轮</text>
+<rect x="140" y="4160" width="2660" height="320" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<text x="176" y="4200" font-size="22" fill="#18181B" font-weight="700">一次请求的 Token 旅程</text>
+<text x="176" y="4224" font-size="12.5" fill="#5F5F6B" font-weight="400">从 HTTP 请求到流式 Token —— 中间是多次模型调用与工具执行的循环</text>
+<rect x="176" y="4250" width="300" height="150" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1" rx="14"/>
+<circle cx="200" cy="4276" r="13" fill="#EEEBF9"/>
+<text x="200" y="4280" font-size="10" fill="#6E56CF" font-weight="700" text-anchor="middle">01</text>
+<text x="220" y="4281" font-size="14" fill="#18181B" font-weight="700">接入</text>
+<text x="194" y="4314" font-size="12" fill="#5F5F6B" font-weight="400">Auth · rate limit</text>
+<text x="194" y="4333" font-size="12" fill="#5F5F6B" font-weight="400">session / tenant</text>
+<text x="194" y="4382" font-size="9" fill="#6E56CF" font-weight="700" letter-spacing="1.2">EDGE / API</text>
+<line x1="481" y1="4325" x2="497" y2="4325" stroke="#B9B9C4" stroke-width="1.4"/>
+<polygon points="497,4325 491,4321.470588235294 491,4328.529411764706" fill="#B9B9C4"/>
+<rect x="502" y="4250" width="300" height="150" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1" rx="14"/>
+<circle cx="526" cy="4276" r="13" fill="#FAE9FD"/>
+<text x="526" y="4280" font-size="10" fill="#D946EF" font-weight="700" text-anchor="middle">02</text>
+<text x="546" y="4281" font-size="14" fill="#18181B" font-weight="700">上下文组装</text>
+<text x="520" y="4314" font-size="12" fill="#5F5F6B" font-weight="400">system + tools + memory</text>
+<text x="520" y="4333" font-size="12" fill="#5F5F6B" font-weight="400">history 按 token 预算裁剪</text>
+<text x="520" y="4382" font-size="9" fill="#D946EF" font-weight="700" letter-spacing="1.2">HARNESS</text>
+<line x1="807" y1="4325" x2="823" y2="4325" stroke="#B9B9C4" stroke-width="1.4"/>
+<polygon points="823,4325 817,4321.470588235294 817,4328.529411764706" fill="#B9B9C4"/>
+<rect x="828" y="4250" width="300" height="150" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1" rx="14"/>
+<circle cx="852" cy="4276" r="13" fill="#FDEAE4"/>
+<text x="852" y="4280" font-size="10" fill="#F24E1E" font-weight="700" text-anchor="middle">03</text>
+<text x="872" y="4281" font-size="14" fill="#18181B" font-weight="700">路由</text>
+<text x="846" y="4314" font-size="12" fill="#5F5F6B" font-weight="400">模型级联</text>
+<text x="846" y="4333" font-size="12" fill="#5F5F6B" font-weight="400">区域 / 配额 / 成本</text>
+<text x="846" y="4382" font-size="9" fill="#F24E1E" font-weight="700" letter-spacing="1.2">ROUTER</text>
+<line x1="1133" y1="4325" x2="1149" y2="4325" stroke="#B9B9C4" stroke-width="1.4"/>
+<polygon points="1149,4325 1143,4321.470588235294 1143,4328.529411764706" fill="#B9B9C4"/>
+<rect x="1154" y="4250" width="300" height="150" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1" rx="14"/>
+<circle cx="1178" cy="4276" r="13" fill="#FFF4E5"/>
+<text x="1178" y="4280" font-size="10" fill="#FFA629" font-weight="700" text-anchor="middle">04</text>
+<text x="1198" y="4281" font-size="14" fill="#18181B" font-weight="700">Prefill</text>
+<text x="1172" y="4314" font-size="12" fill="#5F5F6B" font-weight="400">tokenize · KV cache</text>
+<text x="1172" y="4333" font-size="12" fill="#5F5F6B" font-weight="400">prefix cache 命中</text>
+<text x="1172" y="4382" font-size="9" fill="#FFA629" font-weight="700" letter-spacing="1.2">GPU · PREFILL</text>
+<line x1="1459" y1="4325" x2="1475" y2="4325" stroke="#B9B9C4" stroke-width="1.4"/>
+<polygon points="1475,4325 1469,4321.470588235294 1469,4328.529411764706" fill="#B9B9C4"/>
+<rect x="1480" y="4250" width="300" height="150" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1" rx="14"/>
+<circle cx="1504" cy="4276" r="13" fill="#E2F3FF"/>
+<text x="1504" y="4280" font-size="10" fill="#0D99FF" font-weight="700" text-anchor="middle">05</text>
+<text x="1524" y="4281" font-size="14" fill="#18181B" font-weight="700">Decode</text>
+<text x="1498" y="4314" font-size="12" fill="#5F5F6B" font-weight="400">流式 token</text>
+<text x="1498" y="4333" font-size="12" fill="#5F5F6B" font-weight="400">grammar / tool-call</text>
+<text x="1498" y="4382" font-size="9" fill="#0D99FF" font-weight="700" letter-spacing="1.2">GPU · DECODE</text>
+<line x1="1785" y1="4325" x2="1801" y2="4325" stroke="#B9B9C4" stroke-width="1.4"/>
+<polygon points="1801,4325 1795,4321.470588235294 1795,4328.529411764706" fill="#B9B9C4"/>
+<rect x="1806" y="4250" width="300" height="150" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1" rx="14"/>
+<circle cx="1830" cy="4276" r="13" fill="#E3F5EB"/>
+<text x="1830" y="4280" font-size="10" fill="#14AE5C" font-weight="700" text-anchor="middle">06</text>
+<text x="1850" y="4281" font-size="14" fill="#18181B" font-weight="700">工具执行</text>
+<text x="1824" y="4314" font-size="12" fill="#5F5F6B" font-weight="400">schema 校验</text>
+<text x="1824" y="4333" font-size="12" fill="#5F5F6B" font-weight="400">沙箱 → observation</text>
+<text x="1824" y="4382" font-size="9" fill="#14AE5C" font-weight="700" letter-spacing="1.2">SANDBOX</text>
+<line x1="2111" y1="4325" x2="2127" y2="4325" stroke="#B9B9C4" stroke-width="1.4"/>
+<polygon points="2127,4325 2121,4321.470588235294 2121,4328.529411764706" fill="#B9B9C4"/>
+<rect x="2132" y="4250" width="300" height="150" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1" rx="14"/>
+<circle cx="2156" cy="4276" r="13" fill="#FAE9FD"/>
+<text x="2156" y="4280" font-size="10" fill="#D946EF" font-weight="700" text-anchor="middle">07</text>
+<text x="2176" y="4281" font-size="14" fill="#18181B" font-weight="700">循环</text>
+<text x="2150" y="4314" font-size="12" fill="#5F5F6B" font-weight="400">回到 02，直到</text>
+<text x="2150" y="4333" font-size="12" fill="#5F5F6B" font-weight="400">预算 / 完成 / 失败</text>
+<text x="2150" y="4382" font-size="9" fill="#D946EF" font-weight="700" letter-spacing="1.2">HARNESS</text>
+<line x1="2437" y1="4325" x2="2453" y2="4325" stroke="#B9B9C4" stroke-width="1.4"/>
+<polygon points="2453,4325 2447,4321.470588235294 2447,4328.529411764706" fill="#B9B9C4"/>
+<rect x="2458" y="4250" width="300" height="150" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1" rx="14"/>
+<circle cx="2482" cy="4276" r="13" fill="#E2EFEE"/>
+<text x="2482" y="4280" font-size="10" fill="#0F766E" font-weight="700" text-anchor="middle">08</text>
+<text x="2502" y="4281" font-size="14" fill="#18181B" font-weight="700">输出</text>
+<text x="2476" y="4314" font-size="12" fill="#5F5F6B" font-weight="400">SSE 流式返回</text>
+<text x="2476" y="4333" font-size="12" fill="#5F5F6B" font-weight="400">trace · cost · feedback</text>
+<text x="2476" y="4382" font-size="9" fill="#0F766E" font-weight="700" letter-spacing="1.2">STREAM + TRACE</text>
+<path d="M 1956 4404 V 4428 H 652 V 4410" fill="none" stroke="#D946EF" stroke-width="1.3" stroke-dasharray="5 5"/>
+<polygon points="652,4404 647.8823529411765,4411 656.1176470588235,4411" fill="#D946EF"/>
+<text x="1304" y="4446" font-size="11" fill="#D946EF" font-weight="600" text-anchor="middle">observation 回填 → 在 step / token / 时间预算内循环</text>
+<rect x="140" y="4508" width="2660" height="260" fill="#FFFFFF" stroke="#E4E4EA" stroke-width="1" rx="22"/>
+<text x="176" y="4550" font-size="22" fill="#18181B" font-weight="700">落地路线 · 务实版</text>
+<text x="176" y="4574" font-size="12.5" fill="#5F5F6B" font-weight="400">先验证闭环，再降本，最后才规模化</text>
+<text x="2764" y="4550" font-size="13" fill="#F24E1E" font-weight="700" text-anchor="end">注意 · 预训练是最后才考虑的事</text>
+<rect x="176" y="4600" width="846" height="132" fill="#F8F7FD" stroke="#ECECF1" stroke-width="1" rx="14"/>
+<rect x="176" y="4600" width="4" height="132" fill="#6E56CF" rx="2"/>
+<text x="196" y="4624" font-size="9.5" fill="#6E56CF" font-weight="700" letter-spacing="1.2">PHASE 1 · 0–3 月</text>
+<text x="196" y="4652" font-size="17" fill="#18181B" font-weight="700">验证闭环</text>
+<text x="196" y="4680" font-size="12" fill="#5F5F6B" font-weight="400">前沿 API + Harness + 沙箱 + Eval</text>
+<text x="196" y="4698" font-size="12" fill="#5F5F6B" font-weight="400">先证明任务成功率与单位经济模型</text>
+<text x="196" y="4720" font-size="10.5" fill="#8A8A95" font-weight="600">EXIT · 端到端成功率 &gt; 基线，$/task 可算</text>
+<rect x="1046" y="4600" width="846" height="132" fill="#F4FBF8" stroke="#ECECF1" stroke-width="1" rx="14"/>
+<rect x="1046" y="4600" width="4" height="132" fill="#14AE5C" rx="2"/>
+<text x="1066" y="4624" font-size="9.5" fill="#14AE5C" font-weight="700" letter-spacing="1.2">PHASE 2 · 3–9 月</text>
+<text x="1066" y="4652" font-size="17" fill="#18181B" font-weight="700">降本可控</text>
+<text x="1066" y="4680" font-size="12" fill="#5F5F6B" font-weight="400">开源基座 + 领域 SFT + vLLM 自托管</text>
+<text x="1066" y="4698" font-size="12" fill="#5F5F6B" font-weight="400">私有 eval 回归 + prefix cache 优化</text>
+<text x="1066" y="4720" font-size="10.5" fill="#8A8A95" font-weight="600">EXIT · 成本降 5–10×，质量不降</text>
+<rect x="1916" y="4600" width="846" height="132" fill="#FEF7F5" stroke="#ECECF1" stroke-width="1" rx="14"/>
+<rect x="1916" y="4600" width="4" height="132" fill="#F24E1E" rx="2"/>
+<text x="1936" y="4624" font-size="9.5" fill="#F24E1E" font-weight="700" letter-spacing="1.2">PHASE 3 · 9 月+</text>
+<text x="1936" y="4652" font-size="17" fill="#18181B" font-weight="700">规模化</text>
+<text x="1936" y="4680" font-size="12" fill="#5F5F6B" font-weight="400">Agentic RL + 自建训练集群 + 数据飞轮</text>
+<text x="1936" y="4698" font-size="12" fill="#5F5F6B" font-weight="400">只有规模证明后才考虑预训练</text>
+<text x="1936" y="4720" font-size="10.5" fill="#8A8A95" font-weight="600">EXIT · 成功率持续爬坡，边际成本下降</text>
+<text x="140" y="4808" font-size="10.5" fill="#8A8A95" font-weight="400">Agent 全链路技术架构 · 2026-11 · 仓库为各阶段代表项目，非穷举 · 点击仓库名跳转 GitHub</text>
+<text x="2764" y="4808" font-size="10.5" fill="#8A8A95" font-weight="400" text-anchor="end">Editable SVG for Figma · 2880 × 4840</text>
+</svg>

@@ -1,0 +1,101 @@
+{
+  "eval": {
+    "hot": [
+      "topic:llm-evaluation stars:>50 archived:false fork:false",
+      "topic:agent-evaluation stars:>20 archived:false fork:false",
+      "topic:llm-eval stars:>50 archived:false fork:false"
+    ],
+    "rising": [
+      "topic:llm-evaluation created:>{since} stars:>5 archived:false fork:false",
+      "topic:agent-evaluation created:>{since} stars:>5 archived:false fork:false"
+    ]
+  },
+  "infra": {
+    "hot": [
+      "topic:gpu-cluster stars:>20 archived:false fork:false",
+      "topic:ml-infrastructure stars:>200 archived:false fork:false",
+      "topic:llm-infrastructure stars:>50 archived:false fork:false"
+    ],
+    "rising": [
+      "topic:gpu-cluster created:>{since} stars:>5 archived:false fork:false",
+      "topic:ml-infrastructure created:>{since} stars:>10 archived:false fork:false"
+    ]
+  },
+  "training": {
+    "hot": [
+      "topic:llm-training stars:>100 archived:false fork:false",
+      "topic:rlhf stars:>100 archived:false fork:false",
+      "topic:fine-tuning stars:>500 archived:false fork:false"
+    ],
+    "rising": [
+      "topic:rlhf created:>{since} stars:>10 archived:false fork:false",
+      "topic:post-training created:>{since} stars:>10 archived:false fork:false"
+    ]
+  },
+  "model": {
+    "hot": [
+      "topic:foundation-models stars:>100 archived:false fork:false",
+      "topic:multimodal stars:>500 archived:false fork:false",
+      "topic:long-context stars:>50 archived:false fork:false"
+    ],
+    "rising": [
+      "topic:foundation-models created:>{since} stars:>10 archived:false fork:false",
+      "topic:multimodal created:>{since} stars:>30 archived:false fork:false"
+    ]
+  },
+  "serving": {
+    "hot": [
+      "topic:llm-serving stars:>50 archived:false fork:false",
+      "topic:llm-inference stars:>50 archived:false fork:false",
+      "topic:inference-engine stars:>50 archived:false fork:false"
+    ],
+    "rising": [
+      "topic:llm-serving created:>{since} stars:>5 archived:false fork:false",
+      "topic:kv-cache created:>{since} stars:>5 archived:false fork:false"
+    ]
+  },
+  "harness": {
+    "hot": [
+      "topic:ai-agents stars:>300 archived:false fork:false",
+      "topic:agent-framework stars:>50 archived:false fork:false",
+      "topic:mcp stars:>200 archived:false fork:false"
+    ],
+    "rising": [
+      "topic:ai-agents created:>{since} stars:>30 archived:false fork:false",
+      "topic:agent-framework created:>{since} stars:>10 archived:false fork:false"
+    ]
+  },
+  "platform": {
+    "hot": [
+      "topic:llmops stars:>100 archived:false fork:false",
+      "topic:rag stars:>500 archived:false fork:false",
+      "topic:workflow-automation stars:>500 archived:false fork:false"
+    ],
+    "rising": [
+      "topic:llmops created:>{since} stars:>10 archived:false fork:false",
+      "topic:rag created:>{since} stars:>30 archived:false fork:false"
+    ]
+  },
+  "security": {
+    "hot": [
+      "topic:llm-security stars:>30 archived:false fork:false",
+      "topic:guardrails stars:>30 archived:false fork:false",
+      "topic:prompt-injection stars:>20 archived:false fork:false"
+    ],
+    "rising": [
+      "topic:llm-security created:>{since} stars:>5 archived:false fork:false",
+      "topic:guardrails created:>{since} stars:>5 archived:false fork:false"
+    ]
+  },
+  "observability": {
+    "hot": [
+      "topic:llm-observability stars:>30 archived:false fork:false",
+      "topic:agent-observability stars:>20 archived:false fork:false",
+      "topic:llmops stars:>100 archived:false fork:false"
+    ],
+    "rising": [
+      "topic:llm-observability created:>{since} stars:>5 archived:false fork:false",
+      "topic:agent-observability created:>{since} stars:>5 archived:false fork:false"
+    ]
+  }
+}

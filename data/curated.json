@@ -1,0 +1,196 @@
+{
+  "generatedAt": "2026-11-06T06:04:19+00:00",
+  "totalRepos": 100,
+  "stages": [
+    {
+      "id": "eval",
+      "num": "00",
+      "title": "评测与任务定义",
+      "short": "评测",
+      "color": "#6E56CF",
+      "goal": "先定义“什么算完成”，再谈模型",
+      "repos": [
+        "openai/evals",
+        "EleutherAI/lm-evaluation-harness",
+        "UKGovernmentBEIS/inspect_ai",
+        "SWE-bench/SWE-bench",
+        "web-arena-x/webarena",
+        "sierra-research/tau-bench",
+        "THUDM/AgentBench",
+        "huggingface/lighteval"
+      ]
+    },
+    {
+      "id": "infra",
+      "num": "01",
+      "title": "算力与集群",
+      "short": "算力",
+      "color": "#0D99FF",
+      "goal": "稳定、可调度、可恢复的算力底座",
+      "repos": [
+        "NVIDIA/nccl",
+        "NVIDIA/gpu-operator",
+        "volcano-sh/volcano",
+        "kubernetes-sigs/kueue",
+        "ray-project/ray",
+        "NVIDIA/DCGM",
+        "ofiwg/libfabric",
+        "kubeflow/training-operator"
+      ]
+    },
+    {
+      "id": "training",
+      "num": "02",
+      "title": "数据与训练",
+      "short": "训练",
+      "color": "#14AE5C",
+      "goal": "Agent 能力的真正来源： 数据 × 环境 × RL",
+      "repos": [
+        "huggingface/datatrove",
+        "allenai/dolma",
+        "NVIDIA/NeMo-Curator",
+        "modelscope/data-juicer",
+        "NVIDIA/Megatron-LM",
+        "pytorch/torchtitan",
+        "deepspeedai/DeepSpeed",
+        "volcengine/verl",
+        "OpenRLHF/OpenRLHF",
+        "huggingface/trl",
+        "NovaSky-AI/SkyRL",
+        "inclusionAI/AReaL",
+        "unslothai/unsloth",
+        "axolotl-ai-cloud/axolotl",
+        "firecracker-microvm/firecracker",
+        "e2b-dev/E2B"
+      ]
+    },
+    {
+      "id": "model",
+      "num": "03",
+      "title": "模型设计",
+      "short": "模型",
+      "color": "#F24E1E",
+      "goal": "围绕 Agent 场景做架构与能力取舍",
+      "repos": [
+        "QwenLM/Qwen3",
+        "meta-llama/llama-models",
+        "deepseek-ai/DeepSeek-V3",
+        "huggingface/transformers",
+        "Dao-AILab/flash-attention",
+        "deepseek-ai/DeepEP",
+        "NVIDIA/TransformerEngine",
+        "huggingface/tokenizers"
+      ]
+    },
+    {
+      "id": "serving",
+      "num": "04",
+      "title": "推理服务",
+      "short": "推理",
+      "color": "#FFA629",
+      "goal": "把权重变成低延迟、低成本的 Token",
+      "repos": [
+        "vllm-project/vllm",
+        "sgl-project/sglang",
+        "NVIDIA/TensorRT-LLM",
+        "InternLM/lmdeploy",
+        "LMCache/LMCache",
+        "ai-dynamo/dynamo",
+        "NVIDIA/Triton-Inference-Server",
+        "BerriAI/litellm",
+        "ggml-org/llama.cpp",
+        "ollama/ollama",
+        "huggingface/text-generation-inference",
+        "llm-d/llm-d"
+      ]
+    },
+    {
+      "id": "harness",
+      "num": "05",
+      "title": "Agent Harness",
+      "short": "Harness",
+      "color": "#D946EF",
+      "goal": "模型之外的体验分水岭",
+      "repos": [
+        "langchain-ai/langgraph",
+        "openai/openai-agents-python",
+        "huggingface/smolagents",
+        "microsoft/autogen",
+        "SWE-agent/SWE-agent",
+        "All-Hands-AI/OpenHands",
+        "browser-use/browser-use",
+        "modelcontextprotocol/servers",
+        "microsoft/playwright-mcp",
+        "mem0ai/mem0",
+        "letta-ai/letta",
+        "temporalio/temporal",
+        "google/gvisor",
+        "sst/opencode",
+        "cline/cline",
+        "block/goose"
+      ]
+    },
+    {
+      "id": "platform",
+      "num": "06",
+      "title": "Agent 平台与框架",
+      "short": "平台",
+      "color": "#65A30D",
+      "goal": "把原型变成可运营的产品 低代码与代码优先两条路线",
+      "repos": [
+        "langgenius/dify",
+        "coze-dev/coze-studio",
+        "n8n-io/n8n",
+        "langflow-ai/langflow",
+        "FlowiseAI/Flowise",
+        "infiniflow/ragflow",
+        "labring/FastGPT",
+        "open-webui/open-webui",
+        "danny-avila/LibreChat",
+        "run-llama/llama_index",
+        "deepset-ai/haystack",
+        "microsoft/semantic-kernel",
+        "pydantic/pydantic-ai",
+        "google/adk-python",
+        "mastra-ai/mastra",
+        "agno-agi/agno"
+      ]
+    },
+    {
+      "id": "security",
+      "num": "07",
+      "title": "安全与权限",
+      "short": "安全",
+      "color": "#EF4444",
+      "goal": "能执行代码和转账时， 安全不是附加项",
+      "repos": [
+        "guardrails-ai/guardrails",
+        "NVIDIA/NeMo-Guardrails",
+        "meta-llama/PurpleLlama",
+        "microsoft/presidio",
+        "promptfoo/promptfoo",
+        "NVIDIA/garak",
+        "protectai/rebuff",
+        "open-policy-agent/opa"
+      ]
+    },
+    {
+      "id": "observability",
+      "num": "08",
+      "title": "观测与数据飞轮",
+      "short": "观测",
+      "color": "#0F766E",
+      "goal": "让每一次生产调用 变成下一轮训练数据",
+      "repos": [
+        "langfuse/langfuse",
+        "Arize-ai/phoenix",
+        "comet-ml/opik",
+        "Helicone/helicone",
+        "open-telemetry/opentelemetry-python",
+        "HumanSignal/label-studio",
+        "wandb/wandb",
+        "confident-ai/deepeval"
+      ]
+    }
+  ]
+}

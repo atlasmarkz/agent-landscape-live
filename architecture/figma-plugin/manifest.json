@@ -1,0 +1,10 @@
+{
+  "name": "Agent Diagram · GitHub Links",
+  "id": "agent-architecture-github-links-2026",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": [
+    "figma"
+  ],
+  "documentAccess": "dynamic-page"
+}
