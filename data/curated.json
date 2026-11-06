@@ -114,6 +114,7 @@
       "repos": [
         "langchain-ai/langgraph",
         "openai/openai-agents-python",
+        "deepseek-ai/deepseek-harness",
         "huggingface/smolagents",
         "microsoft/autogen",
         "SWE-agent/SWE-agent",

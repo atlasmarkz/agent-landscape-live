@@ -139,7 +139,7 @@ async function fetchMode(stageId, mode) {
   for (const template of queries[stageId]?.[mode] || []) {
     const q = template.replaceAll("{since}", since);
     try {
-      const url = `https://api.github.com/search/repositories?q=${encodeURIComponent(q)}&sort=stars&order=desc&per_page=20`;
+      const url = `https://api.github.com/search/repositories?q=${encodeURIComponent(q)}&sort=stars&order=desc&per_page=40`;
       const data = await gh(url);
       let kept = 0;
       for (const item of data.items || []) {
@@ -158,7 +158,7 @@ async function fetchMode(stageId, mode) {
   const unique = [];
   const seenDescriptions = new Map();
   const seenNames = new Set();
-  for (const repo of [...merged.values()].sort((a, b) => b.stars - a.stars)) {
+  for (const repo of [...merged.values()].sort((a, b) => (b.curated ? 1 : 0) - (a.curated ? 1 : 0) || b.stars - a.stars)) {
     const key = (repo.description || "").toLowerCase().replace(/\s+/g, " ").trim();
     const repoName = repo.fullName.split("/").pop().toLowerCase().replace(/[^a-z0-9]/g, "");
     if (key && seenDescriptions.has(key)) continue;
@@ -169,8 +169,7 @@ async function fetchMode(stageId, mode) {
   }
   return unique
     .map((r) => ({ ...r, curated: curatedSet.has(r.fullName) }))
-    .sort((a, b) => b.stars - a.stars)
-    .slice(0, 8);
+    .slice(0, 12);
 }
 
 let previous = {};

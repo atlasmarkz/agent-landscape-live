@@ -5,8 +5,8 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # Every 6 hours. GitHub may delay scheduled runs under load.
-    - cron: "17 */6 * * *"
+    # Every 4 hours for fresher data. GitHub may delay under load.
+    - cron: "2 */4 * * *"
 
 permissions:
   contents: write
