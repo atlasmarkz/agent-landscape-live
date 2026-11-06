@@ -2,7 +2,7 @@
 
 > 一张图看懂 Agent 全链路，再用一份每 6 小时更新的榜单追踪它。
 
-**Live site:** https://atlasmarkz.github.io/agent-landscape-live/
+**Live site:** https://agent-landscape-live.pages.dev/
 
 ![Agent Landscape · Live](assets/og.png)
 
@@ -34,7 +34,7 @@ scripts/fetch-live.mjs ── GitHub REST Search API
 data/live.json ── GitHub Actions（每 6 小时）
         │
         ▼
-GitHub Pages ── index.html + assets + data
+Cloudflare Pages ── index.html + assets + data
 ```
 
 质量过滤会排除 awesome 榜单、课程、教程、书籍、面试材料、已归档 / 停止维护的项目，以及明显跑题的仓库。它不是完美的推荐系统，而是一份可追溯的索引。
@@ -71,12 +71,16 @@ node scripts/fetch-live.mjs
 
 ## 部署
 
-仓库已配置 `.github/workflows/pages.yml`：
+站点独立部署在 **Cloudflare Pages**，不占用个人 GitHub 站点路径：
+
+- **Live site:** https://agent-landscape-live.pages.dev/
+
+仓库已配置 `.github/workflows/deploy.yml`：
 
 1. push 到 `main`，或手动触发 `workflow_dispatch`；
-2. Actions 运行 `node scripts/fetch-live.mjs`；
-3. 将 `index.html`、`assets/`、`data/` 打包为 Pages artifact；
-4. 部署到 GitHub Pages。
+2. Actions 运行 `node scripts/fetch-live.mjs` 刷新 `data/live.json`；
+3. 把刷新后的快照提交回仓库（`[skip ci]`，不会触发递归构建）；
+4. 打包 `index.html` / `assets/` / `data/` 并用 Wrangler 部署到 Cloudflare Pages。
 
 定时任务：
 
@@ -85,7 +89,22 @@ schedule:
   - cron: "17 */6 * * *"
 ```
 
-首次部署时，在仓库 **Settings → Pages → Build and deployment** 中选择 **GitHub Actions** 即可。后续 cron 会自动刷新数据并重新部署。
+### 需要的 GitHub Secrets
+
+| Secret | 说明 |
+| --- | --- |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare API Token，权限 `Account / Cloudflare Pages / Edit` |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare 账户 ID（Dashboard 右侧可见） |
+
+### 本地部署
+
+```bash
+npx wrangler login
+npx wrangler pages project create agent-landscape-live --production-branch main
+npm run build:dist && npx wrangler pages deploy dist --project-name=agent-landscape-live
+```
+
+`wrangler.toml` 已经声明 `pages_build_output_dir = "dist"`，配置好 `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` 环境变量后，也可以直接用 `npx wrangler pages deploy`。
 
 ## 目录
 

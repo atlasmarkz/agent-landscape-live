@@ -1,0 +1,17 @@
+{
+  "name": "agent-landscape-live",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agent 全链路技术架构 + 每 6 小时刷新的 GitHub 热门 / 新锐榜单",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-dist.mjs",
+    "fetch": "node scripts/fetch-live.mjs",
+    "deploy": "npm run build && wrangler pages deploy",
+    "deploy:prod": "npm run build && wrangler pages deploy dist --project-name=agent-landscape-live --branch=main",
+    "dev": "npx serve ."
+  },
+  "devDependencies": {
+    "wrangler": "^3.112.0"
+  }
+}
