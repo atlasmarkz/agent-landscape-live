@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      force_rising:
+        description: "Refresh rising results even if the daily snapshot is still fresh"
+        type: boolean
+        default: false
   schedule:
     # Every 4 hours for fresher data. GitHub may delay under load.
     - cron: "2 */4 * * *"
@@ -34,6 +39,7 @@ jobs:
       - name: Fetch live GitHub data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_RISING: ${{ inputs.force_rising && '1' || '0' }}
         run: node scripts/fetch-live.mjs
 
       - name: Commit refreshed snapshot

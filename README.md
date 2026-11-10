@@ -67,7 +67,7 @@ export GITHUB_TOKEN=$(gh auth token)
 node scripts/fetch-live.mjs
 ```
 
-脚本会读取 `data/curated.json` 中的 100 个仓库，补全元数据，并生成 hot / rising 结果到 `data/live.json`。GitHub 认证搜索限制为 30 次/分钟，脚本内置 2.2 秒间隔，完整运行约 2 分钟。
+脚本会读取 `data/curated.json` 中的 100 个仓库，补全元数据，并生成 hot / rising 结果到 `data/live.json`。新锐（rising）结果约每天刷新一次（距上次 ≥ 22 小时），其余运行复用 `live.json` 中的快照；设置 `FORCE_RISING=1` 可强制刷新（Actions 手动触发时勾选 `force_rising`）。GitHub 认证搜索限制为 30 次/分钟，脚本内置 2.2 秒间隔，完整运行约 2 分钟。
 
 ## 部署
 

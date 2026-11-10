@@ -179,6 +179,20 @@ try {
   previous = {};
 }
 
+// Rising results move slowly; refresh them about once a day instead of on every run.
+// 22h (not 24h) so a slightly early cron tick doesn't push the refresh out by a full interval.
+const RISING_INTERVAL_MS = 22 * 3600 * 1000;
+const lastRisingAt = Date.parse(previous.risingFetchedAt || "") || 0;
+const refreshRising =
+  process.env.FORCE_RISING === "1" ||
+  !previous.stages ||
+  Date.now() - lastRisingAt >= RISING_INTERVAL_MS;
+console.log(
+  refreshRising
+    ? "rising: refreshing this run"
+    : `rising: reusing snapshot from ${previous.risingFetchedAt} (set FORCE_RISING=1 to override)`,
+);
+
 console.log("fetching curated metadata...");
 const freshCurated = await fetchCurated();
 const curatedOut = { ...(previous.curated || {}) };
@@ -193,8 +207,10 @@ let risingCount = 0;
 for (const stage of curatedFile.stages) {
   console.log(`fetching live results: ${stage.id}`);
   const hot = await fetchMode(stage.id, "hot");
-  const rising = await fetchMode(stage.id, "rising");
   const prev = previous.stages?.[stage.id] || {};
+  const rising = refreshRising
+    ? await fetchMode(stage.id, "rising")
+    : (prev.rising || []).map((r) => ({ ...r, curated: curatedSet.has(r.fullName) }));
   stagesOut[stage.id] = {
     hot: hot.length ? hot : prev.hot || [],
     rising: rising.length ? rising : prev.rising || [],
@@ -206,7 +222,8 @@ for (const stage of curatedFile.stages) {
 const payload = {
   generatedAt: new Date().toISOString(),
   source: "GitHub REST API (search + repos)",
-  since,
+  since: refreshRising ? since : previous.since || since,
+  risingFetchedAt: refreshRising ? new Date().toISOString() : previous.risingFetchedAt,
   stats: {
     curated: Object.keys(curatedOut).length,
     hot: hotCount,
