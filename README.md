@@ -1,6 +1,6 @@
 # Agent Landscape · Live
 
-> 一张图看懂 Agent 全链路，再用一份每 6 小时更新的榜单追踪它。
+> 一张图看懂 Agent 全链路，再用一份持续更新的榜单追踪它（热门每 4 小时、新锐每天）。
 
 **Live site:** https://agent-landscape-live.pages.dev/
 
@@ -20,7 +20,7 @@ Agent Landscape 把 Agent 系统拆成 9 层：
 | **最热 Hot** | GitHub Search + topic 查询 | Stars 降序 |
 | **新锐 Rising** | 最近 12 个月创建的仓库 | Stars 降序 |
 
-精选仓库附带实时 Stars、语言、最近 push 时间与 topics。最热 / 新锐每 6 小时由 GitHub Actions 重新抓取，前端只读取同源静态 JSON，不会暴露 Token。
+精选仓库附带实时 Stars、语言、最近 push 时间与 topics。最热每 4 小时、新锐每天由 GitHub Actions 重新抓取，前端只读取同源静态 JSON，不会暴露 Token。
 
 ## 数据管线
 
@@ -31,7 +31,7 @@ scripts/queries.json
 scripts/fetch-live.mjs ── GitHub REST Search API
         │  质量过滤 / 去重 / 元数据补全
         ▼
-data/live.json ── GitHub Actions（每 6 小时）
+data/live.json ── GitHub Actions（每 4 小时；rising 每天）
         │
         ▼
 Cloudflare Pages ── index.html + assets + data
@@ -86,7 +86,7 @@ node scripts/fetch-live.mjs
 
 ```yaml
 schedule:
-  - cron: "17 */6 * * *"
+  - cron: "2 */4 * * *"
 ```
 
 ### 需要的 GitHub Secrets
@@ -134,7 +134,7 @@ npm run build:dist && npx wrangler pages deploy dist --project-name=agent-landsc
 │  ├─ fetch-live.mjs          抓取、过滤、生成 live.json
 │  ├─ export_curated.py       从架构图生成 curated.json
 │  └─ make_og.py              生成社交分享图
-└─ .github/workflows/pages.yml
+└─ .github/workflows/deploy.yml
 ```
 
 ## 架构图
