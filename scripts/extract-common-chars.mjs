@@ -2,11 +2,12 @@
 // CommonJS module so the font build can consume it as a safety net.
 import fs from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 
 const exec = promisify(execFile);
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\//, "")), "..");
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const TMP = path.join(ROOT, ".fontbuild");
 await fs.mkdir(TMP, { recursive: true });
 
@@ -29,10 +30,12 @@ const npmEntry = (await fs.stat(npmCli).catch(() => null))
   ? npmCli
   : path.join(process.env.APPDATA || "", "..", "..", "node_modules", "npm", "bin", "npm-cli.js");
 
-await exec(process.execPath, [npmEntry, "pack", "common-chinese-characters@0.0.3", "--pack-destination", pkg], {
-  cwd: TMP,
-  shell: false,
-});
+const packArgs = ["pack", "common-chinese-characters@0.0.3", "--pack-destination", pkg];
+if (process.platform === "win32") {
+  await exec(process.execPath, [npmEntry, ...packArgs], { cwd: TMP, shell: false });
+} else {
+  await exec("npm", packArgs, { cwd: TMP });
+}
 const tgz = (await fs.readdir(pkg)).find((f) => f.endsWith(".tgz"));
 if (!tgz) throw new Error("npm pack produced no tarball");
 await exec("tar", ["-xzf", path.join(pkg, tgz), "-C", pkg]);

@@ -8,20 +8,19 @@
 // the site charset plus a 2500-hanzi common-character safety net.
 import fs from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { createRequire } from "node:module";
 
 const exec = promisify(execFile);
 const require = createRequire(import.meta.url);
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\//, "")), "..");
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const FONTS = path.join(ROOT, "assets", "fonts");
 const TMP = path.join(ROOT, ".fontbuild");
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 
-await fs.rm(FONTS, { recursive: true, force: true });
-await fs.mkdir(FONTS, { recursive: true });
 await fs.mkdir(TMP, { recursive: true });
 
 // ------------------------------------------------------------- charset
@@ -31,6 +30,11 @@ const site = await fs.readFile(path.join(ROOT, "scripts", "subset-charset.txt"),
 // from GitHub later still render in the webfont.
 const table = require(path.join(TMP, "common-2500.cjs"));
 const common = Object.values(table.字表 || table).join("");
+
+// Only clear the output once the inputs are known to be present, so a failed
+// build doesn't leave the site without fonts.
+await fs.rm(FONTS, { recursive: true, force: true });
+await fs.mkdir(FONTS, { recursive: true });
 
 const clean = (s) =>
   [...new Set(s.split(""))].filter((c) => {
