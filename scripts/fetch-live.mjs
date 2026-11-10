@@ -1,120 +1,50 @@
 // Fetch live GitHub metadata for the curated landscape + hot / rising search results.
 // Requires GITHUB_TOKEN with public repo read access.
+//
+// Search is done per sub-section (stage → group → topic queries from scripts/queries.json).
+// Every repo is then assigned to exactly one (stage, group) across the whole site, so the
+// same project doesn't show up in several layers.
 import fs from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { DATA, ROOT, readJson, requireToken, makeGh, mapRepo, buildQuery, searchUrl, isRelevant, sleep } from "./lib/live.mjs";
 
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DATA = path.join(ROOT, "data");
-const TOKEN = process.env.GITHUB_TOKEN;
-if (!TOKEN) {
-  console.error("GITHUB_TOKEN is required.");
-  process.exit(1);
-}
+const GROUP_LIMIT = 6; // live results kept per sub-section
+const SEARCH_GAP_MS = 2200; // authenticated search: 30 req/min
+// Rising results move slowly; refresh them about once a day instead of on every run.
+// 22h (not 24h) so a slightly early cron tick doesn't push the refresh out by a full interval.
+const RISING_INTERVAL_MS = 22 * 3600 * 1000;
 
-const headers = {
-  Accept: "application/vnd.github+json",
-  Authorization: `Bearer ${TOKEN}`,
-  "X-GitHub-Api-Version": "2022-11-28",
-  "User-Agent": "agent-landscape-live",
-};
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-async function gh(url, options = {}) {
-  for (let attempt = 0; attempt < 3; attempt += 1) {
-    const res = await fetch(url, { ...options, headers: { ...headers, ...(options.headers || {}) } });
-    if (res.ok) return res.json();
-    if (res.status === 403 || res.status === 429) {
-      const retry = Number(res.headers.get("retry-after") || 0);
-      const wait = retry ? retry * 1000 : 15000;
-      console.warn(`rate limited (${res.status}); waiting ${Math.round(wait / 1000)}s`);
-      await sleep(wait);
-      continue;
-    }
-    const body = await res.text();
-    throw new Error(`${res.status} ${res.statusText}: ${body.slice(0, 240)}`);
-  }
-  throw new Error("rate limited after retries");
-}
-
-function mapRepo(r) {
-  return {
-    fullName: r.full_name,
-    description: r.description || "",
-    stars: r.stargazers_count || 0,
-    forks: r.forks_count || 0,
-    language: r.language || "",
-    pushedAt: r.pushed_at || "",
-    createdAt: r.created_at || "",
-    topics: Array.isArray(r.topics) ? r.topics.slice(0, 8) : [],
-    url: r.html_url || `https://github.com/${r.full_name}`,
-    archived: Boolean(r.archived),
-    fork: Boolean(r.fork),
-    license: r.license?.spdx_id || "",
-    openIssues: r.open_issues_count || 0,
-  };
-}
-
-// GitHub topic search is noisy: popular lists, courses, and unrelated tools often
-// share a topic. Keep the live modes useful with a small editorial filter.
-const COMMON_DENY =
-  /awesome|free-for-dev|\bcourse\b|\broadmap\b|tutorial|survey|\bbook\b|cheatsheet|interview|curriculum|handbook|list of|curated|\blearn\b|\bguide\b|\bblog\b|blogs|no longer|deprecated|unmaintained|not maintained|分享|教程|入门|实战|课程|学习|指南|综述|论文|书籍|面试/i;
-
-const FILTERS = {
-  eval: {
-    must: /eval|benchmark|test|score|judge|metric|audit|observ/i,
-    deny: /wifi|spatial|scrap|crawler|image|vision|diffusion|vulnerability scanner|penetration/i,
-  },
-  infra: {
-    must: /gpu|cluster|compute|infra|distributed|cloud|kubernetes|slurm|training|serving|scheduler|accelerat|hardware/i,
-    deny: /image|vision|cnn|diffusion|wifi|scrap|secret|security|penetration/i,
-  },
-  training: {
-    must: /train|fine-tun|rlhf|post-train|peft|lora|alignment|distill|reinforcement|sft|dpo|grpo|pre-train/i,
-    deny: /secret|security|penetration|bug bounty|image|vision|diffusion|video|wifi|scrap|document processing|retrieval|\brag\b|vector database|llmops/i,
-  },
-  model: {
-    must: /model|llm|language|moe|transformer|multimodal|vision-language|foundation|weights|architecture|long-context/i,
-    deny: /serving|\bserve\b|inference engine|scrap|crawler|workflow|agent framework|platform|vector database|security scanner|wifi|agents?|agentic|plugin|\bclaude\b|\bcodex\b|\bcursor\b|visualiz|robotics|dataset|toolkit|data integration|\bocr\b/i,
-  },
-  serving: {
-    must: /inference|serving|server|serve|engine|kv-cache|quantiz|throughput|latency|vllm|sglang|llama\.cpp|model-serving|deploy|runtime|backend/i,
-    deny: /wifi|spatial|image|vision|diffusion|security|scanner|distributed compute|compute engine/i,
-  },
-  harness: {
-    must: /agent|harness|mcp|tool|workflow|orchestrat|framework|assistant|automat|skill/i,
-    deny: /wifi|spatial|image|vision|diffusion/i,
-  },
-  platform: {
-    must: /platform|workflow|rag|retrieval|llmops|low-code|agent|automat|orchestrat|interface|chat|knowledge|pipeline|studio/i,
-    deny: /video|short|scrap|crawler|security|scanner|image generation|wifi|spatial|fine-tun|world model|train|\bocr\b/i,
-  },
-  security: {
-    must: /security|guardrail|prompt|injection|safety|red team|audit|sandbox|scanner|vulnerab|attack|defense|threat|malicious|privacy/i,
-    deny: /system prompts|leak|wifi|spatial|image|vision|diffusion|programming language|router|decision layer/i,
-  },
-  observability: {
-    must: /observ|trace|monitor|telemetry|eval|metric|log|debug|analytics|instrument|dashboard/i,
-    deny: /wifi|spatial|image|vision|diffusion|scrap/i,
-  },
-};
-
-function isRelevant(stageId, repo) {
-  const text = `${repo.fullName} ${repo.description} ${repo.topics.join(" ")}`;
-  if (COMMON_DENY.test(text)) return false;
-  const filter = FILTERS[stageId];
-  if (!filter) return true;
-  if (filter.deny.test(text)) return false;
-  return filter.must.test(text);
-}
-
-const curatedFile = JSON.parse(await fs.readFile(path.join(DATA, "curated.json"), "utf8"));
-const queries = JSON.parse(await fs.readFile(path.join(ROOT, "scripts", "queries.json"), "utf8"));
-const curatedRepos = curatedFile.stages.flatMap((s) => s.repos);
-const curatedSet = new Set(curatedRepos);
+const gh = makeGh(requireToken());
+const curatedFile = await readJson(path.join(DATA, "curated.json"));
+const queries = await readJson(path.join(ROOT, "scripts", "queries.json"));
+const previous = await readJson(path.join(DATA, "live.json"), {});
+const stages = curatedFile.stages;
 const since = new Date(Date.now() - 365 * 864e5).toISOString().slice(0, 10);
 
+// fullName → { stage, group } for every curated repo.
+const curatedHome = new Map();
+for (const stage of stages) {
+  for (const group of stage.groups) {
+    for (const full of group.repos) curatedHome.set(full.toLowerCase(), { stage: stage.id, group: group.id });
+  }
+}
+const curatedRepos = stages.flatMap((s) => s.repos);
+const isCurated = (full) => curatedHome.has(full.toLowerCase());
+
+const lastRisingAt = Date.parse(previous.risingFetchedAt || "") || 0;
+const refreshRising =
+  process.env.FORCE_RISING === "1" ||
+  !previous.stages ||
+  // A snapshot from before sub-sections has no `group` on its items; refetch once.
+  !Object.values(previous.stages).some((s) => s.rising?.some((r) => r.group)) ||
+  Date.now() - lastRisingAt >= RISING_INTERVAL_MS;
+
 console.log(`curated: ${curatedRepos.length} repos | rising since: ${since}`);
+console.log(
+  refreshRising
+    ? "rising: refreshing this run"
+    : `rising: reusing snapshot from ${previous.risingFetchedAt} (set FORCE_RISING=1 to override)`,
+);
 
 async function fetchCurated() {
   const out = {};
@@ -134,89 +64,151 @@ async function fetchCurated() {
   return out;
 }
 
-async function fetchMode(stageId, mode) {
-  const merged = new Map();
-  for (const template of queries[stageId]?.[mode] || []) {
-    const q = template.replaceAll("{since}", since);
-    try {
-      const url = `https://api.github.com/search/repositories?q=${encodeURIComponent(q)}&sort=stars&order=desc&per_page=40`;
-      const data = await gh(url);
-      let kept = 0;
-      for (const item of data.items || []) {
-        const repo = mapRepo(item);
-        if (repo.archived || repo.fork) continue;
-        if (!isRelevant(stageId, repo)) continue;
-        kept += 1;
-        if (!merged.has(repo.fullName)) merged.set(repo.fullName, repo);
+const sortKey = (a, b) => Number(b.curated) - Number(a.curated) || b.stars - a.stars;
+
+// Search every (stage, group) for one mode. Returns stageId → groupId → sorted candidates.
+async function searchAll(mode) {
+  const out = {};
+  for (const stage of stages) {
+    out[stage.id] = {};
+    for (const group of stage.groups) {
+      const merged = new Map();
+      for (const spec of queries[stage.id]?.[group.id] || []) {
+        const q = buildQuery(spec, mode, since);
+        try {
+          const data = await gh(searchUrl(q));
+          let kept = 0;
+          for (const item of data.items || []) {
+            const repo = mapRepo(item);
+            if (repo.archived || repo.fork) continue;
+            if (!isRelevant(stage.id, group.id, repo)) continue;
+            kept += 1;
+            if (!merged.has(repo.fullName)) merged.set(repo.fullName, { ...repo, curated: isCurated(repo.fullName) });
+          }
+          console.log(`  ${stage.id}/${group.id}/${mode} ${spec.topic}: ${data.items?.length || 0} results, ${kept} relevant`);
+        } catch (err) {
+          console.warn(`  ${stage.id}/${group.id}/${mode} ${spec.topic} failed: ${err.message}`);
+        }
+        await sleep(SEARCH_GAP_MS);
       }
-      console.log(`  ${stageId}/${mode}: ${data.items?.length || 0} results, ${kept} relevant`);
-    } catch (err) {
-      console.warn(`  ${stageId}/${mode} query failed: ${err.message}`);
+      out[stage.id][group.id] = [...merged.values()].sort(sortKey);
     }
-    await sleep(2200);
   }
-  const unique = [];
-  const seenDescriptions = new Map();
+  return out;
+}
+
+function lexLess(a, b) {
+  for (let i = 0; i < a.length; i += 1) if (a[i] !== b[i]) return a[i] < b[i];
+  return false;
+}
+
+// Give each repo exactly one home. Curated repos always live in their curated
+// (stage, group) — found anywhere in that stage they are re-tagged there, found only in
+// other stages they are dropped. Everything else goes to the (stage, group) where it
+// ranked highest (ties → earlier stage / group).
+function assignOwners(candidates) {
+  const best = new Map();
+  stages.forEach((stage, si) => {
+    stage.groups.forEach((group, gi) => {
+      (candidates[stage.id][group.id] || []).forEach((repo, rank) => {
+        const key = repo.fullName.toLowerCase();
+        const home = curatedHome.get(key);
+        if (home) {
+          if (home.stage === stage.id) best.set(key, { score: [0], stage: home.stage, group: home.group });
+          return;
+        }
+        const score = [1, rank, si, gi];
+        const cur = best.get(key);
+        if (!cur || lexLess(score, cur.score)) {
+          best.set(key, { score, stage: stage.id, group: group.id });
+        }
+      });
+    });
+  });
+  return best;
+}
+
+function dedupeSimilar(repos) {
+  const seenDescriptions = new Set();
   const seenNames = new Set();
-  for (const repo of [...merged.values()].sort((a, b) => (b.curated ? 1 : 0) - (a.curated ? 1 : 0) || b.stars - a.stars)) {
-    const key = (repo.description || "").toLowerCase().replace(/\s+/g, " ").trim();
-    const repoName = repo.fullName.split("/").pop().toLowerCase().replace(/[^a-z0-9]/g, "");
-    if (key && seenDescriptions.has(key)) continue;
-    if (repoName && seenNames.has(repoName)) continue;
-    if (key) seenDescriptions.set(key, repo);
-    if (repoName) seenNames.add(repoName);
+  const unique = [];
+  for (const repo of repos) {
+    const desc = (repo.description || "").toLowerCase().replace(/\s+/g, " ").trim();
+    const name = repo.fullName.split("/").pop().toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (desc && seenDescriptions.has(desc)) continue;
+    if (name && seenNames.has(name)) continue;
+    if (desc) seenDescriptions.add(desc);
+    if (name) seenNames.add(name);
     unique.push(repo);
   }
-  return unique
-    .map((r) => ({ ...r, curated: curatedSet.has(r.fullName) }))
-    .slice(0, 12);
+  return unique;
 }
 
-let previous = {};
-try {
-  previous = JSON.parse(await fs.readFile(path.join(DATA, "live.json"), "utf8"));
-} catch {
-  previous = {};
+// Build stageId → sorted list (each item tagged with `group`), falling back per group
+// to the previous snapshot when a group's searches came back empty.
+function buildMode(candidates, mode) {
+  const owners = assignOwners(candidates);
+  const result = {};
+  for (const stage of stages) {
+    const prevItems = previous.stages?.[stage.id]?.[mode] || [];
+    const items = [];
+    // Every candidate found in this stage, once, so a repo found under group A but
+    // owned by group B of the same stage still lands in B.
+    const pool = new Map();
+    for (const group of stage.groups) {
+      for (const repo of candidates[stage.id][group.id] || []) pool.set(repo.fullName, repo);
+    }
+    const ordered = [...pool.values()].sort(sortKey);
+    for (const group of stage.groups) {
+      const own = ordered.filter((repo) => {
+        const owner = owners.get(repo.fullName.toLowerCase());
+        return owner && owner.stage === stage.id && owner.group === group.id;
+      });
+      let picked = dedupeSimilar(own).slice(0, GROUP_LIMIT);
+      if (!picked.length) picked = prevItems.filter((r) => r.group === group.id);
+      items.push(...picked.map((r) => ({ ...r, group: group.id, curated: isCurated(r.fullName) })));
+    }
+    result[stage.id] = items.sort(sortKey);
+  }
+  return result;
 }
-
-// Rising results move slowly; refresh them about once a day instead of on every run.
-// 22h (not 24h) so a slightly early cron tick doesn't push the refresh out by a full interval.
-const RISING_INTERVAL_MS = 22 * 3600 * 1000;
-const lastRisingAt = Date.parse(previous.risingFetchedAt || "") || 0;
-const refreshRising =
-  process.env.FORCE_RISING === "1" ||
-  !previous.stages ||
-  Date.now() - lastRisingAt >= RISING_INTERVAL_MS;
-console.log(
-  refreshRising
-    ? "rising: refreshing this run"
-    : `rising: reusing snapshot from ${previous.risingFetchedAt} (set FORCE_RISING=1 to override)`,
-);
 
 console.log("fetching curated metadata...");
 const freshCurated = await fetchCurated();
-const curatedOut = { ...(previous.curated || {}) };
-for (const [full, repo] of Object.entries(freshCurated)) {
-  if (repo.error && curatedOut[full] && !curatedOut[full].error) continue;
-  curatedOut[full] = repo;
+const curatedOut = {};
+for (const full of curatedRepos) {
+  const fresh = freshCurated[full];
+  const prev = previous.curated?.[full];
+  curatedOut[full] = fresh?.error && prev && !prev.error ? prev : fresh;
+}
+
+console.log("searching hot...");
+const hot = buildMode(await searchAll("hot"), "hot");
+let rising;
+if (refreshRising) {
+  console.log("searching rising...");
+  rising = buildMode(await searchAll("rising"), "rising");
+} else {
+  rising = {};
+  for (const stage of stages) {
+    rising[stage.id] = (previous.stages?.[stage.id]?.rising || []).map((r) => ({ ...r, curated: isCurated(r.fullName) }));
+  }
 }
 
 const stagesOut = {};
 let hotCount = 0;
 let risingCount = 0;
-for (const stage of curatedFile.stages) {
-  console.log(`fetching live results: ${stage.id}`);
-  const hot = await fetchMode(stage.id, "hot");
-  const prev = previous.stages?.[stage.id] || {};
-  const rising = refreshRising
-    ? await fetchMode(stage.id, "rising")
-    : (prev.rising || []).map((r) => ({ ...r, curated: curatedSet.has(r.fullName) }));
-  stagesOut[stage.id] = {
-    hot: hot.length ? hot : prev.hot || [],
-    rising: rising.length ? rising : prev.rising || [],
-  };
-  hotCount += stagesOut[stage.id].hot.length;
-  risingCount += stagesOut[stage.id].rising.length;
+for (const stage of stages) {
+  stagesOut[stage.id] = { hot: hot[stage.id], rising: rising[stage.id] };
+  hotCount += hot[stage.id].length;
+  risingCount += rising[stage.id].length;
+}
+
+// Don't publish a snapshot that lost most of its results (rate limit, API outage).
+const prevHot = Object.values(previous.stages || {}).reduce((n, s) => n + (s.hot?.length || 0), 0);
+if (prevHot && hotCount < prevHot * 0.5) {
+  console.error(`hot results dropped from ${prevHot} to ${hotCount}; keeping previous live.json`);
+  process.exit(1);
 }
 
 const payload = {

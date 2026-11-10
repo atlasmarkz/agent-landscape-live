@@ -16,9 +16,11 @@ Agent Landscape 把 Agent 系统拆成 9 层：
 
 | 模式 | 来源 | 排序 |
 | --- | --- | --- |
-| **精选 Curated** | 架构图中的 100 个代表项目 | 按阶段覆盖度编排，不按 Stars |
+| **精选 Curated** | 架构图中的 100 个代表项目 + 按子板块补全，共约 150 个 | 按阶段 / 子板块编排，不按 Stars |
 | **最热 Hot** | GitHub Search + topic 查询 | Stars 降序 |
 | **新锐 Rising** | 最近 12 个月创建的仓库 | Stars 降序 |
+
+每个阶段再拆成 3–9 个子板块（共 42 个），例如 Harness 层分为 Agent Loop、上下文工程 / 压缩、记忆管理、Skills、工具 / MCP / 浏览器、沙箱、持久执行、多 Agent、Coding Agent。页面上每个阶段都可以按子板块筛选。
 
 精选仓库附带实时 Stars、语言、最近 push 时间与 topics。最热每 4 小时、新锐每天由 GitHub Actions 重新抓取，前端只读取同源静态 JSON，不会暴露 Token。
 
@@ -26,7 +28,7 @@ Agent Landscape 把 Agent 系统拆成 9 层：
 
 ```text
 scripts/queries.json
-        │  45 组 topic 查询
+        │  42 个子板块 × 1–3 个 topic 查询
         ▼
 scripts/fetch-live.mjs ── GitHub REST Search API
         │  质量过滤 / 去重 / 元数据补全
@@ -67,7 +69,7 @@ export GITHUB_TOKEN=$(gh auth token)
 node scripts/fetch-live.mjs
 ```
 
-脚本会读取 `data/curated.json` 中的 100 个仓库，补全元数据，并生成 hot / rising 结果到 `data/live.json`。新锐（rising）结果约每天刷新一次（距上次 ≥ 22 小时），其余运行复用 `live.json` 中的快照；设置 `FORCE_RISING=1` 可强制刷新（Actions 手动触发时勾选 `force_rising`）。GitHub 认证搜索限制为 30 次/分钟，脚本内置 2.2 秒间隔，完整运行约 2 分钟。
+脚本会读取 `data/curated.json` 中的精选仓库并补全元数据，再按子板块搜索 hot / rising，写入 `data/live.json`。每个仓库全站只出现在一个阶段的一个子板块里（优先放在它的精选位置，否则放在排名最高的位置），每个子板块最多保留 6 个。新锐（rising）结果约每天刷新一次（距上次 ≥ 22 小时），其余运行复用 `live.json` 中的快照；设置 `FORCE_RISING=1` 可强制刷新（Actions 手动触发时勾选 `force_rising`）。GitHub 认证搜索限制为 30 次/分钟，脚本内置 2.2 秒间隔，只刷新 hot 约 5 分钟，连 rising 一起约 10 分钟。
 
 ## 部署
 
@@ -121,7 +123,7 @@ npm run build:dist && npx wrangler pages deploy dist --project-name=agent-landsc
 │  ├─ favicon.svg
 │  └─ og.png                  社交分享图
 ├─ data/
-│  ├─ curated.json            9 个阶段 / 100 个精选仓库
+│  ├─ curated.json            9 个阶段 / 42 个子板块 / 精选仓库
 │  └─ live.json               实时元数据与 hot / rising 结果
 ├─ architecture/
 │  ├─ agent-architecture.svg  Figma 可编辑源文件
@@ -130,12 +132,21 @@ npm run build:dist && npx wrangler pages deploy dist --project-name=agent-landsc
 │  ├─ figma-plugin/           批量添加原生 Hyperlink
 │  └─ README.md               架构图说明
 ├─ scripts/
-│  ├─ queries.json            45 组 GitHub topic 查询
-│  ├─ fetch-live.mjs          抓取、过滤、生成 live.json
-│  ├─ export_curated.py       从架构图生成 curated.json
+│  ├─ queries.json            每个子板块的 GitHub topic 查询
+│  ├─ fetch-live.mjs          抓取、过滤、跨层去重、生成 live.json
+│  ├─ validate-queries.mjs    检查精选仓库（改名 / 归档 / 不活跃）与各 topic 的命中质量
+│  ├─ lib/live.mjs            GitHub 请求、相关性过滤规则（共享）
+│  ├─ export_curated.py       从 build_svg.py（stages + GROUPS）生成 curated.json
 │  └─ make_og.py              生成社交分享图
 └─ .github/workflows/deploy.yml
 ```
+
+## 修改子板块
+
+1. 在 `architecture/build_svg.py` 的 `GROUPS` 里改子板块和精选仓库。架构图上的仓库（`stages[].repos`）必须出现在本层的某个子板块中，脚本会断言检查。
+2. `python scripts/export_curated.py` 重新生成 `data/curated.json`（同时重建 SVG）。
+3. 在 `scripts/queries.json` 里给新子板块配 topic，必要时在 `scripts/lib/live.mjs` 的 `FILTERS` 里加子板块级 `must` / `deny`。
+4. `GITHUB_TOKEN=$(gh auth token) node scripts/validate-queries.mjs --stage <id> --rising` 检查命中质量。
 
 ## 架构图
 

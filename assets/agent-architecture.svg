@@ -235,11 +235,11 @@
 <text x="2088" y="896" font-size="12" font-weight="500" fill="#ECECF2">ofiwg/libfabric</text>
 <text x="2376" y="896" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/kubeflow/training-operator" xlink:href="https://github.com/kubeflow/training-operator" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open kubeflow/training-operator on GitHub">
+<a href="https://github.com/kubeflow/trainer" xlink:href="https://github.com/kubeflow/trainer" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open kubeflow/trainer on GitHub">
 <rect x="2407" y="872" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2420" y="884" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2423.5 884 V 898 M 2426 889 H 2428.5 M 2426 892 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2439" y="896" font-size="12" font-weight="500" fill="#ECECF2">kubeflow/training-operator</text>
+<text x="2439" y="896" font-size="12" font-weight="500" fill="#ECECF2">kubeflow/trainer</text>
 <text x="2727" y="896" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <circle cx="2058" cy="964" r="3" fill="#0D99FF"/>
@@ -313,18 +313,18 @@
 <text x="2439" y="1136" font-size="12" font-weight="500" fill="#ECECF2">allenai/dolma</text>
 <text x="2727" y="1136" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/NVIDIA/NeMo-Curator" xlink:href="https://github.com/NVIDIA/NeMo-Curator" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/NeMo-Curator on GitHub">
+<a href="https://github.com/NVIDIA-NeMo/Curator" xlink:href="https://github.com/NVIDIA-NeMo/Curator" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA-NeMo/Curator on GitHub">
 <rect x="2056" y="1158" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2069" y="1170" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2072.5 1170 V 1184 M 2075 1175 H 2077.5 M 2075 1178 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2088" y="1182" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/NeMo-Curator</text>
+<text x="2088" y="1182" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA-NeMo/Curator</text>
 <text x="2376" y="1182" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/modelscope/data-juicer" xlink:href="https://github.com/modelscope/data-juicer" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open modelscope/data-juicer on GitHub">
+<a href="https://github.com/datajuicer/data-juicer" xlink:href="https://github.com/datajuicer/data-juicer" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open datajuicer/data-juicer on GitHub">
 <rect x="2407" y="1158" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2420" y="1170" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2423.5 1170 V 1184 M 2426 1175 H 2428.5 M 2426 1178 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2439" y="1182" font-size="12" font-weight="500" fill="#ECECF2">modelscope/data-juicer</text>
+<text x="2439" y="1182" font-size="12" font-weight="500" fill="#ECECF2">datajuicer/data-juicer</text>
 <text x="2727" y="1182" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/NVIDIA/Megatron-LM" xlink:href="https://github.com/NVIDIA/Megatron-LM" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/Megatron-LM on GitHub">
@@ -348,11 +348,11 @@
 <text x="2088" y="1274" font-size="12" font-weight="500" fill="#ECECF2">deepspeedai/DeepSpeed</text>
 <text x="2376" y="1274" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/volcengine/verl" xlink:href="https://github.com/volcengine/verl" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open volcengine/verl on GitHub">
+<a href="https://github.com/verl-project/verl" xlink:href="https://github.com/verl-project/verl" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open verl-project/verl on GitHub">
 <rect x="2407" y="1250" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2420" y="1262" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2423.5 1262 V 1276 M 2426 1267 H 2428.5 M 2426 1270 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2439" y="1274" font-size="12" font-weight="500" fill="#ECECF2">volcengine/verl</text>
+<text x="2439" y="1274" font-size="12" font-weight="500" fill="#ECECF2">verl-project/verl</text>
 <text x="2727" y="1274" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/OpenRLHF/OpenRLHF" xlink:href="https://github.com/OpenRLHF/OpenRLHF" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open OpenRLHF/OpenRLHF on GitHub">
@@ -376,11 +376,11 @@
 <text x="2088" y="1366" font-size="12" font-weight="500" fill="#ECECF2">NovaSky-AI/SkyRL</text>
 <text x="2376" y="1366" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/inclusionAI/AReaL" xlink:href="https://github.com/inclusionAI/AReaL" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open inclusionAI/AReaL on GitHub">
+<a href="https://github.com/areal-project/AReaL" xlink:href="https://github.com/areal-project/AReaL" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open areal-project/AReaL on GitHub">
 <rect x="2407" y="1342" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2420" y="1354" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2423.5 1354 V 1368 M 2426 1359 H 2428.5 M 2426 1362 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2439" y="1366" font-size="12" font-weight="500" fill="#ECECF2">inclusionAI/AReaL</text>
+<text x="2439" y="1366" font-size="12" font-weight="500" fill="#ECECF2">areal-project/AReaL</text>
 <text x="2727" y="1366" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/unslothai/unsloth" xlink:href="https://github.com/unslothai/unsloth" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open unslothai/unsloth on GitHub">
@@ -594,11 +594,11 @@
 <text x="2439" y="2124" font-size="12" font-weight="500" fill="#ECECF2">ai-dynamo/dynamo</text>
 <text x="2727" y="2124" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/NVIDIA/Triton-Inference-Server" xlink:href="https://github.com/NVIDIA/Triton-Inference-Server" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/Triton-Inference-Server on GitHub">
+<a href="https://github.com/triton-inference-server/server" xlink:href="https://github.com/triton-inference-server/server" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open triton-inference-server/server on GitHub">
 <rect x="2056" y="2146" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2069" y="2158" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2072.5 2158 V 2172 M 2075 2163 H 2077.5 M 2075 2166 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2088" y="2170" font-size="11.2" font-weight="500" fill="#ECECF2">NVIDIA/Triton-Inference-Server</text>
+<text x="2088" y="2170" font-size="11.2" font-weight="500" fill="#ECECF2">triton-inference-server/server</text>
 <text x="2376" y="2170" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/BerriAI/litellm" xlink:href="https://github.com/BerriAI/litellm" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open BerriAI/litellm on GitHub">
@@ -622,11 +622,11 @@
 <text x="2439" y="2216" font-size="12" font-weight="500" fill="#ECECF2">ollama/ollama</text>
 <text x="2727" y="2216" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/huggingface/text-generation-inference" xlink:href="https://github.com/huggingface/text-generation-inference" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open huggingface/text-generation-inference on GitHub">
+<a href="https://github.com/flashinfer-ai/flashinfer" xlink:href="https://github.com/flashinfer-ai/flashinfer" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open flashinfer-ai/flashinfer on GitHub">
 <rect x="2056" y="2238" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2069" y="2250" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2072.5 2250 V 2264 M 2075 2255 H 2077.5 M 2075 2258 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2088" y="2262" font-size="11.2" font-weight="500" fill="#ECECF2">huggingface/text-generation-inference</text>
+<text x="2088" y="2262" font-size="12" font-weight="500" fill="#ECECF2">flashinfer-ai/flashinfer</text>
 <text x="2376" y="2262" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/llm-d/llm-d" xlink:href="https://github.com/llm-d/llm-d" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open llm-d/llm-d on GitHub">
@@ -716,11 +716,11 @@
 <text x="2088" y="2592" font-size="12" font-weight="500" fill="#ECECF2">SWE-agent/SWE-agent</text>
 <text x="2376" y="2592" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/All-Hands-AI/OpenHands" xlink:href="https://github.com/All-Hands-AI/OpenHands" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open All-Hands-AI/OpenHands on GitHub">
+<a href="https://github.com/OpenHands/OpenHands" xlink:href="https://github.com/OpenHands/OpenHands" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open OpenHands/OpenHands on GitHub">
 <rect x="2407" y="2568" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2420" y="2580" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2423.5 2580 V 2594 M 2426 2585 H 2428.5 M 2426 2588 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2439" y="2592" font-size="12" font-weight="500" fill="#ECECF2">All-Hands-AI/OpenHands</text>
+<text x="2439" y="2592" font-size="12" font-weight="500" fill="#ECECF2">OpenHands/OpenHands</text>
 <text x="2727" y="2592" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/browser-use/browser-use" xlink:href="https://github.com/browser-use/browser-use" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open browser-use/browser-use on GitHub">
@@ -772,11 +772,11 @@
 <text x="2088" y="2776" font-size="12" font-weight="500" fill="#ECECF2">google/gvisor</text>
 <text x="2376" y="2776" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/sst/opencode" xlink:href="https://github.com/sst/opencode" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open sst/opencode on GitHub">
+<a href="https://github.com/anomalyco/opencode" xlink:href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open anomalyco/opencode on GitHub">
 <rect x="2407" y="2752" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2420" y="2764" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2423.5 2764 V 2778 M 2426 2769 H 2428.5 M 2426 2772 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2439" y="2776" font-size="12" font-weight="500" fill="#ECECF2">sst/opencode</text>
+<text x="2439" y="2776" font-size="12" font-weight="500" fill="#ECECF2">anomalyco/opencode</text>
 <text x="2727" y="2776" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/cline/cline" xlink:href="https://github.com/cline/cline" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open cline/cline on GitHub">
@@ -786,11 +786,11 @@
 <text x="2088" y="2822" font-size="12" font-weight="500" fill="#ECECF2">cline/cline</text>
 <text x="2376" y="2822" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/block/goose" xlink:href="https://github.com/block/goose" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open block/goose on GitHub">
+<a href="https://github.com/aaif-goose/goose" xlink:href="https://github.com/aaif-goose/goose" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open aaif-goose/goose on GitHub">
 <rect x="2407" y="2798" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2420" y="2810" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2423.5 2810 V 2824 M 2426 2815 H 2428.5 M 2426 2818 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2439" y="2822" font-size="12" font-weight="500" fill="#ECECF2">block/goose</text>
+<text x="2439" y="2822" font-size="12" font-weight="500" fill="#ECECF2">aaif-goose/goose</text>
 <text x="2727" y="2822" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <circle cx="2058" cy="2876" r="3" fill="#D946EF"/>
@@ -867,11 +867,11 @@
 <text x="2439" y="3094" font-size="12" font-weight="500" fill="#ECECF2">langflow-ai/langflow</text>
 <text x="2727" y="3094" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/FlowiseAI/Flowise" xlink:href="https://github.com/FlowiseAI/Flowise" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open FlowiseAI/Flowise on GitHub">
+<a href="https://github.com/Mintplex-Labs/anything-llm" xlink:href="https://github.com/Mintplex-Labs/anything-llm" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open Mintplex-Labs/anything-llm on GitHub">
 <rect x="2056" y="3116" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2069" y="3128" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2072.5 3128 V 3142 M 2075 3133 H 2077.5 M 2075 3136 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2088" y="3140" font-size="12" font-weight="500" fill="#ECECF2">FlowiseAI/Flowise</text>
+<text x="2088" y="3140" font-size="12" font-weight="500" fill="#ECECF2">Mintplex-Labs/anything-llm</text>
 <text x="2376" y="3140" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/infiniflow/ragflow" xlink:href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open infiniflow/ragflow on GitHub">
@@ -895,11 +895,11 @@
 <text x="2439" y="3186" font-size="12" font-weight="500" fill="#ECECF2">open-webui/open-webui</text>
 <text x="2727" y="3186" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/danny-avila/LibreChat" xlink:href="https://github.com/danny-avila/LibreChat" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open danny-avila/LibreChat on GitHub">
+<a href="https://github.com/LibreChat-AI/LibreChat" xlink:href="https://github.com/LibreChat-AI/LibreChat" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open LibreChat-AI/LibreChat on GitHub">
 <rect x="2056" y="3208" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2069" y="3220" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2072.5 3220 V 3234 M 2075 3225 H 2077.5 M 2075 3228 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2088" y="3232" font-size="12" font-weight="500" fill="#ECECF2">danny-avila/LibreChat</text>
+<text x="2088" y="3232" font-size="12" font-weight="500" fill="#ECECF2">LibreChat-AI/LibreChat</text>
 <text x="2376" y="3232" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/run-llama/llama_index" xlink:href="https://github.com/run-llama/llama_index" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open run-llama/llama_index on GitHub">
@@ -1010,11 +1010,11 @@
 <text x="2088" y="3556" font-size="12" font-weight="500" fill="#ECECF2">guardrails-ai/guardrails</text>
 <text x="2376" y="3556" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/NVIDIA/NeMo-Guardrails" xlink:href="https://github.com/NVIDIA/NeMo-Guardrails" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA/NeMo-Guardrails on GitHub">
+<a href="https://github.com/NVIDIA-NeMo/Guardrails" xlink:href="https://github.com/NVIDIA-NeMo/Guardrails" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open NVIDIA-NeMo/Guardrails on GitHub">
 <rect x="2407" y="3532" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2420" y="3544" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2423.5 3544 V 3558 M 2426 3549 H 2428.5 M 2426 3552 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2439" y="3556" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/NeMo-Guardrails</text>
+<text x="2439" y="3556" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA-NeMo/Guardrails</text>
 <text x="2727" y="3556" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/meta-llama/PurpleLlama" xlink:href="https://github.com/meta-llama/PurpleLlama" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open meta-llama/PurpleLlama on GitHub">
@@ -1024,11 +1024,11 @@
 <text x="2088" y="3602" font-size="12" font-weight="500" fill="#ECECF2">meta-llama/PurpleLlama</text>
 <text x="2376" y="3602" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/microsoft/presidio" xlink:href="https://github.com/microsoft/presidio" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open microsoft/presidio on GitHub">
+<a href="https://github.com/data-privacy-stack/presidio" xlink:href="https://github.com/data-privacy-stack/presidio" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open data-privacy-stack/presidio on GitHub">
 <rect x="2407" y="3578" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2420" y="3590" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2423.5 3590 V 3604 M 2426 3595 H 2428.5 M 2426 3598 H 2428.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2439" y="3602" font-size="12" font-weight="500" fill="#ECECF2">microsoft/presidio</text>
+<text x="2439" y="3602" font-size="12" font-weight="500" fill="#ECECF2">data-privacy-stack/presidio</text>
 <text x="2727" y="3602" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/promptfoo/promptfoo" xlink:href="https://github.com/promptfoo/promptfoo" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open promptfoo/promptfoo on GitHub">
@@ -1045,11 +1045,11 @@
 <text x="2439" y="3648" font-size="12" font-weight="500" fill="#ECECF2">NVIDIA/garak</text>
 <text x="2727" y="3648" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
-<a href="https://github.com/protectai/rebuff" xlink:href="https://github.com/protectai/rebuff" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open protectai/rebuff on GitHub">
+<a href="https://github.com/Tencent/AI-Infra-Guard" xlink:href="https://github.com/Tencent/AI-Infra-Guard" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open Tencent/AI-Infra-Guard on GitHub">
 <rect x="2056" y="3670" width="337" height="38" fill="#1F1F26" stroke="#2E2E38" stroke-width="1" rx="8"/>
 <rect x="2069" y="3682" width="11" height="14" rx="2.2" fill="none" stroke="#7D7D89" stroke-width="1.1"/>
 <path d="M 2072.5 3682 V 3696 M 2075 3687 H 2077.5 M 2075 3690 H 2077.5" stroke="#7D7D89" stroke-width="1.1" fill="none"/>
-<text x="2088" y="3694" font-size="12" font-weight="500" fill="#ECECF2">protectai/rebuff</text>
+<text x="2088" y="3694" font-size="12" font-weight="500" fill="#ECECF2">Tencent/AI-Infra-Guard</text>
 <text x="2376" y="3694" font-size="10" fill="#6F6F7B" font-weight="600">↗</text>
 </a>
 <a href="https://github.com/open-policy-agent/opa" xlink:href="https://github.com/open-policy-agent/opa" target="_blank" rel="noopener" style="cursor:pointer" aria-label="Open open-policy-agent/opa on GitHub">

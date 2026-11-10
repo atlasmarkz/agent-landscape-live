@@ -34,7 +34,9 @@ for s in build_svg.stages:
         "short": short,
         "color": s["color"],
         "goal": " ".join(s["goal"]),
-        "repos": s["repos"],
+        # All curated repos for the web (union of groups); the diagram shows a subset.
+        "repos": [r for g in s["groups"] for r in g["repos"]],
+        "groups": s["groups"],
     })
 
 payload = {

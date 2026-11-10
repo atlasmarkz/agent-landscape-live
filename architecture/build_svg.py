@@ -79,7 +79,7 @@ stages.append({
   ("三池隔离", ["预训练 / RL rollout / 在线推理", "电力 · 散热 · 容量规划"]),
  ],
  "repos": ["NVIDIA/nccl", "NVIDIA/gpu-operator", "volcano-sh/volcano", "kubernetes-sigs/kueue",
-           "ray-project/ray", "NVIDIA/DCGM", "ofiwg/libfabric", "kubeflow/training-operator"],
+           "ray-project/ray", "NVIDIA/DCGM", "ofiwg/libfabric", "kubeflow/trainer"],
  "repo_note": "万卡集群的瓶颈通常在网络与存储",
 })
 
@@ -98,9 +98,9 @@ stages.append({
   ("训练栈", ["Megatron / FSDP2 / DeepSpeed", "FP8 · 序列并行 · 激活重算"]),
   ("训练中评测", ["held-out 私有集 · 失败分类", "checkpoint 选择 · 回归门禁"]),
  ],
- "repos": ["huggingface/datatrove", "allenai/dolma", "NVIDIA/NeMo-Curator", "modelscope/data-juicer",
-           "NVIDIA/Megatron-LM", "pytorch/torchtitan", "deepspeedai/DeepSpeed", "volcengine/verl",
-           "OpenRLHF/OpenRLHF", "huggingface/trl", "NovaSky-AI/SkyRL", "inclusionAI/AReaL",
+ "repos": ["huggingface/datatrove", "allenai/dolma", "NVIDIA-NeMo/Curator", "datajuicer/data-juicer",
+           "NVIDIA/Megatron-LM", "pytorch/torchtitan", "deepspeedai/DeepSpeed", "verl-project/verl",
+           "OpenRLHF/OpenRLHF", "huggingface/trl", "NovaSky-AI/SkyRL", "areal-project/AReaL",
            "unslothai/unsloth", "axolotl-ai-cloud/axolotl",
            "firecracker-microvm/firecracker", "e2b-dev/E2B"],
  "repo_note": "环境与轨迹数据 = Agent 时代的护城河",
@@ -140,9 +140,9 @@ stages.append({
              "lead": "成本关键：",
              "body": "Agent 负载 = 长 system prompt + 多轮工具调用 → prefix cache 命中率直接决定单位成本"},
  "repos": ["vllm-project/vllm", "sgl-project/sglang", "NVIDIA/TensorRT-LLM", "InternLM/lmdeploy",
-           "LMCache/LMCache", "ai-dynamo/dynamo", "NVIDIA/Triton-Inference-Server",
+           "LMCache/LMCache", "ai-dynamo/dynamo", "triton-inference-server/server",
            "BerriAI/litellm", "ggml-org/llama.cpp", "ollama/ollama",
-           "huggingface/text-generation-inference", "llm-d/llm-d"],
+           "flashinfer-ai/flashinfer", "llm-d/llm-d"],
  "repo_note": "prefix cache 是 Agent 推理的命门",
 })
 
@@ -163,10 +163,10 @@ stages.append({
              "body": "同一模型，工具设计与上下文管理可带来数倍任务成功率差异",
              "body2": "评估重点：长任务完成率 · 工具调用正确率 · 失败恢复 · $/task"},
  "repos": ["langchain-ai/langgraph", "openai/openai-agents-python", "huggingface/smolagents",
-           "microsoft/autogen", "SWE-agent/SWE-agent", "All-Hands-AI/OpenHands",
+           "microsoft/autogen", "SWE-agent/SWE-agent", "OpenHands/OpenHands",
            "browser-use/browser-use", "modelcontextprotocol/servers", "microsoft/playwright-mcp",
            "mem0ai/mem0", "letta-ai/letta", "temporalio/temporal", "google/gvisor",
-           "sst/opencode", "cline/cline", "block/goose"],
+           "anomalyco/opencode", "cline/cline", "aaif-goose/goose"],
  "repo_note": "Harness 迭代速度 > 模型换代速度",
 })
 
@@ -187,8 +187,8 @@ stages.append({
              "body": "Dify / Coze / n8n 适合快速交付；LangGraph / OpenAI Agents SDK 适合深水区",
              "body2": "企业常见组合 = 低代码编排 + 自建 Harness + 私有模型"},
  "repos": ["langgenius/dify", "coze-dev/coze-studio", "n8n-io/n8n", "langflow-ai/langflow",
-           "FlowiseAI/Flowise", "infiniflow/ragflow", "labring/FastGPT", "open-webui/open-webui",
-           "danny-avila/LibreChat", "run-llama/llama_index", "deepset-ai/haystack",
+           "Mintplex-Labs/anything-llm", "infiniflow/ragflow", "labring/FastGPT", "open-webui/open-webui",
+           "LibreChat-AI/LibreChat", "run-llama/llama_index", "deepset-ai/haystack",
            "microsoft/semantic-kernel", "pydantic/pydantic-ai", "google/adk-python",
            "mastra-ai/mastra", "agno-agi/agno"],
 })
@@ -208,9 +208,9 @@ stages.append({
   ("持续红队", ["garak · promptfoo", "注入 / 越狱 / 工具滥用"]),
   ("供应链", ["依赖扫描 · 模型来源", "镜像签名 · SBOM"]),
  ],
- "repos": ["guardrails-ai/guardrails", "NVIDIA/NeMo-Guardrails", "meta-llama/PurpleLlama",
-           "microsoft/presidio", "promptfoo/promptfoo", "NVIDIA/garak",
-           "protectai/rebuff", "open-policy-agent/opa"],
+ "repos": ["guardrails-ai/guardrails", "NVIDIA-NeMo/Guardrails", "meta-llama/PurpleLlama",
+           "data-privacy-stack/presidio", "promptfoo/promptfoo", "NVIDIA/garak",
+           "Tencent/AI-Infra-Guard", "open-policy-agent/opa"],
 })
 
 stages.append({
@@ -233,6 +233,95 @@ stages.append({
            "wandb/wandb", "confident-ai/deepeval"],
  "repo_note": "没有 trace 就没有飞轮",
 })
+
+# Sub-sections per layer (web only). The diagram keeps drawing s["repos"]; every
+# diagram repo must also appear in exactly one group of its own stage, so this file
+# stays the single source of truth for data/curated.json.
+GROUPS = {
+ "00": [
+  ("framework", "评测框架", ["openai/evals", "EleutherAI/lm-evaluation-harness", "UKGovernmentBEIS/inspect_ai",
+                           "huggingface/lighteval", "open-compass/opencompass"]),
+  ("benchmark", "Agent 基准", ["SWE-bench/SWE-bench", "web-arena-x/webarena", "sierra-research/tau-bench",
+                              "THUDM/AgentBench", "harbor-framework/terminal-bench-1", "xlang-ai/OSWorld"]),
+  ("app-eval", "应用评测 / Judge", ["vibrantlabsai/ragas", "truera/trulens", "UKGovernmentBEIS/inspect_evals"]),
+ ],
+ "01": [
+  ("scheduling", "调度与编排", ["volcano-sh/volcano", "kubernetes-sigs/kueue", "kubeflow/trainer",
+                               "skypilot-org/skypilot"]),
+  ("network", "通信与网络", ["NVIDIA/nccl", "ofiwg/libfabric", "ROCm/rccl", "linux-rdma/rdma-core"]),
+  ("compute", "分布式计算", ["ray-project/ray", "Netflix/metaflow", "dask/dask"]),
+  ("gpu-ops", "GPU 运维", ["NVIDIA/gpu-operator", "NVIDIA/DCGM", "NVIDIA/dcgm-exporter"]),
+ ],
+ "02": [
+  ("data", "数据处理", ["huggingface/datatrove", "allenai/dolma", "NVIDIA-NeMo/Curator", "datajuicer/data-juicer"]),
+  ("pretrain", "预训练框架", ["NVIDIA/Megatron-LM", "pytorch/torchtitan", "deepspeedai/DeepSpeed"]),
+  ("finetune", "微调 / SFT", ["unslothai/unsloth", "axolotl-ai-cloud/axolotl", "hiyouga/LlamaFactory",
+                             "huggingface/peft"]),
+  ("rl", "RL / Agentic RL", ["verl-project/verl", "OpenRLHF/OpenRLHF", "huggingface/trl", "NovaSky-AI/SkyRL",
+                            "areal-project/AReaL", "rllm-org/rllm"]),
+  ("env", "RL 环境与沙箱", ["firecracker-microvm/firecracker", "e2b-dev/E2B", "Farama-Foundation/Gymnasium"]),
+ ],
+ "03": [
+  ("base", "开源基座", ["QwenLM/Qwen3", "meta-llama/llama-models", "deepseek-ai/DeepSeek-V3",
+                       "google-deepmind/gemma"]),
+  ("multimodal", "多模态 / GUI", ["QwenLM/Qwen3-VL", "OpenGVLab/InternVL", "openbmb/MiniCPM-V"]),
+  ("kernels", "架构与算子", ["Dao-AILab/flash-attention", "deepseek-ai/DeepEP", "NVIDIA/TransformerEngine",
+                            "linkedin/Liger-Kernel"]),
+  ("library", "建模库", ["huggingface/transformers", "huggingface/tokenizers", "ml-explore/mlx"]),
+ ],
+ "04": [
+  ("engine", "推理引擎", ["vllm-project/vllm", "sgl-project/sglang", "NVIDIA/TensorRT-LLM", "InternLM/lmdeploy"]),
+  ("local", "端侧 / 本地", ["ggml-org/llama.cpp", "ollama/ollama", "ml-explore/mlx-lm"]),
+  ("kv", "KV Cache / 分离式", ["LMCache/LMCache", "ai-dynamo/dynamo", "llm-d/llm-d"]),
+  ("accel", "量化与加速", ["flashinfer-ai/flashinfer", "vllm-project/llm-compressor",
+                          "NVIDIA/Model-Optimizer"]),
+  ("gateway", "网关与路由", ["BerriAI/litellm", "triton-inference-server/server", "Portkey-AI/gateway",
+                            "kserve/kserve"]),
+ ],
+ "05": [
+  ("loop", "Agent Loop / 运行时", ["langchain-ai/langgraph", "openai/openai-agents-python", "huggingface/smolagents",
+                                  "deepseek-ai/deepseek-harness"]),
+  ("context", "上下文工程 / 压缩", ["microsoft/LLMLingua", "headroomlabs-ai/headroom"]),
+  ("memory", "记忆管理", ["mem0ai/mem0", "letta-ai/letta", "getzep/graphiti", "thedotmack/claude-mem"]),
+  ("skills", "Skills / 指令", ["anthropics/skills"]),
+  ("tools", "工具 / MCP / 浏览器", ["modelcontextprotocol/servers", "microsoft/playwright-mcp",
+                                  "browser-use/browser-use", "github/github-mcp-server"]),
+  ("sandbox", "沙箱", ["google/gvisor", "e2b-dev/code-interpreter", "microsandbox/microsandbox"]),
+  ("durable", "持久执行", ["temporalio/temporal", "inngest/inngest", "restatedev/restate"]),
+  ("multi-agent", "多 Agent", ["microsoft/autogen", "crewAIInc/crewAI", "camel-ai/camel"]),
+  ("coding", "Coding Agent", ["anomalyco/opencode", "cline/cline", "aaif-goose/goose", "OpenHands/OpenHands",
+                              "SWE-agent/SWE-agent", "openai/codex", "Aider-AI/aider"]),
+ ],
+ "06": [
+  ("lowcode", "低代码编排", ["langgenius/dify", "coze-dev/coze-studio", "n8n-io/n8n", "langflow-ai/langflow"]),
+  ("framework", "代码优先框架", ["pydantic/pydantic-ai", "google/adk-python", "mastra-ai/mastra", "agno-agi/agno",
+                                "microsoft/semantic-kernel"]),
+  ("rag", "RAG 与知识库", ["infiniflow/ragflow", "labring/FastGPT", "run-llama/llama_index", "deepset-ai/haystack"]),
+  ("chat", "Chat 前端 / 自部署", ["open-webui/open-webui", "LibreChat-AI/LibreChat", "Mintplex-Labs/anything-llm"]),
+ ],
+ "07": [
+  ("guardrails", "护栏与注入防御", ["guardrails-ai/guardrails", "NVIDIA-NeMo/Guardrails", "meta-llama/PurpleLlama"]),
+  ("redteam", "红队与扫描", ["promptfoo/promptfoo", "NVIDIA/garak", "Giskard-AI/giskard-oss"]),
+  ("policy", "策略、权限与隐私", ["open-policy-agent/opa", "cedar-policy/cedar", "data-privacy-stack/presidio"]),
+  ("agent-sec", "Agent / MCP 安全", ["Tencent/AI-Infra-Guard", "snyk/agent-scan"]),
+ ],
+ "08": [
+  ("tracing", "Tracing 与埋点", ["langfuse/langfuse", "Arize-ai/phoenix", "comet-ml/opik", "Helicone/helicone",
+                                "open-telemetry/opentelemetry-python", "traceloop/openllmetry"]),
+  ("experiment", "实验追踪", ["wandb/wandb", "mlflow/mlflow"]),
+  ("online-eval", "在线评估与监控", ["confident-ai/deepeval", "evidentlyai/evidently"]),
+  ("labeling", "标注与数据回流", ["HumanSignal/label-studio", "argilla-io/argilla"]),
+ ],
+}
+
+for s in stages:
+    groups = GROUPS[s["num"]]
+    s["groups"] = [{"id": gid, "title": title, "repos": repos} for gid, title, repos in groups]
+    members = [r for _, _, repos in groups for r in repos]
+    dupes = sorted({r for r in members if members.count(r) > 1})
+    assert not dupes, "stage %s: repo in more than one group: %s" % (s["num"], dupes)
+    missing = [r for r in s["repos"] if r not in members]
+    assert not missing, "stage %s: diagram repos missing from groups: %s" % (s["num"], missing)
 
 journey = [
  ("01", "接入", ["Auth · rate limit", "session / tenant"], "EDGE / API", C0),

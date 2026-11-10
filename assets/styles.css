@@ -1365,6 +1365,73 @@ svg {
   max-height: 21px;
 }
 
+.group-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: -4px 0 16px;
+}
+
+.group-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-2, var(--ink));
+  font: inherit;
+  font-size: 12px;
+  font-weight: 550;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: border-color 0.15s var(--ease), background 0.15s var(--ease), color 0.15s var(--ease);
+}
+
+.group-chip span {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.group-chip:hover {
+  border-color: color-mix(in srgb, var(--c, var(--accent)) 45%, transparent);
+}
+
+.group-chip:focus-visible {
+  outline: 2px solid var(--c, var(--accent));
+  outline-offset: 2px;
+}
+
+.group-chip.is-active {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--c, var(--accent)) 12%, var(--surface));
+  color: color-mix(in srgb, var(--c, var(--accent)) 80%, var(--ink));
+}
+
+.group-chip.is-active span {
+  color: inherit;
+}
+
+@media (max-width: 640px) {
+  .group-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-inline: -16px;
+    padding-inline: 16px;
+    scrollbar-width: none;
+  }
+  .group-chips::-webkit-scrollbar {
+    display: none;
+  }
+  .group-chip {
+    flex-shrink: 0;
+  }
+}
+
 .topic-chip {
   flex-shrink: 0;
   max-width: 120px;

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-06T06:04:19+00:00",
-  "totalRepos": 100,
+  "generatedAt": "2026-11-10T05:25:16+00:00",
+  "totalRepos": 149,
   "stages": [
     {
       "id": "eval",
@@ -13,11 +13,51 @@
         "openai/evals",
         "EleutherAI/lm-evaluation-harness",
         "UKGovernmentBEIS/inspect_ai",
+        "huggingface/lighteval",
+        "open-compass/opencompass",
         "SWE-bench/SWE-bench",
         "web-arena-x/webarena",
         "sierra-research/tau-bench",
         "THUDM/AgentBench",
-        "huggingface/lighteval"
+        "harbor-framework/terminal-bench-1",
+        "xlang-ai/OSWorld",
+        "vibrantlabsai/ragas",
+        "truera/trulens",
+        "UKGovernmentBEIS/inspect_evals"
+      ],
+      "groups": [
+        {
+          "id": "framework",
+          "title": "评测框架",
+          "repos": [
+            "openai/evals",
+            "EleutherAI/lm-evaluation-harness",
+            "UKGovernmentBEIS/inspect_ai",
+            "huggingface/lighteval",
+            "open-compass/opencompass"
+          ]
+        },
+        {
+          "id": "benchmark",
+          "title": "Agent 基准",
+          "repos": [
+            "SWE-bench/SWE-bench",
+            "web-arena-x/webarena",
+            "sierra-research/tau-bench",
+            "THUDM/AgentBench",
+            "harbor-framework/terminal-bench-1",
+            "xlang-ai/OSWorld"
+          ]
+        },
+        {
+          "id": "app-eval",
+          "title": "应用评测 / Judge",
+          "repos": [
+            "vibrantlabsai/ragas",
+            "truera/trulens",
+            "UKGovernmentBEIS/inspect_evals"
+          ]
+        }
       ]
     },
     {
@@ -28,14 +68,60 @@
       "color": "#0D99FF",
       "goal": "稳定、可调度、可恢复的算力底座",
       "repos": [
-        "NVIDIA/nccl",
-        "NVIDIA/gpu-operator",
         "volcano-sh/volcano",
         "kubernetes-sigs/kueue",
-        "ray-project/ray",
-        "NVIDIA/DCGM",
+        "kubeflow/trainer",
+        "skypilot-org/skypilot",
+        "NVIDIA/nccl",
         "ofiwg/libfabric",
-        "kubeflow/training-operator"
+        "ROCm/rccl",
+        "linux-rdma/rdma-core",
+        "ray-project/ray",
+        "Netflix/metaflow",
+        "dask/dask",
+        "NVIDIA/gpu-operator",
+        "NVIDIA/DCGM",
+        "NVIDIA/dcgm-exporter"
+      ],
+      "groups": [
+        {
+          "id": "scheduling",
+          "title": "调度与编排",
+          "repos": [
+            "volcano-sh/volcano",
+            "kubernetes-sigs/kueue",
+            "kubeflow/trainer",
+            "skypilot-org/skypilot"
+          ]
+        },
+        {
+          "id": "network",
+          "title": "通信与网络",
+          "repos": [
+            "NVIDIA/nccl",
+            "ofiwg/libfabric",
+            "ROCm/rccl",
+            "linux-rdma/rdma-core"
+          ]
+        },
+        {
+          "id": "compute",
+          "title": "分布式计算",
+          "repos": [
+            "ray-project/ray",
+            "Netflix/metaflow",
+            "dask/dask"
+          ]
+        },
+        {
+          "id": "gpu-ops",
+          "title": "GPU 运维",
+          "repos": [
+            "NVIDIA/gpu-operator",
+            "NVIDIA/DCGM",
+            "NVIDIA/dcgm-exporter"
+          ]
+        }
       ]
     },
     {
@@ -48,20 +134,76 @@
       "repos": [
         "huggingface/datatrove",
         "allenai/dolma",
-        "NVIDIA/NeMo-Curator",
-        "modelscope/data-juicer",
+        "NVIDIA-NeMo/Curator",
+        "datajuicer/data-juicer",
         "NVIDIA/Megatron-LM",
         "pytorch/torchtitan",
         "deepspeedai/DeepSpeed",
-        "volcengine/verl",
+        "unslothai/unsloth",
+        "axolotl-ai-cloud/axolotl",
+        "hiyouga/LlamaFactory",
+        "huggingface/peft",
+        "verl-project/verl",
         "OpenRLHF/OpenRLHF",
         "huggingface/trl",
         "NovaSky-AI/SkyRL",
-        "inclusionAI/AReaL",
-        "unslothai/unsloth",
-        "axolotl-ai-cloud/axolotl",
+        "areal-project/AReaL",
+        "rllm-org/rllm",
         "firecracker-microvm/firecracker",
-        "e2b-dev/E2B"
+        "e2b-dev/E2B",
+        "Farama-Foundation/Gymnasium"
+      ],
+      "groups": [
+        {
+          "id": "data",
+          "title": "数据处理",
+          "repos": [
+            "huggingface/datatrove",
+            "allenai/dolma",
+            "NVIDIA-NeMo/Curator",
+            "datajuicer/data-juicer"
+          ]
+        },
+        {
+          "id": "pretrain",
+          "title": "预训练框架",
+          "repos": [
+            "NVIDIA/Megatron-LM",
+            "pytorch/torchtitan",
+            "deepspeedai/DeepSpeed"
+          ]
+        },
+        {
+          "id": "finetune",
+          "title": "微调 / SFT",
+          "repos": [
+            "unslothai/unsloth",
+            "axolotl-ai-cloud/axolotl",
+            "hiyouga/LlamaFactory",
+            "huggingface/peft"
+          ]
+        },
+        {
+          "id": "rl",
+          "title": "RL / Agentic RL",
+          "repos": [
+            "verl-project/verl",
+            "OpenRLHF/OpenRLHF",
+            "huggingface/trl",
+            "NovaSky-AI/SkyRL",
+            "areal-project/AReaL",
+            "rllm-org/rllm"
+          ]
+        },
+        {
+          "id": "env",
+          "title": "RL 环境与沙箱",
+          "repos": [
+            "firecracker-microvm/firecracker",
+            "e2b-dev/E2B",
+            "Farama-Foundation/Gymnasium"
+          ]
+        }
       ]
     },
     {
@@ -75,11 +217,57 @@
         "QwenLM/Qwen3",
         "meta-llama/llama-models",
         "deepseek-ai/DeepSeek-V3",
-        "huggingface/transformers",
+        "google-deepmind/gemma",
+        "QwenLM/Qwen3-VL",
+        "OpenGVLab/InternVL",
+        "openbmb/MiniCPM-V",
         "Dao-AILab/flash-attention",
         "deepseek-ai/DeepEP",
         "NVIDIA/TransformerEngine",
-        "huggingface/tokenizers"
+        "linkedin/Liger-Kernel",
+        "huggingface/transformers",
+        "huggingface/tokenizers",
+        "ml-explore/mlx"
+      ],
+      "groups": [
+        {
+          "id": "base",
+          "title": "开源基座",
+          "repos": [
+            "QwenLM/Qwen3",
+            "meta-llama/llama-models",
+            "deepseek-ai/DeepSeek-V3",
+            "google-deepmind/gemma"
+          ]
+        },
+        {
+          "id": "multimodal",
+          "title": "多模态 / GUI",
+          "repos": [
+            "QwenLM/Qwen3-VL",
+            "OpenGVLab/InternVL",
+            "openbmb/MiniCPM-V"
+          ]
+        },
+        {
+          "id": "kernels",
+          "title": "架构与算子",
+          "repos": [
+            "Dao-AILab/flash-attention",
+            "deepseek-ai/DeepEP",
+            "NVIDIA/TransformerEngine",
+            "linkedin/Liger-Kernel"
+          ]
+        },
+        {
+          "id": "library",
+          "title": "建模库",
+          "repos": [
+            "huggingface/transformers",
+            "huggingface/tokenizers",
+            "ml-explore/mlx"
+          ]
+        }
       ]
     },
     {
@@ -94,14 +282,68 @@
         "sgl-project/sglang",
         "NVIDIA/TensorRT-LLM",
         "InternLM/lmdeploy",
-        "LMCache/LMCache",
-        "ai-dynamo/dynamo",
-        "NVIDIA/Triton-Inference-Server",
-        "BerriAI/litellm",
         "ggml-org/llama.cpp",
         "ollama/ollama",
-        "huggingface/text-generation-inference",
-        "llm-d/llm-d"
+        "ml-explore/mlx-lm",
+        "LMCache/LMCache",
+        "ai-dynamo/dynamo",
+        "llm-d/llm-d",
+        "flashinfer-ai/flashinfer",
+        "vllm-project/llm-compressor",
+        "NVIDIA/Model-Optimizer",
+        "BerriAI/litellm",
+        "triton-inference-server/server",
+        "Portkey-AI/gateway",
+        "kserve/kserve"
+      ],
+      "groups": [
+        {
+          "id": "engine",
+          "title": "推理引擎",
+          "repos": [
+            "vllm-project/vllm",
+            "sgl-project/sglang",
+            "NVIDIA/TensorRT-LLM",
+            "InternLM/lmdeploy"
+          ]
+        },
+        {
+          "id": "local",
+          "title": "端侧 / 本地",
+          "repos": [
+            "ggml-org/llama.cpp",
+            "ollama/ollama",
+            "ml-explore/mlx-lm"
+          ]
+        },
+        {
+          "id": "kv",
+          "title": "KV Cache / 分离式",
+          "repos": [
+            "LMCache/LMCache",
+            "ai-dynamo/dynamo",
+            "llm-d/llm-d"
+          ]
+        },
+        {
+          "id": "accel",
+          "title": "量化与加速",
+          "repos": [
+            "flashinfer-ai/flashinfer",
+            "vllm-project/llm-compressor",
+            "NVIDIA/Model-Optimizer"
+          ]
+        },
+        {
+          "id": "gateway",
+          "title": "网关与路由",
+          "repos": [
+            "BerriAI/litellm",
+            "triton-inference-server/server",
+            "Portkey-AI/gateway",
+            "kserve/kserve"
+          ]
+        }
       ]
     },
     {
@@ -114,21 +356,122 @@
       "repos": [
         "langchain-ai/langgraph",
         "openai/openai-agents-python",
-        "deepseek-ai/deepseek-harness",
         "huggingface/smolagents",
-        "microsoft/autogen",
-        "SWE-agent/SWE-agent",
-        "All-Hands-AI/OpenHands",
-        "browser-use/browser-use",
-        "modelcontextprotocol/servers",
-        "microsoft/playwright-mcp",
+        "deepseek-ai/deepseek-harness",
+        "microsoft/LLMLingua",
+        "headroomlabs-ai/headroom",
         "mem0ai/mem0",
         "letta-ai/letta",
-        "temporalio/temporal",
+        "getzep/graphiti",
+        "thedotmack/claude-mem",
+        "anthropics/skills",
+        "modelcontextprotocol/servers",
+        "microsoft/playwright-mcp",
+        "browser-use/browser-use",
+        "github/github-mcp-server",
         "google/gvisor",
-        "sst/opencode",
+        "e2b-dev/code-interpreter",
+        "microsandbox/microsandbox",
+        "temporalio/temporal",
+        "inngest/inngest",
+        "restatedev/restate",
+        "microsoft/autogen",
+        "crewAIInc/crewAI",
+        "camel-ai/camel",
+        "anomalyco/opencode",
         "cline/cline",
-        "block/goose"
+        "aaif-goose/goose",
+        "OpenHands/OpenHands",
+        "SWE-agent/SWE-agent",
+        "openai/codex",
+        "Aider-AI/aider"
+      ],
+      "groups": [
+        {
+          "id": "loop",
+          "title": "Agent Loop / 运行时",
+          "repos": [
+            "langchain-ai/langgraph",
+            "openai/openai-agents-python",
+            "huggingface/smolagents",
+            "deepseek-ai/deepseek-harness"
+          ]
+        },
+        {
+          "id": "context",
+          "title": "上下文工程 / 压缩",
+          "repos": [
+            "microsoft/LLMLingua",
+            "headroomlabs-ai/headroom"
+          ]
+        },
+        {
+          "id": "memory",
+          "title": "记忆管理",
+          "repos": [
+            "mem0ai/mem0",
+            "letta-ai/letta",
+            "getzep/graphiti",
+            "thedotmack/claude-mem"
+          ]
+        },
+        {
+          "id": "skills",
+          "title": "Skills / 指令",
+          "repos": [
+            "anthropics/skills"
+          ]
+        },
+        {
+          "id": "tools",
+          "title": "工具 / MCP / 浏览器",
+          "repos": [
+            "modelcontextprotocol/servers",
+            "microsoft/playwright-mcp",
+            "browser-use/browser-use",
+            "github/github-mcp-server"
+          ]
+        },
+        {
+          "id": "sandbox",
+          "title": "沙箱",
+          "repos": [
+            "google/gvisor",
+            "e2b-dev/code-interpreter",
+            "microsandbox/microsandbox"
+          ]
+        },
+        {
+          "id": "durable",
+          "title": "持久执行",
+          "repos": [
+            "temporalio/temporal",
+            "inngest/inngest",
+            "restatedev/restate"
+          ]
+        },
+        {
+          "id": "multi-agent",
+          "title": "多 Agent",
+          "repos": [
+            "microsoft/autogen",
+            "crewAIInc/crewAI",
+            "camel-ai/camel"
+          ]
+        },
+        {
+          "id": "coding",
+          "title": "Coding Agent",
+          "repos": [
+            "anomalyco/opencode",
+            "cline/cline",
+            "aaif-goose/goose",
+            "OpenHands/OpenHands",
+            "SWE-agent/SWE-agent",
+            "openai/codex",
+            "Aider-AI/aider"
+          ]
+        }
       ]
     },
     {
@@ -143,18 +486,60 @@
         "coze-dev/coze-studio",
         "n8n-io/n8n",
         "langflow-ai/langflow",
-        "FlowiseAI/Flowise",
-        "infiniflow/ragflow",
-        "labring/FastGPT",
-        "open-webui/open-webui",
-        "danny-avila/LibreChat",
-        "run-llama/llama_index",
-        "deepset-ai/haystack",
-        "microsoft/semantic-kernel",
         "pydantic/pydantic-ai",
         "google/adk-python",
         "mastra-ai/mastra",
-        "agno-agi/agno"
+        "agno-agi/agno",
+        "microsoft/semantic-kernel",
+        "infiniflow/ragflow",
+        "labring/FastGPT",
+        "run-llama/llama_index",
+        "deepset-ai/haystack",
+        "open-webui/open-webui",
+        "LibreChat-AI/LibreChat",
+        "Mintplex-Labs/anything-llm"
+      ],
+      "groups": [
+        {
+          "id": "lowcode",
+          "title": "低代码编排",
+          "repos": [
+            "langgenius/dify",
+            "coze-dev/coze-studio",
+            "n8n-io/n8n",
+            "langflow-ai/langflow"
+          ]
+        },
+        {
+          "id": "framework",
+          "title": "代码优先框架",
+          "repos": [
+            "pydantic/pydantic-ai",
+            "google/adk-python",
+            "mastra-ai/mastra",
+            "agno-agi/agno",
+            "microsoft/semantic-kernel"
+          ]
+        },
+        {
+          "id": "rag",
+          "title": "RAG 与知识库",
+          "repos": [
+            "infiniflow/ragflow",
+            "labring/FastGPT",
+            "run-llama/llama_index",
+            "deepset-ai/haystack"
+          ]
+        },
+        {
+          "id": "chat",
+          "title": "Chat 前端 / 自部署",
+          "repos": [
+            "open-webui/open-webui",
+            "LibreChat-AI/LibreChat",
+            "Mintplex-Labs/anything-llm"
+          ]
+        }
       ]
     },
     {
@@ -166,13 +551,53 @@
       "goal": "能执行代码和转账时， 安全不是附加项",
       "repos": [
         "guardrails-ai/guardrails",
-        "NVIDIA/NeMo-Guardrails",
+        "NVIDIA-NeMo/Guardrails",
         "meta-llama/PurpleLlama",
-        "microsoft/presidio",
         "promptfoo/promptfoo",
         "NVIDIA/garak",
-        "protectai/rebuff",
-        "open-policy-agent/opa"
+        "Giskard-AI/giskard-oss",
+        "open-policy-agent/opa",
+        "cedar-policy/cedar",
+        "data-privacy-stack/presidio",
+        "Tencent/AI-Infra-Guard",
+        "snyk/agent-scan"
+      ],
+      "groups": [
+        {
+          "id": "guardrails",
+          "title": "护栏与注入防御",
+          "repos": [
+            "guardrails-ai/guardrails",
+            "NVIDIA-NeMo/Guardrails",
+            "meta-llama/PurpleLlama"
+          ]
+        },
+        {
+          "id": "redteam",
+          "title": "红队与扫描",
+          "repos": [
+            "promptfoo/promptfoo",
+            "NVIDIA/garak",
+            "Giskard-AI/giskard-oss"
+          ]
+        },
+        {
+          "id": "policy",
+          "title": "策略、权限与隐私",
+          "repos": [
+            "open-policy-agent/opa",
+            "cedar-policy/cedar",
+            "data-privacy-stack/presidio"
+          ]
+        },
+        {
+          "id": "agent-sec",
+          "title": "Agent / MCP 安全",
+          "repos": [
+            "Tencent/AI-Infra-Guard",
+            "snyk/agent-scan"
+          ]
+        }
       ]
     },
     {
@@ -188,9 +613,51 @@
         "comet-ml/opik",
         "Helicone/helicone",
         "open-telemetry/opentelemetry-python",
-        "HumanSignal/label-studio",
+        "traceloop/openllmetry",
         "wandb/wandb",
-        "confident-ai/deepeval"
+        "mlflow/mlflow",
+        "confident-ai/deepeval",
+        "evidentlyai/evidently",
+        "HumanSignal/label-studio",
+        "argilla-io/argilla"
+      ],
+      "groups": [
+        {
+          "id": "tracing",
+          "title": "Tracing 与埋点",
+          "repos": [
+            "langfuse/langfuse",
+            "Arize-ai/phoenix",
+            "comet-ml/opik",
+            "Helicone/helicone",
+            "open-telemetry/opentelemetry-python",
+            "traceloop/openllmetry"
+          ]
+        },
+        {
+          "id": "experiment",
+          "title": "实验追踪",
+          "repos": [
+            "wandb/wandb",
+            "mlflow/mlflow"
+          ]
+        },
+        {
+          "id": "online-eval",
+          "title": "在线评估与监控",
+          "repos": [
+            "confident-ai/deepeval",
+            "evidentlyai/evidently"
+          ]
+        },
+        {
+          "id": "labeling",
+          "title": "标注与数据回流",
+          "repos": [
+            "HumanSignal/label-studio",
+            "argilla-io/argilla"
+          ]
+        }
       ]
     }
   ]

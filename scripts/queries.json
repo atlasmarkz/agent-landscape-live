@@ -1,101 +1,62 @@
 {
   "eval": {
-    "hot": [
-      "topic:llm-evaluation stars:>50 archived:false fork:false",
-      "topic:agent-evaluation stars:>20 archived:false fork:false",
-      "topic:llm-eval stars:>50 archived:false fork:false"
-    ],
-    "rising": [
-      "topic:llm-evaluation created:>{since} stars:>5 archived:false fork:false",
-      "topic:agent-evaluation created:>{since} stars:>5 archived:false fork:false"
-    ]
+    "framework": [{ "topic": "llm-evaluation", "stars": 50, "rising": 5 }, { "topic": "llm-eval", "stars": 50, "rising": 5 }],
+    "benchmark": [{ "topic": "llm-benchmark", "stars": 50, "rising": 5 }, { "topic": "agent-evaluation", "stars": 20, "rising": 5 }, { "topic": "agent-benchmark", "stars": 20, "rising": 5 }],
+    "app-eval": [{ "topic": "rag-evaluation", "stars": 20, "rising": 5 }, { "topic": "llm-as-a-judge", "stars": 20, "rising": 5 }]
   },
   "infra": {
-    "hot": [
-      "topic:gpu-cluster stars:>20 archived:false fork:false",
-      "topic:ml-infrastructure stars:>200 archived:false fork:false",
-      "topic:llm-infrastructure stars:>50 archived:false fork:false"
-    ],
-    "rising": [
-      "topic:gpu-cluster created:>{since} stars:>5 archived:false fork:false",
-      "topic:ml-infrastructure created:>{since} stars:>10 archived:false fork:false"
-    ]
+    "scheduling": [{ "topic": "gpu-scheduling", "stars": 20, "rising": 5 }, { "topic": "slurm", "stars": 50, "rising": 5 }],
+    "network": [{ "topic": "rdma", "stars": 50, "rising": 5 }, { "topic": "nccl", "stars": 20, "rising": 5 }],
+    "compute": [{ "topic": "distributed-computing", "stars": 300, "rising": 10 }, { "topic": "ml-infrastructure", "stars": 100, "rising": 5 }],
+    "gpu-ops": [{ "topic": "gpu-monitoring", "stars": 20, "rising": 5 }, { "topic": "gpu-cluster", "stars": 20, "rising": 5 }]
   },
   "training": {
-    "hot": [
-      "topic:llm-training stars:>100 archived:false fork:false",
-      "topic:rlhf stars:>100 archived:false fork:false",
-      "topic:fine-tuning stars:>500 archived:false fork:false"
-    ],
-    "rising": [
-      "topic:rlhf created:>{since} stars:>10 archived:false fork:false",
-      "topic:post-training created:>{since} stars:>10 archived:false fork:false"
-    ]
+    "data": [{ "topic": "data-curation", "stars": 50, "rising": 5 }, { "topic": "synthetic-data", "stars": 100, "rising": 10 }],
+    "pretrain": [{ "topic": "distributed-training", "stars": 100, "rising": 10 }, { "topic": "pretraining", "stars": 100, "rising": 10 }],
+    "finetune": [{ "topic": "fine-tuning", "stars": 500, "rising": 20 }, { "topic": "lora", "stars": 300, "rising": 10 }],
+    "rl": [{ "topic": "rlhf", "stars": 100, "rising": 10 }, { "topic": "grpo", "stars": 50, "rising": 10 }],
+    "env": [{ "topic": "rl-environment", "stars": 20, "rising": 5 }, { "topic": "gymnasium", "stars": 50, "rising": 5 }]
   },
   "model": {
-    "hot": [
-      "topic:foundation-models stars:>100 archived:false fork:false",
-      "topic:multimodal stars:>500 archived:false fork:false",
-      "topic:long-context stars:>50 archived:false fork:false"
-    ],
-    "rising": [
-      "topic:foundation-models created:>{since} stars:>10 archived:false fork:false",
-      "topic:multimodal created:>{since} stars:>30 archived:false fork:false"
-    ]
+    "base": [{ "topic": "foundation-models", "stars": 100, "rising": 10 }, { "topic": "pretrained-models", "stars": 1000, "rising": 50 }],
+    "multimodal": [{ "topic": "vision-language-model", "stars": 100, "rising": 20 }, { "topic": "gui-agent", "stars": 50, "rising": 10 }],
+    "kernels": [{ "topic": "cuda-kernels", "stars": 50, "rising": 10 }, { "topic": "triton-kernels", "stars": 20, "rising": 5 }],
+    "library": [{ "topic": "transformers", "stars": 1000, "rising": 50 }]
   },
   "serving": {
-    "hot": [
-      "topic:llm-serving stars:>50 archived:false fork:false",
-      "topic:llm-inference stars:>50 archived:false fork:false",
-      "topic:inference-engine stars:>50 archived:false fork:false"
-    ],
-    "rising": [
-      "topic:llm-serving created:>{since} stars:>5 archived:false fork:false",
-      "topic:kv-cache created:>{since} stars:>5 archived:false fork:false"
-    ]
+    "engine": [{ "topic": "llm-serving", "stars": 50, "rising": 5 }, { "topic": "llm-inference", "stars": 50, "rising": 10 }],
+    "local": [{ "topic": "local-llm", "stars": 300, "rising": 20 }, { "topic": "gguf", "stars": 100, "rising": 10 }],
+    "kv": [{ "topic": "kv-cache", "stars": 30, "rising": 5 }, { "topic": "prefix-caching", "stars": 10, "rising": 5 }],
+    "accel": [{ "topic": "quantization", "stars": 200, "rising": 10 }, { "topic": "speculative-decoding", "stars": 30, "rising": 5 }],
+    "gateway": [{ "topic": "llm-gateway", "stars": 50, "rising": 10 }, { "topic": "ai-gateway", "stars": 50, "rising": 10 }]
   },
   "harness": {
-    "hot": [
-      "topic:ai-agents stars:>300 archived:false fork:false",
-      "topic:agent-framework stars:>50 archived:false fork:false",
-      "topic:mcp stars:>200 archived:false fork:false"
-    ],
-    "rising": [
-      "topic:ai-agents created:>{since} stars:>30 archived:false fork:false",
-      "topic:agent-framework created:>{since} stars:>10 archived:false fork:false"
-    ]
+    "loop": [{ "topic": "agent-runtime", "stars": 30, "rising": 10 }, { "topic": "agent-harness", "stars": 20, "rising": 10 }],
+    "context": [{ "topic": "context-engineering", "stars": 50, "rising": 10 }, { "topic": "prompt-compression", "stars": 20, "rising": 5 }],
+    "memory": [{ "topic": "agent-memory", "stars": 50, "rising": 10 }, { "topic": "long-term-memory", "stars": 50, "rising": 10 }],
+    "skills": [{ "topic": "agent-skills", "stars": 50, "rising": 10 }, { "topic": "claude-skills", "stars": 50, "rising": 10 }],
+    "tools": [{ "topic": "mcp-server", "stars": 200, "rising": 30 }, { "topic": "browser-automation", "stars": 500, "rising": 30 }],
+    "sandbox": [{ "topic": "sandbox", "stars": 200, "rising": 20 }, { "topic": "code-interpreter", "stars": 100, "rising": 10 }],
+    "durable": [{ "topic": "durable-execution", "stars": 50, "rising": 5 }, { "topic": "workflow-engine", "stars": 1000, "rising": 30 }],
+    "multi-agent": [{ "topic": "multi-agent", "stars": 300, "rising": 30 }, { "topic": "multi-agent-systems", "stars": 100, "rising": 20 }],
+    "coding": [{ "topic": "coding-agent", "stars": 200, "rising": 30 }, { "topic": "ai-coding", "stars": 300, "rising": 30 }]
   },
   "platform": {
-    "hot": [
-      "topic:llmops stars:>100 archived:false fork:false",
-      "topic:rag stars:>500 archived:false fork:false",
-      "topic:workflow-automation stars:>500 archived:false fork:false"
-    ],
-    "rising": [
-      "topic:llmops created:>{since} stars:>10 archived:false fork:false",
-      "topic:rag created:>{since} stars:>30 archived:false fork:false"
-    ]
+    "lowcode": [{ "topic": "low-code", "stars": 1000, "rising": 50 }, { "topic": "workflow-automation", "stars": 500, "rising": 30 }],
+    "framework": [{ "topic": "agent-framework", "stars": 300, "rising": 20 }, { "topic": "agents-sdk", "stars": 50, "rising": 10 }],
+    "rag": [{ "topic": "rag", "stars": 500, "rising": 30 }, { "topic": "knowledge-base", "stars": 500, "rising": 30 }],
+    "chat": [{ "topic": "llm-ui", "stars": 100, "rising": 20 }, { "topic": "ai-chat", "stars": 500, "rising": 30 }]
   },
   "security": {
-    "hot": [
-      "topic:llm-security stars:>30 archived:false fork:false",
-      "topic:guardrails stars:>30 archived:false fork:false",
-      "topic:prompt-injection stars:>20 archived:false fork:false"
-    ],
-    "rising": [
-      "topic:llm-security created:>{since} stars:>5 archived:false fork:false",
-      "topic:guardrails created:>{since} stars:>5 archived:false fork:false"
-    ]
+    "guardrails": [{ "topic": "guardrails", "stars": 30, "rising": 5 }, { "topic": "prompt-injection", "stars": 20, "rising": 5 }],
+    "redteam": [{ "topic": "red-teaming", "stars": 30, "rising": 5 }, { "topic": "llm-security", "stars": 30, "rising": 5 }],
+    "policy": [{ "topic": "policy-engine", "stars": 100, "rising": 10 }, { "topic": "pii", "stars": 100, "rising": 10 }],
+    "agent-sec": [{ "topic": "mcp-security", "stars": 10, "rising": 5 }, { "topic": "ai-security", "stars": 100, "rising": 10 }]
   },
   "observability": {
-    "hot": [
-      "topic:llm-observability stars:>30 archived:false fork:false",
-      "topic:agent-observability stars:>20 archived:false fork:false",
-      "topic:llmops stars:>100 archived:false fork:false"
-    ],
-    "rising": [
-      "topic:llm-observability created:>{since} stars:>5 archived:false fork:false",
-      "topic:agent-observability created:>{since} stars:>5 archived:false fork:false"
-    ]
+    "tracing": [{ "topic": "llm-observability", "stars": 30, "rising": 5 }, { "topic": "opentelemetry", "stars": 300, "rising": 10 }],
+    "experiment": [{ "topic": "experiment-tracking", "stars": 100, "rising": 10 }, { "topic": "mlops", "stars": 1000, "rising": 30 }],
+    "online-eval": [{ "topic": "model-monitoring", "stars": 50, "rising": 5 }, { "topic": "agent-observability", "stars": 20, "rising": 5 }],
+    "labeling": [{ "topic": "data-labeling", "stars": 100, "rising": 10 }, { "topic": "annotation-tool", "stars": 300, "rising": 10 }]
   }
 }

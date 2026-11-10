@@ -44,6 +44,7 @@
     mode: localStorage.getItem("al-mode") || "curated",
     query: "",
     expanded: new Set(),
+    group: {}, // stageId → selected sub-section id ("" = all)
     allExpanded: false,
     activeStage: null,
     loading: false,
@@ -167,6 +168,20 @@
   /* ---------------------------------------------------------
      Data
      --------------------------------------------------------- */
+  function groupIndex(stage) {
+    if (!stage._groupOf) {
+      stage._groupOf = new Map();
+      for (const group of stage.groups || []) {
+        for (const full of group.repos) stage._groupOf.set(full, group.id);
+      }
+    }
+    return stage._groupOf;
+  }
+
+  function groupTitle(stage, id) {
+    return (stage.groups || []).find((g) => g.id === id)?.title || "";
+  }
+
   function hydrateCurated(fullName) {
     const meta = state.live?.curated?.[fullName] || {};
     const slash = fullName.indexOf("/");
@@ -205,12 +220,28 @@
   }
 
   function getRepos(stage, mode) {
-    if (mode === "curated") return stage.repos.map(hydrateCurated);
+    const groupOf = groupIndex(stage);
+    const curated = (full) => ({ ...hydrateCurated(full), group: groupOf.get(full) || "" });
+    if (mode === "curated") return stage.repos.map(curated);
     const live = state.live?.stages?.[stage.id]?.[mode];
-    if (Array.isArray(live) && live.length) return live.map(normalizeLive);
+    if (Array.isArray(live) && live.length) {
+      return live.map((repo) => ({ ...normalizeLive(repo), group: repo.group || groupOf.get(repo.fullName) || "" }));
+    }
     // If the live snapshot is unavailable, keep the page useful with the
     // editorial shortlist rather than showing empty sections.
-    return stage.repos.slice(0, 6).map(hydrateCurated);
+    return (stage.groups || []).flatMap((g) => g.repos.slice(0, 2)).map(curated);
+  }
+
+  function groupChips(stage, repos, active) {
+    const groups = (stage.groups || [])
+      .map((g) => ({ ...g, count: repos.filter((r) => r.group === g.id).length }))
+      .filter((g) => g.count > 0);
+    if (groups.length < 2) return "";
+    const chip = (id, label, count) =>
+      `<button class="group-chip${active === id ? " is-active" : ""}" type="button" data-group-stage="${escapeHtml(stage.id)}" data-group="${escapeHtml(id)}" aria-pressed="${active === id}">${escapeHtml(label)}<span>${count}</span></button>`;
+    return `<div class="group-chips" role="group" aria-label="${escapeHtml(stage.title)} 子板块">${chip("", "全部", repos.length)}${groups
+      .map((g) => chip(g.id, g.title, g.count))
+      .join("")}</div>`;
   }
 
   function modeTotal(mode) {
@@ -230,6 +261,10 @@
      --------------------------------------------------------- */
   function renderAll() {
     if (!state.curated) return;
+    const heroCurated = $("#heroCurated");
+    const heroGroups = $("#heroGroups");
+    if (heroCurated) heroCurated.textContent = String(state.curated.stages.reduce((n, s) => n + s.repos.length, 0));
+    if (heroGroups) heroGroups.textContent = String(state.curated.stages.reduce((n, s) => n + (s.groups?.length || 0), 0));
     renderSignalMap();
     renderStageNav();
     renderTicker();
@@ -318,14 +353,18 @@
     let matched = 0;
 
     for (const stage of stages) {
-      let repos = getRepos(stage, state.mode);
-      if (query) repos = repos.filter((repo) => matches(repo, query));
-      if (query && !repos.length) continue;
-      matched += repos.length;
+      let stageRepos = getRepos(stage, state.mode);
+      if (query) stageRepos = stageRepos.filter((repo) => matches(repo, query));
+      if (query && !stageRepos.length) continue;
+      matched += stageRepos.length;
+
+      let activeGroup = state.group[stage.id] || "";
+      if (activeGroup && !stageRepos.some((r) => r.group === activeGroup)) activeGroup = "";
+      const repos = activeGroup ? stageRepos.filter((r) => r.group === activeGroup) : stageRepos;
 
       const isOpen = state.allExpanded || state.expanded.has(stage.id);
-      const visible = query ? repos : isOpen ? repos : repos.slice(0, 4);
-      const more = !query && !state.allExpanded && repos.length > 4
+      const visible = query || activeGroup || isOpen ? repos : repos.slice(0, 4);
+      const more = !query && !activeGroup && !state.allExpanded && repos.length > 4
         ? `<button class="stage-more${isOpen ? " is-open" : ""}" type="button" data-stage-more="${escapeHtml(stage.id)}" aria-expanded="${isOpen}">
             <span>${isOpen ? "收起" : `显示全部 ${repos.length} 个`}</span>
             <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6.5 8 10l4-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -339,8 +378,9 @@
             <h3>${escapeHtml(stage.title)}</h3>
             <p>${escapeHtml(stage.goal)}</p>
           </div>
-          <div class="stage-aside"><span class="stage-count">${repos.length} 个${state.mode === "curated" ? "仓库" : "实时结果"}</span></div>
+          <div class="stage-aside"><span class="stage-count">${stageRepos.length} 个${state.mode === "curated" ? "仓库" : "实时结果"}</span></div>
         </div>
+        ${groupChips(stage, stageRepos, activeGroup)}
         ${
           visible.length
             ? `<div class="repo-grid">${visible.map((repo, index) => repoCard(repo, index, stage, state.mode)).join("")}</div>`
@@ -377,10 +417,11 @@
   function repoCard(repo, index, stage, mode) {
     const fullName = repo.fullName;
     const badge = badgeFor(repo, mode);
-    const topics = repo.topics.slice(0, 3);
-    const topicHtml = topics.length
-      ? topics.map((topic) => `<span class="topic-chip">${escapeHtml(topic)}</span>`).join("")
-      : `<span class="topic-chip stage-tag">${escapeHtml(stage.short)}</span>`;
+    const sub = groupTitle(stage, repo.group);
+    const topics = repo.topics.slice(0, sub ? 2 : 3);
+    const topicHtml =
+      `<span class="topic-chip stage-tag">${escapeHtml(sub || stage.short)}</span>` +
+      topics.map((topic) => `<span class="topic-chip">${escapeHtml(topic)}</span>`).join("");
     const language = repo.language
       ? `<span class="repo-lang"><i style="background:${escapeHtml(langColor(repo.language))}"></i>${escapeHtml(langLabel(repo.language))}</span>`
       : "";
@@ -552,6 +593,18 @@
   });
 
   stageList.addEventListener("click", (event) => {
+    const chip = event.target.closest("[data-group-stage]");
+    if (chip) {
+      const stageId = chip.dataset.groupStage;
+      state.group[stageId] = chip.dataset.group;
+      const y = window.scrollY;
+      const rowScroll = chip.parentElement.scrollLeft;
+      renderStages();
+      window.scrollTo(0, y);
+      const row = document.querySelector(`#stage-${CSS.escape(stageId)} .group-chips`);
+      if (row) row.scrollLeft = rowScroll;
+      return;
+    }
     const button = event.target.closest("[data-stage-more]");
     if (!button) return;
     const id = button.dataset.stageMore;
