@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T21:50:21.055Z",
+  "generatedAt": "2026-11-14T04:36:00.362Z",
   "source": "GitHub REST API (search + repos)",
   "since": "2025-11-13",
   "risingFetchedAt": "2026-11-13T16:00:11.038Z",
@@ -12,8 +12,8 @@
     "openai/evals": {
       "fullName": "openai/evals",
       "description": "Evals is a framework for evaluating LLMs and LLM systems, and an open-source registry of benchmarks.",
-      "stars": 19740,
-      "forks": 3134,
+      "stars": 19741,
+      "forks": 3133,
       "language": "Python",
       "pushedAt": "2026-04-14T15:29:57Z",
       "createdAt": "2023-01-23T20:51:04Z",
@@ -28,7 +28,7 @@
       "fullName": "EleutherAI/lm-evaluation-harness",
       "description": "A framework for few-shot evaluation of language models.",
       "stars": 14462,
-      "forks": 3794,
+      "forks": 3797,
       "language": "Python",
       "pushedAt": "2026-11-04T14:34:40Z",
       "createdAt": "2020-08-28T00:09:15Z",
@@ -41,22 +41,22 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 1353
+      "openIssues": 1354
     },
     "UKGovernmentBEIS/inspect_ai": {
       "fullName": "UKGovernmentBEIS/inspect_ai",
       "description": "Inspect: A framework for large language model evaluations",
-      "stars": 3242,
-      "forks": 930,
+      "stars": 3244,
+      "forks": 931,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:34:10Z",
+      "pushedAt": "2026-11-14T01:34:33Z",
       "createdAt": "2023-11-14T14:53:11Z",
       "topics": [],
       "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 514
+      "openIssues": 515
     },
     "huggingface/lighteval": {
       "fullName": "huggingface/lighteval",
@@ -81,8 +81,8 @@
     "open-compass/opencompass": {
       "fullName": "open-compass/opencompass",
       "description": "OpenCompass is an LLM evaluation platform, supporting a wide range of models from OpenAI, Anthropic, Gemini, Qwen, GLM, DeepSeek, etc, across 100+ datasets covering knowledge, reasoning, coding, science, language, long-context, and safety.",
-      "stars": 7595,
-      "forks": 911,
+      "stars": 7596,
+      "forks": 912,
       "language": "Python",
       "pushedAt": "2026-11-11T11:08:57Z",
       "createdAt": "2023-06-15T12:42:58Z",
@@ -97,12 +97,12 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 307
+      "openIssues": 308
     },
     "SWE-bench/SWE-bench": {
       "fullName": "SWE-bench/SWE-bench",
       "description": "SWE-bench: Can Language Models Resolve Real-world Github Issues?",
-      "stars": 6183,
+      "stars": 6184,
       "forks": 1057,
       "language": "Python",
       "pushedAt": "2026-09-18T05:08:56Z",
@@ -216,7 +216,7 @@
       "stars": 16313,
       "forks": 1814,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:20:25Z",
+      "pushedAt": "2026-11-14T03:06:20Z",
       "createdAt": "2023-05-08T17:48:04Z",
       "topics": [
         "evaluation",
@@ -227,7 +227,7 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 552
+      "openIssues": 548
     },
     "truera/trulens": {
       "fullName": "truera/trulens",
@@ -235,7 +235,7 @@
       "stars": 3639,
       "forks": 394,
       "language": "Python",
-      "pushedAt": "2026-11-12T10:27:29Z",
+      "pushedAt": "2026-11-14T01:23:23Z",
       "createdAt": "2020-11-02T21:56:45Z",
       "topics": [
         "agent-evaluation",
@@ -251,12 +251,12 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 161
+      "openIssues": 159
     },
     "UKGovernmentBEIS/inspect_evals": {
       "fullName": "UKGovernmentBEIS/inspect_evals",
       "description": "Collection of evals for Inspect AI",
-      "stars": 740,
+      "stars": 741,
       "forks": 485,
       "language": "Python",
       "pushedAt": "2026-11-13T07:53:18Z",
@@ -271,10 +271,10 @@
     "volcano-sh/volcano": {
       "fullName": "volcano-sh/volcano",
       "description": "A Cloud Native Batch System (Project under CNCF)",
-      "stars": 6086,
+      "stars": 6087,
       "forks": 1627,
       "language": "Go",
-      "pushedAt": "2026-11-13T06:18:26Z",
+      "pushedAt": "2026-11-14T04:06:18Z",
       "createdAt": "2019-03-14T09:47:29Z",
       "topics": [
         "ai",
@@ -290,15 +290,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 888
+      "openIssues": 890
     },
     "kubernetes-sigs/kueue": {
       "fullName": "kubernetes-sigs/kueue",
       "description": ":vertical_traffic_light: Kubernetes-native Job Queueing and Scheduling",
       "stars": 3157,
-      "forks": 910,
+      "forks": 909,
       "language": "Go",
-      "pushedAt": "2026-11-13T20:17:52Z",
+      "pushedAt": "2026-11-14T04:17:13Z",
       "createdAt": "2022-02-16T05:52:19Z",
       "topics": [
         "k8s",
@@ -309,7 +309,7 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 982
+      "openIssues": 984
     },
     "kubeflow/trainer": {
       "fullName": "kubeflow/trainer",
@@ -317,7 +317,7 @@
       "stars": 2284,
       "forks": 1110,
       "language": "Go",
-      "pushedAt": "2026-11-12T02:12:47Z",
+      "pushedAt": "2026-11-14T04:12:03Z",
       "createdAt": "2017-06-28T18:38:14Z",
       "topics": [
         "ai",
@@ -333,15 +333,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 278
+      "openIssues": 281
     },
     "skypilot-org/skypilot": {
       "fullName": "skypilot-org/skypilot",
       "description": "The AI Compute Platform for frontier teams. SkyPilot turns fragmented AI compute into one AI supercomputer, so frontier AI teams build custom intelligence faster.",
-      "stars": 10833,
-      "forks": 1347,
+      "stars": 10834,
+      "forks": 1349,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:22:31Z",
+      "pushedAt": "2026-11-14T03:34:40Z",
       "createdAt": "2021-08-11T23:32:15Z",
       "topics": [
         "cloud-computing",
@@ -362,7 +362,7 @@
     "NVIDIA/nccl": {
       "fullName": "NVIDIA/nccl",
       "description": "Optimized primitives for collective multi-GPU communication",
-      "stars": 5231,
+      "stars": 5232,
       "forks": 1486,
       "language": "C++",
       "pushedAt": "2026-11-13T20:44:40Z",
@@ -379,7 +379,7 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 521
+      "openIssues": 520
     },
     "ofiwg/libfabric": {
       "fullName": "ofiwg/libfabric",
@@ -387,7 +387,7 @@
       "stars": 841,
       "forks": 534,
       "language": "C",
-      "pushedAt": "2026-11-13T20:14:12Z",
+      "pushedAt": "2026-11-14T01:42:30Z",
       "createdAt": "2014-08-15T16:45:53Z",
       "topics": [],
       "url": "https://github.com/ofiwg/libfabric",
@@ -402,7 +402,7 @@
       "stars": 421,
       "forks": 204,
       "language": "C++",
-      "pushedAt": "2026-11-13T19:47:57Z",
+      "pushedAt": "2026-11-14T01:02:13Z",
       "createdAt": "2017-12-06T18:36:05Z",
       "topics": [],
       "url": "https://github.com/ROCm/rccl",
@@ -415,7 +415,7 @@
       "fullName": "linux-rdma/rdma-core",
       "description": "RDMA core userspace libraries and daemons",
       "stars": 2424,
-      "forks": 924,
+      "forks": 925,
       "language": "C",
       "pushedAt": "2026-11-12T11:21:04Z",
       "createdAt": "2016-09-17T14:13:20Z",
@@ -438,9 +438,9 @@
       "fullName": "ray-project/ray",
       "description": "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.",
       "stars": 44285,
-      "forks": 8280,
+      "forks": 8282,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:44:36Z",
+      "pushedAt": "2026-11-14T03:02:24Z",
       "createdAt": "2016-10-25T19:38:30Z",
       "topics": [
         "data-science",
@@ -461,7 +461,7 @@
     "Netflix/metaflow": {
       "fullName": "Netflix/metaflow",
       "description": "Build, Manage and Deploy AI/ML Systems",
-      "stars": 10347,
+      "stars": 10348,
       "forks": 1394,
       "language": "Python",
       "pushedAt": "2026-11-09T07:55:52Z",
@@ -486,7 +486,7 @@
       "fullName": "dask/dask",
       "description": "Parallel computing with task scheduling",
       "stars": 13949,
-      "forks": 2026,
+      "forks": 2027,
       "language": "Python",
       "pushedAt": "2026-11-13T16:55:52Z",
       "createdAt": "2015-01-04T18:50:00Z",
@@ -503,7 +503,7 @@
       "archived": false,
       "fork": false,
       "license": "BSD-3-Clause",
-      "openIssues": 1433
+      "openIssues": 1434
     },
     "NVIDIA/gpu-operator": {
       "fullName": "NVIDIA/gpu-operator",
@@ -531,14 +531,14 @@
       "stars": 817,
       "forks": 115,
       "language": "C++",
-      "pushedAt": "2026-10-27T01:47:22Z",
+      "pushedAt": "2026-11-13T23:58:15Z",
       "createdAt": "2020-12-15T23:12:04Z",
       "topics": [],
       "url": "https://github.com/NVIDIA/DCGM",
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 195
+      "openIssues": 177
     },
     "NVIDIA/dcgm-exporter": {
       "fullName": "NVIDIA/dcgm-exporter",
@@ -603,10 +603,10 @@
     "NVIDIA-NeMo/Curator": {
       "fullName": "NVIDIA-NeMo/Curator",
       "description": "Scalable data pre processing and curation toolkit for LLMs",
-      "stars": 1861,
+      "stars": 1860,
       "forks": 375,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:15:18Z",
+      "pushedAt": "2026-11-14T00:38:45Z",
       "createdAt": "2024-03-14T20:41:51Z",
       "topics": [
         "data",
@@ -622,12 +622,12 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 316
+      "openIssues": 315
     },
     "datajuicer/data-juicer": {
       "fullName": "datajuicer/data-juicer",
       "description": "Data processing for and with foundation models!  🍎 🍋 🌽 ➡️ ➡️🍸 🍹 🍷",
-      "stars": 7245,
+      "stars": 7246,
       "forks": 452,
       "language": "Python",
       "pushedAt": "2026-11-13T02:58:09Z",
@@ -651,10 +651,10 @@
     "NVIDIA/Megatron-LM": {
       "fullName": "NVIDIA/Megatron-LM",
       "description": "Ongoing research training transformer models at scale",
-      "stars": 18390,
+      "stars": 18391,
       "forks": 4732,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:32:55Z",
+      "pushedAt": "2026-11-14T04:01:03Z",
       "createdAt": "2019-03-21T16:15:52Z",
       "topics": [
         "large-language-models",
@@ -665,22 +665,22 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 2071
+      "openIssues": 2078
     },
     "pytorch/torchtitan": {
       "fullName": "pytorch/torchtitan",
       "description": "A PyTorch native platform for training generative AI models",
-      "stars": 5903,
+      "stars": 5905,
       "forks": 1081,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:24:17Z",
+      "pushedAt": "2026-11-14T02:07:20Z",
       "createdAt": "2023-12-13T01:51:37Z",
       "topics": [],
       "url": "https://github.com/pytorch/torchtitan",
       "archived": false,
       "fork": false,
       "license": "BSD-3-Clause",
-      "openIssues": 442
+      "openIssues": 437
     },
     "deepspeedai/DeepSpeed": {
       "fullName": "deepspeedai/DeepSpeed",
@@ -688,7 +688,7 @@
       "stars": 43327,
       "forks": 5074,
       "language": "Python",
-      "pushedAt": "2026-11-13T20:59:41Z",
+      "pushedAt": "2026-11-14T04:08:05Z",
       "createdAt": "2020-01-23T18:35:18Z",
       "topics": [
         "billion-parameters",
@@ -704,15 +704,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 1606
+      "openIssues": 1603
     },
     "unslothai/unsloth": {
       "fullName": "unslothai/unsloth",
       "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more.",
-      "stars": 79447,
-      "forks": 7407,
+      "stars": 79465,
+      "forks": 7408,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:42:48Z",
+      "pushedAt": "2026-11-14T04:06:54Z",
       "createdAt": "2023-11-29T16:50:09Z",
       "topics": [
         "agent",
@@ -728,12 +728,12 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 513
+      "openIssues": 517
     },
     "axolotl-ai-cloud/axolotl": {
       "fullName": "axolotl-ai-cloud/axolotl",
       "description": "Go ahead and axolotl questions",
-      "stars": 12691,
+      "stars": 12692,
       "forks": 1475,
       "language": "Python",
       "pushedAt": "2026-11-13T19:28:37Z",
@@ -751,8 +751,8 @@
     "hiyouga/LlamaFactory": {
       "fullName": "hiyouga/LlamaFactory",
       "description": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
-      "stars": 76028,
-      "forks": 9366,
+      "stars": 76032,
+      "forks": 9369,
       "language": "Python",
       "pushedAt": "2026-11-13T13:16:48Z",
       "createdAt": "2023-05-28T10:09:12Z",
@@ -776,7 +776,7 @@
       "fullName": "huggingface/peft",
       "description": "🤗 PEFT: State-of-the-art Parameter-Efficient Fine-Tuning.",
       "stars": 21887,
-      "forks": 2665,
+      "forks": 2666,
       "language": "Python",
       "pushedAt": "2026-11-13T09:56:58Z",
       "createdAt": "2022-11-25T03:51:09Z",
@@ -794,13 +794,13 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 112
+      "openIssues": 113
     },
     "verl-project/verl": {
       "fullName": "verl-project/verl",
       "description": "verl/HybridFlow: A Flexible and Efficient RL Post-Training Framework ",
       "stars": 24224,
-      "forks": 4906,
+      "forks": 4907,
       "language": "Python",
       "pushedAt": "2026-11-13T13:56:29Z",
       "createdAt": "2024-10-31T06:11:15Z",
@@ -809,12 +809,12 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 1498
+      "openIssues": 1499
     },
     "OpenRLHF/OpenRLHF": {
       "fullName": "OpenRLHF/OpenRLHF",
       "description": "An Easy-to-use, Scalable and High-performance Agentic RL Framework based on Ray (PPO & DAPO & REINFORCE++ &  VLM & TIS & vLLM & Ray & Async  RL)",
-      "stars": 10151,
+      "stars": 10152,
       "forks": 1064,
       "language": "Python",
       "pushedAt": "2026-11-03T03:17:19Z",
@@ -841,37 +841,37 @@
       "stars": 19733,
       "forks": 3144,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:45:52Z",
+      "pushedAt": "2026-11-13T23:51:28Z",
       "createdAt": "2020-03-27T10:54:55Z",
       "topics": [],
       "url": "https://github.com/huggingface/trl",
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 326
+      "openIssues": 299
     },
     "NovaSky-AI/SkyRL": {
       "fullName": "NovaSky-AI/SkyRL",
       "description": "SkyRL: A Modular Full-stack RL Library for LLMs",
       "stars": 2525,
-      "forks": 488,
+      "forks": 489,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:30:49Z",
+      "pushedAt": "2026-11-13T22:52:32Z",
       "createdAt": "2025-04-22T17:33:31Z",
       "topics": [],
       "url": "https://github.com/NovaSky-AI/SkyRL",
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 645
+      "openIssues": 646
     },
     "areal-project/AReaL": {
       "fullName": "areal-project/AReaL",
       "description": "The RL Bridge for LLM-based Agent Applications. Made Simple & Flexible.",
-      "stars": 5909,
-      "forks": 657,
+      "stars": 5910,
+      "forks": 658,
       "language": "Python",
-      "pushedAt": "2026-11-13T20:13:38Z",
+      "pushedAt": "2026-11-14T02:21:25Z",
       "createdAt": "2025-02-24T07:23:43Z",
       "topics": [
         "agent",
@@ -887,7 +887,7 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 164
+      "openIssues": 165
     },
     "rllm-org/rllm": {
       "fullName": "rllm-org/rllm",
@@ -916,7 +916,7 @@
     "firecracker-microvm/firecracker": {
       "fullName": "firecracker-microvm/firecracker",
       "description": "Secure and fast microVMs for serverless computing.",
-      "stars": 38010,
+      "stars": 38013,
       "forks": 2744,
       "language": "Rust",
       "pushedAt": "2026-11-13T19:54:42Z",
@@ -935,15 +935,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 143
+      "openIssues": 144
     },
     "e2b-dev/E2B": {
       "fullName": "e2b-dev/E2B",
       "description": "Open-source, secure environment with real-world tools for enterprise-grade agents.",
-      "stars": 14850,
-      "forks": 1169,
+      "stars": 14854,
+      "forks": 1168,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:30:44Z",
+      "pushedAt": "2026-11-14T04:19:36Z",
       "createdAt": "2023-03-04T13:41:18Z",
       "topics": [
         "agent",
@@ -959,12 +959,12 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 123
+      "openIssues": 124
     },
     "Farama-Foundation/Gymnasium": {
       "fullName": "Farama-Foundation/Gymnasium",
       "description": "A standard API for single-agent reinforcement learning environments, with popular reference environments and related utilities (formerly Gym)",
-      "stars": 12812,
+      "stars": 12814,
       "forks": 1539,
       "language": "Python",
       "pushedAt": "2026-11-12T11:53:47Z",
@@ -984,7 +984,7 @@
       "fullName": "QwenLM/Qwen3",
       "description": "Qwen3 is the large language model series developed by Qwen team, Alibaba Cloud.",
       "stars": 27729,
-      "forks": 2104,
+      "forks": 2103,
       "language": "Python",
       "pushedAt": "2026-01-09T03:05:47Z",
       "createdAt": "2024-02-05T05:45:08Z",
@@ -999,7 +999,7 @@
       "fullName": "meta-llama/llama-models",
       "description": "Utilities intended for use with Llama models.",
       "stars": 7725,
-      "forks": 1409,
+      "forks": 1410,
       "language": "Python",
       "pushedAt": "2026-02-11T16:38:31Z",
       "createdAt": "2024-06-27T22:14:09Z",
@@ -1013,7 +1013,7 @@
     "deepseek-ai/DeepSeek-V3": {
       "fullName": "deepseek-ai/DeepSeek-V3",
       "description": "",
-      "stars": 104822,
+      "stars": 104826,
       "forks": 16745,
       "language": "Python",
       "pushedAt": "2025-08-28T03:24:37Z",
@@ -1043,8 +1043,8 @@
     "QwenLM/Qwen3-VL": {
       "fullName": "QwenLM/Qwen3-VL",
       "description": "Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.",
-      "stars": 20211,
-      "forks": 1896,
+      "stars": 20212,
+      "forks": 1895,
       "language": "Jupyter Notebook",
       "pushedAt": "2026-01-30T04:47:30Z",
       "createdAt": "2024-08-29T08:30:38Z",
@@ -1082,7 +1082,7 @@
     "openbmb/MiniCPM-V": {
       "fullName": "OpenBMB/MiniCPM-V",
       "description": "See, hear, and interact on your local devices.",
-      "stars": 27144,
+      "stars": 27146,
       "forks": 2130,
       "language": "Python",
       "pushedAt": "2026-11-09T07:37:30Z",
@@ -1102,7 +1102,7 @@
     "Dao-AILab/flash-attention": {
       "fullName": "Dao-AILab/flash-attention",
       "description": "Fast and memory-efficient exact attention",
-      "stars": 25291,
+      "stars": 25292,
       "forks": 3224,
       "language": "Python",
       "pushedAt": "2026-11-12T20:58:23Z",
@@ -1112,13 +1112,13 @@
       "archived": false,
       "fork": false,
       "license": "BSD-3-Clause",
-      "openIssues": 1406
+      "openIssues": 1407
     },
     "deepseek-ai/DeepEP": {
       "fullName": "deepseek-ai/DeepEP",
       "description": "DeepEP: an efficient expert-parallel communication library",
-      "stars": 10441,
-      "forks": 1557,
+      "stars": 10442,
+      "forks": 1559,
       "language": "Cuda",
       "pushedAt": "2026-10-21T03:50:43Z",
       "createdAt": "2025-02-17T01:33:04Z",
@@ -1135,7 +1135,7 @@
       "stars": 3604,
       "forks": 898,
       "language": "Python",
-      "pushedAt": "2026-11-13T19:31:51Z",
+      "pushedAt": "2026-11-14T00:21:03Z",
       "createdAt": "2022-09-20T15:20:26Z",
       "topics": [
         "cuda",
@@ -1151,7 +1151,7 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 395
+      "openIssues": 393
     },
     "linkedin/Liger-Kernel": {
       "fullName": "linkedin/Liger-Kernel",
@@ -1175,15 +1175,15 @@
       "archived": false,
       "fork": false,
       "license": "BSD-2-Clause",
-      "openIssues": 237
+      "openIssues": 238
     },
     "huggingface/transformers": {
       "fullName": "huggingface/transformers",
       "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
-      "stars": 168954,
-      "forks": 35187,
+      "stars": 168953,
+      "forks": 35191,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:26:38Z",
+      "pushedAt": "2026-11-14T00:53:09Z",
       "createdAt": "2018-10-29T13:56:00Z",
       "topics": [
         "audio",
@@ -1199,7 +1199,7 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 1117
+      "openIssues": 1123
     },
     "huggingface/tokenizers": {
       "fullName": "huggingface/tokenizers",
@@ -1222,15 +1222,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 191
+      "openIssues": 186
     },
     "ml-explore/mlx": {
       "fullName": "ml-explore/mlx",
       "description": "MLX: An array framework for Apple silicon",
       "stars": 29156,
-      "forks": 2424,
+      "forks": 2426,
       "language": "C++",
-      "pushedAt": "2026-11-11T22:59:29Z",
+      "pushedAt": "2026-11-13T22:25:46Z",
       "createdAt": "2023-11-28T23:33:45Z",
       "topics": [
         "mlx"
@@ -1239,15 +1239,15 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 143
+      "openIssues": 145
     },
     "vllm-project/vllm": {
       "fullName": "vllm-project/vllm",
       "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
-      "stars": 96870,
-      "forks": 24780,
+      "stars": 96887,
+      "forks": 24794,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:38:32Z",
+      "pushedAt": "2026-11-14T04:20:26Z",
       "createdAt": "2023-02-09T11:23:20Z",
       "topics": [
         "amd",
@@ -1263,15 +1263,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 10329
+      "openIssues": 10320
     },
     "sgl-project/sglang": {
       "fullName": "sgl-project/sglang",
       "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
-      "stars": 38831,
-      "forks": 10437,
+      "stars": 38840,
+      "forks": 10448,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:41:44Z",
+      "pushedAt": "2026-11-14T04:00:57Z",
       "createdAt": "2024-01-08T04:15:52Z",
       "topics": [
         "attention",
@@ -1287,15 +1287,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 6818
+      "openIssues": 6776
     },
     "NVIDIA/TensorRT-LLM": {
       "fullName": "NVIDIA/TensorRT-LLM",
       "description": "TensorRT LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and supports state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs. TensorRT LLM also contains components to create Python and C++ runtimes that orchestrate the inference execution in a performant way.",
-      "stars": 15073,
+      "stars": 15074,
       "forks": 2932,
       "language": "Python",
-      "pushedAt": "2026-11-13T20:59:43Z",
+      "pushedAt": "2026-11-14T03:35:23Z",
       "createdAt": "2023-08-16T17:14:27Z",
       "topics": [
         "blackwell",
@@ -1308,7 +1308,7 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 2085
+      "openIssues": 2077
     },
     "InternLM/lmdeploy": {
       "fullName": "InternLM/lmdeploy",
@@ -1337,10 +1337,10 @@
     "ggml-org/llama.cpp": {
       "fullName": "ggml-org/llama.cpp",
       "description": "LLM inference in C/C++",
-      "stars": 134865,
-      "forks": 25567,
+      "stars": 134905,
+      "forks": 25578,
       "language": "C++",
-      "pushedAt": "2026-11-13T21:39:59Z",
+      "pushedAt": "2026-11-14T03:52:36Z",
       "createdAt": "2023-03-10T18:58:00Z",
       "topics": [
         "ggml"
@@ -1349,15 +1349,15 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 2609
+      "openIssues": 2597
     },
     "ollama/ollama": {
       "fullName": "ollama/ollama",
       "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
-      "stars": 186887,
-      "forks": 19067,
+      "stars": 186906,
+      "forks": 19074,
       "language": "Go",
-      "pushedAt": "2026-11-13T20:45:24Z",
+      "pushedAt": "2026-11-14T00:00:10Z",
       "createdAt": "2023-06-26T19:39:32Z",
       "topics": [
         "deepseek",
@@ -1373,12 +1373,12 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 4652
+      "openIssues": 4654
     },
     "ml-explore/mlx-lm": {
       "fullName": "ml-explore/mlx-lm",
       "description": "Run LLMs with MLX",
-      "stars": 7650,
+      "stars": 7652,
       "forks": 1184,
       "language": "Python",
       "pushedAt": "2026-11-06T11:23:26Z",
@@ -1391,15 +1391,15 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 290
+      "openIssues": 291
     },
     "LMCache/LMCache": {
       "fullName": "LMCache/LMCache",
       "description": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
       "stars": 12358,
-      "forks": 2162,
+      "forks": 2163,
       "language": "Python",
-      "pushedAt": "2026-11-13T18:58:56Z",
+      "pushedAt": "2026-11-14T04:25:44Z",
       "createdAt": "2024-05-28T21:06:04Z",
       "topics": [
         "amd",
@@ -1420,10 +1420,10 @@
     "ai-dynamo/dynamo": {
       "fullName": "ai-dynamo/dynamo",
       "description": "A Datacenter Scale Distributed Inference Serving Framework",
-      "stars": 8483,
-      "forks": 1855,
+      "stars": 8484,
+      "forks": 1856,
       "language": "Rust",
-      "pushedAt": "2026-11-13T21:41:59Z",
+      "pushedAt": "2026-11-14T03:56:47Z",
       "createdAt": "2025-03-03T18:40:07Z",
       "topics": [
         "diffusion",
@@ -1439,15 +1439,15 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 2274
+      "openIssues": 2261
     },
     "llm-d/llm-d": {
       "fullName": "llm-d/llm-d",
       "description": "State of the art inference performance with modern accelerators on Kubernetes",
-      "stars": 5252,
+      "stars": 5253,
       "forks": 932,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:03:51Z",
+      "pushedAt": "2026-11-14T02:15:44Z",
       "createdAt": "2025-04-29T18:28:17Z",
       "topics": [
         "ai",
@@ -1468,10 +1468,10 @@
     "flashinfer-ai/flashinfer": {
       "fullName": "flashinfer-ai/flashinfer",
       "description": "FlashInfer: Kernel Library for LLM Serving",
-      "stars": 6917,
-      "forks": 1751,
+      "stars": 6918,
+      "forks": 1752,
       "language": "Cuda",
-      "pushedAt": "2026-11-13T21:13:37Z",
+      "pushedAt": "2026-11-14T02:58:24Z",
       "createdAt": "2023-07-22T00:29:04Z",
       "topics": [
         "attention",
@@ -1487,7 +1487,7 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 1421
+      "openIssues": 1420
     },
     "vllm-project/llm-compressor": {
       "fullName": "vllm-project/llm-compressor",
@@ -1495,7 +1495,7 @@
       "stars": 3967,
       "forks": 735,
       "language": "Python",
-      "pushedAt": "2026-11-13T20:58:21Z",
+      "pushedAt": "2026-11-13T22:27:42Z",
       "createdAt": "2024-06-20T20:13:34Z",
       "topics": [
         "compression",
@@ -1510,25 +1510,25 @@
     "NVIDIA/Model-Optimizer": {
       "fullName": "NVIDIA/Model-Optimizer",
       "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
-      "stars": 5601,
+      "stars": 5603,
       "forks": 807,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:21:03Z",
+      "pushedAt": "2026-11-14T03:25:22Z",
       "createdAt": "2024-04-23T19:00:54Z",
       "topics": [],
       "url": "https://github.com/NVIDIA/Model-Optimizer",
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 523
+      "openIssues": 525
     },
     "BerriAI/litellm": {
       "fullName": "BerriAI/litellm",
       "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-      "stars": 63220,
-      "forks": 13267,
+      "stars": 63226,
+      "forks": 13271,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:43:48Z",
+      "pushedAt": "2026-11-14T04:31:16Z",
       "createdAt": "2023-07-27T00:09:52Z",
       "topics": [
         "ai-gateway",
@@ -1552,7 +1552,7 @@
       "stars": 11142,
       "forks": 1869,
       "language": "Python",
-      "pushedAt": "2026-11-13T17:32:40Z",
+      "pushedAt": "2026-11-14T01:15:39Z",
       "createdAt": "2018-10-04T21:10:30Z",
       "topics": [
         "cloud",
@@ -1567,12 +1567,12 @@
       "archived": false,
       "fork": false,
       "license": "BSD-3-Clause",
-      "openIssues": 910
+      "openIssues": 909
     },
     "Portkey-AI/gateway": {
       "fullName": "Portkey-AI/gateway",
       "description": "A blazing fast AI Gateway with integrated guardrails. Route to 1,600+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.",
-      "stars": 13378,
+      "stars": 13377,
       "forks": 1381,
       "language": "TypeScript",
       "pushedAt": "2026-05-25T13:54:51Z",
@@ -1596,7 +1596,7 @@
     "kserve/kserve": {
       "fullName": "kserve/kserve",
       "description": "Standardized Distributed Generative and Predictive AI Inference Platform for Scalable, Multi-Framework Deployment on Kubernetes",
-      "stars": 6227,
+      "stars": 6228,
       "forks": 1788,
       "language": "Go",
       "pushedAt": "2026-11-13T20:04:03Z",
@@ -1620,10 +1620,10 @@
     "langchain-ai/langgraph": {
       "fullName": "langchain-ai/langgraph",
       "description": "Build resilient agents.",
-      "stars": 44916,
-      "forks": 7745,
+      "stars": 44933,
+      "forks": 7747,
       "language": "Python",
-      "pushedAt": "2026-11-13T20:13:21Z",
+      "pushedAt": "2026-11-14T01:43:55Z",
       "createdAt": "2023-08-09T18:33:12Z",
       "topics": [
         "agents",
@@ -1644,10 +1644,10 @@
     "openai/openai-agents-python": {
       "fullName": "openai/openai-agents-python",
       "description": "A lightweight, powerful framework for multi-agent workflows",
-      "stars": 30656,
-      "forks": 5050,
+      "stars": 30661,
+      "forks": 5052,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:41:15Z",
+      "pushedAt": "2026-11-14T04:22:39Z",
       "createdAt": "2025-03-11T03:42:36Z",
       "topics": [
         "agents",
@@ -1662,12 +1662,12 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 40
+      "openIssues": 39
     },
     "huggingface/smolagents": {
       "fullName": "huggingface/smolagents",
       "description": "🤗 smolagents: a barebones library for agents that think in code.",
-      "stars": 30354,
+      "stars": 30361,
       "forks": 3214,
       "language": "Python",
       "pushedAt": "2026-11-10T18:34:27Z",
@@ -1677,13 +1677,13 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 1086
+      "openIssues": 1087
     },
     "deepseek-ai/deepseek-harness": {
       "fullName": "deepseek-ai/deepseek-harness",
       "description": "DeepSeek Harness: Everything is a Plugin.",
-      "stars": 280473,
-      "forks": 34589,
+      "stars": 280621,
+      "forks": 34616,
       "language": "TypeScript",
       "pushedAt": "2026-11-13T07:56:25Z",
       "createdAt": "2026-08-13T11:56:32Z",
@@ -1717,10 +1717,10 @@
     "headroomlabs-ai/headroom": {
       "fullName": "headroomlabs-ai/headroom",
       "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
-      "stars": 79588,
-      "forks": 6228,
+      "stars": 79614,
+      "forks": 6229,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:42:29Z",
+      "pushedAt": "2026-11-14T02:37:40Z",
       "createdAt": "2026-01-07T19:58:51Z",
       "topics": [
         "agent",
@@ -1736,13 +1736,13 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 322
+      "openIssues": 331
     },
     "mem0ai/mem0": {
       "fullName": "mem0ai/mem0",
       "description": "The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.",
-      "stars": 68922,
-      "forks": 8199,
+      "stars": 68929,
+      "forks": 8202,
       "language": "Python",
       "pushedAt": "2026-11-06T16:53:07Z",
       "createdAt": "2023-06-20T08:58:36Z",
@@ -1765,8 +1765,8 @@
     "letta-ai/letta": {
       "fullName": "letta-ai/letta",
       "description": "Platform for stateful agents: AI with advanced memory that can learn and self-improve over time.",
-      "stars": 25432,
-      "forks": 2670,
+      "stars": 25433,
+      "forks": 2671,
       "language": "",
       "pushedAt": "2026-10-18T22:28:04Z",
       "createdAt": "2023-10-11T07:38:37Z",
@@ -1785,10 +1785,10 @@
     "getzep/graphiti": {
       "fullName": "getzep/graphiti",
       "description": "Build Real-Time Knowledge Graphs for AI Agents",
-      "stars": 32794,
+      "stars": 32798,
       "forks": 3370,
       "language": "Python",
-      "pushedAt": "2026-11-11T01:25:29Z",
+      "pushedAt": "2026-11-14T03:51:53Z",
       "createdAt": "2024-08-08T22:08:30Z",
       "topics": [
         "agents",
@@ -1800,13 +1800,13 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 558
+      "openIssues": 560
     },
     "thedotmack/claude-mem": {
       "fullName": "thedotmack/claude-mem",
       "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-      "stars": 116819,
-      "forks": 10136,
+      "stars": 116882,
+      "forks": 10144,
       "language": "TypeScript",
       "pushedAt": "2026-11-13T18:56:42Z",
       "createdAt": "2025-08-31T20:50:03Z",
@@ -1824,13 +1824,13 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 128
+      "openIssues": 126
     },
     "anthropics/skills": {
       "fullName": "anthropics/skills",
       "description": "Public repository for Agent Skills",
-      "stars": 194107,
-      "forks": 22827,
+      "stars": 194194,
+      "forks": 22841,
       "language": "Python",
       "pushedAt": "2026-11-06T22:32:32Z",
       "createdAt": "2025-09-22T15:53:31Z",
@@ -1841,13 +1841,13 @@
       "archived": false,
       "fork": false,
       "license": "",
-      "openIssues": 1527
+      "openIssues": 1533
     },
     "modelcontextprotocol/servers": {
       "fullName": "modelcontextprotocol/servers",
       "description": "Model Context Protocol Reference Servers",
-      "stars": 91972,
-      "forks": 11962,
+      "stars": 91976,
+      "forks": 11964,
       "language": "TypeScript",
       "pushedAt": "2026-11-12T05:37:52Z",
       "createdAt": "2024-11-19T01:10:17Z",
@@ -1861,7 +1861,7 @@
     "microsoft/playwright-mcp": {
       "fullName": "microsoft/playwright-mcp",
       "description": "Playwright MCP server",
-      "stars": 39608,
+      "stars": 39612,
       "forks": 3433,
       "language": "TypeScript",
       "pushedAt": "2026-11-13T14:49:49Z",
@@ -1879,10 +1879,10 @@
     "browser-use/browser-use": {
       "fullName": "browser-use/browser-use",
       "description": "Open-source Python library for AI browser agents, plus Browser Use Cloud: stealth browsers and a hosted agent API.",
-      "stars": 120950,
-      "forks": 13526,
+      "stars": 120967,
+      "forks": 13529,
       "language": "Python",
-      "pushedAt": "2026-11-13T20:56:59Z",
+      "pushedAt": "2026-11-14T04:27:52Z",
       "createdAt": "2024-10-31T16:00:56Z",
       "topics": [
         "ai-agents",
@@ -1898,13 +1898,13 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 580
+      "openIssues": 575
     },
     "github/github-mcp-server": {
       "fullName": "github/github-mcp-server",
       "description": "GitHub's official MCP Server",
-      "stars": 34443,
-      "forks": 5345,
+      "stars": 34449,
+      "forks": 5347,
       "language": "Go",
       "pushedAt": "2026-11-13T20:25:40Z",
       "createdAt": "2025-03-04T16:42:04Z",
@@ -1917,15 +1917,15 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 457
+      "openIssues": 458
     },
     "google/gvisor": {
       "fullName": "google/gvisor",
       "description": "Application Kernel for Containers",
-      "stars": 19994,
-      "forks": 2075,
+      "stars": 19998,
+      "forks": 2078,
       "language": "Go",
-      "pushedAt": "2026-11-13T21:44:09Z",
+      "pushedAt": "2026-11-14T04:19:10Z",
       "createdAt": "2018-04-26T21:28:49Z",
       "topics": [
         "containers",
@@ -1940,12 +1940,12 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 1210
+      "openIssues": 1182
     },
     "e2b-dev/code-interpreter": {
       "fullName": "e2b-dev/code-interpreter",
       "description": "Python & JS/TS SDK for running AI-generated code/code interpreting in your AI app ",
-      "stars": 2427,
+      "stars": 2428,
       "forks": 232,
       "language": "Python",
       "pushedAt": "2026-11-03T16:31:07Z",
@@ -1969,10 +1969,10 @@
     "microsandbox/microsandbox": {
       "fullName": "superradcompany/microsandbox",
       "description": "🧱 easy, fast, programmable and local-first microVM runtime and library",
-      "stars": 9056,
+      "stars": 9058,
       "forks": 520,
       "language": "Rust",
-      "pushedAt": "2026-11-13T15:20:23Z",
+      "pushedAt": "2026-11-14T03:42:05Z",
       "createdAt": "2024-10-03T15:57:38Z",
       "topics": [
         "agents",
@@ -1988,15 +1988,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 176
+      "openIssues": 183
     },
     "temporalio/temporal": {
       "fullName": "temporalio/temporal",
       "description": "Temporal service",
-      "stars": 24384,
-      "forks": 2115,
+      "stars": 24390,
+      "forks": 2118,
       "language": "Go",
-      "pushedAt": "2026-11-13T21:30:59Z",
+      "pushedAt": "2026-11-14T04:29:08Z",
       "createdAt": "2019-10-16T22:15:35Z",
       "topics": [
         "cronjob-scheduler",
@@ -2012,15 +2012,15 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 1140
+      "openIssues": 1143
     },
     "inngest/inngest": {
       "fullName": "inngest/inngest",
       "description": "The leading workflow orchestration platform.  Run stateful step functions and AI workflows on serverless, servers, or the edge.",
-      "stars": 6034,
-      "forks": 391,
+      "stars": 6035,
+      "forks": 392,
       "language": "Go",
-      "pushedAt": "2026-11-13T21:26:27Z",
+      "pushedAt": "2026-11-14T04:26:32Z",
       "createdAt": "2021-06-07T18:26:33Z",
       "topics": [
         "cli",
@@ -2036,15 +2036,15 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 285
+      "openIssues": 288
     },
     "restatedev/restate": {
       "fullName": "restatedev/restate",
       "description": "Restate is the platform for building resilient applications that tolerate all infrastructure faults w/o the need for a PhD.",
-      "stars": 4696,
-      "forks": 234,
+      "stars": 4698,
+      "forks": 235,
       "language": "Rust",
-      "pushedAt": "2026-11-13T21:29:43Z",
+      "pushedAt": "2026-11-14T00:48:39Z",
       "createdAt": "2023-01-04T15:03:32Z",
       "topics": [
         "async-await",
@@ -2060,13 +2060,13 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 465
+      "openIssues": 466
     },
     "microsoft/autogen": {
       "fullName": "microsoft/autogen",
       "description": "A programming framework for agentic AI",
-      "stars": 61807,
-      "forks": 9397,
+      "stars": 61809,
+      "forks": 9402,
       "language": "Python",
       "pushedAt": "2026-11-12T10:19:36Z",
       "createdAt": "2023-08-18T11:43:45Z",
@@ -2089,8 +2089,8 @@
     "crewAIInc/crewAI": {
       "fullName": "crewAIInc/crewAI",
       "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
-      "stars": 60862,
-      "forks": 9173,
+      "stars": 60871,
+      "forks": 9178,
       "language": "Python",
       "pushedAt": "2026-11-13T18:43:21Z",
       "createdAt": "2023-10-27T03:26:59Z",
@@ -2110,7 +2110,7 @@
     "camel-ai/camel": {
       "fullName": "camel-ai/camel",
       "description": "🐫 CAMEL: The first and the best multi-agent framework. Finding the Scaling Law of Agents. https://www.camel-ai.org",
-      "stars": 18031,
+      "stars": 18030,
       "forks": 2145,
       "language": "Python",
       "pushedAt": "2026-11-09T10:25:06Z",
@@ -2134,40 +2134,40 @@
     "anomalyco/opencode": {
       "fullName": "anomalyco/opencode",
       "description": "The open source coding agent.",
-      "stars": 226652,
-      "forks": 30686,
+      "stars": 226705,
+      "forks": 30698,
       "language": "TypeScript",
-      "pushedAt": "2026-11-13T21:18:48Z",
+      "pushedAt": "2026-11-14T04:21:43Z",
       "createdAt": "2025-04-30T20:08:00Z",
       "topics": [],
       "url": "https://github.com/anomalyco/opencode",
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 4028
+      "openIssues": 3996
     },
     "cline/cline": {
       "fullName": "cline/cline",
       "description": "Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
-      "stars": 71595,
-      "forks": 7917,
+      "stars": 71601,
+      "forks": 7920,
       "language": "TypeScript",
-      "pushedAt": "2026-11-13T21:02:22Z",
+      "pushedAt": "2026-11-13T23:33:41Z",
       "createdAt": "2024-07-06T07:28:10Z",
       "topics": [],
       "url": "https://github.com/cline/cline",
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 1773
+      "openIssues": 1777
     },
     "aaif-goose/goose": {
       "fullName": "aaif-goose/goose",
       "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
-      "stars": 56552,
-      "forks": 6583,
+      "stars": 56571,
+      "forks": 6582,
       "language": "Rust",
-      "pushedAt": "2026-11-13T20:04:30Z",
+      "pushedAt": "2026-11-14T03:56:38Z",
       "createdAt": "2024-08-23T19:03:36Z",
       "topics": [
         "acp",
@@ -2179,15 +2179,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 539
+      "openIssues": 536
     },
     "OpenHands/OpenHands": {
       "fullName": "OpenHands/OpenHands",
       "description": "🙌 OpenHands: AI-Driven Development",
-      "stars": 93423,
-      "forks": 12500,
+      "stars": 93438,
+      "forks": 12503,
       "language": "TypeScript",
-      "pushedAt": "2026-11-13T21:43:24Z",
+      "pushedAt": "2026-11-14T04:24:28Z",
       "createdAt": "2024-03-13T03:33:31Z",
       "topics": [
         "agent",
@@ -2203,12 +2203,12 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 1175
+      "openIssues": 1182
     },
     "SWE-agent/SWE-agent": {
       "fullName": "SWE-agent/SWE-agent",
       "description": "SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024] ",
-      "stars": 20799,
+      "stars": 20801,
       "forks": 2267,
       "language": "Python",
       "pushedAt": "2026-11-09T22:24:38Z",
@@ -2231,23 +2231,23 @@
     "openai/codex": {
       "fullName": "openai/codex",
       "description": "Lightweight coding agent that runs in your terminal",
-      "stars": 135180,
-      "forks": 21438,
+      "stars": 135206,
+      "forks": 21443,
       "language": "Rust",
-      "pushedAt": "2026-11-13T21:36:20Z",
+      "pushedAt": "2026-11-14T04:16:58Z",
       "createdAt": "2025-04-13T05:37:54Z",
       "topics": [],
       "url": "https://github.com/openai/codex",
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 27551
+      "openIssues": 27586
     },
     "Aider-AI/aider": {
       "fullName": "Aider-AI/aider",
       "description": "aider is AI pair programming in your terminal",
-      "stars": 50112,
-      "forks": 5166,
+      "stars": 50111,
+      "forks": 5164,
       "language": "Python",
       "pushedAt": "2026-05-22T14:02:20Z",
       "createdAt": "2023-05-09T18:57:49Z",
@@ -2270,10 +2270,10 @@
     "langgenius/dify": {
       "fullName": "langgenius/dify",
       "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-      "stars": 161114,
-      "forks": 25479,
+      "stars": 161128,
+      "forks": 25481,
       "language": "Python",
-      "pushedAt": "2026-11-13T14:54:14Z",
+      "pushedAt": "2026-11-14T04:28:36Z",
       "createdAt": "2023-04-12T07:40:24Z",
       "topics": [
         "agent",
@@ -2289,7 +2289,7 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 1309
+      "openIssues": 1346
     },
     "coze-dev/coze-studio": {
       "fullName": "coze-dev/coze-studio",
@@ -2318,10 +2318,10 @@
     "n8n-io/n8n": {
       "fullName": "n8n-io/n8n",
       "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-      "stars": 210403,
-      "forks": 61498,
+      "stars": 210425,
+      "forks": 61495,
       "language": "TypeScript",
-      "pushedAt": "2026-11-13T21:18:21Z",
+      "pushedAt": "2026-11-14T03:25:07Z",
       "createdAt": "2019-06-22T09:24:21Z",
       "topics": [
         "ai",
@@ -2337,15 +2337,15 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 1226
+      "openIssues": 1222
     },
     "langflow-ai/langflow": {
       "fullName": "langflow-ai/langflow",
       "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
-      "stars": 156606,
-      "forks": 10397,
+      "stars": 156616,
+      "forks": 10399,
       "language": "Python",
-      "pushedAt": "2026-11-13T20:34:44Z",
+      "pushedAt": "2026-11-14T00:24:36Z",
       "createdAt": "2023-02-08T22:28:03Z",
       "topics": [
         "agents",
@@ -2364,10 +2364,10 @@
     "pydantic/pydantic-ai": {
       "fullName": "pydantic/pydantic-ai",
       "description": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
-      "stars": 21194,
-      "forks": 3167,
+      "stars": 21199,
+      "forks": 3171,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:44:10Z",
+      "pushedAt": "2026-11-14T01:52:22Z",
       "createdAt": "2024-06-21T15:55:04Z",
       "topics": [
         "agent-framework",
@@ -2382,13 +2382,13 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 1966
+      "openIssues": 1968
     },
     "google/adk-python": {
       "fullName": "google/adk-python",
       "description": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
-      "stars": 22207,
-      "forks": 4355,
+      "stars": 22209,
+      "forks": 4356,
       "language": "Python",
       "pushedAt": "2026-11-13T20:50:41Z",
       "createdAt": "2025-04-01T20:44:40Z",
@@ -2406,15 +2406,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 445
+      "openIssues": 450
     },
     "mastra-ai/mastra": {
       "fullName": "mastra-ai/mastra",
       "description": "Mastra is the modern TypeScript framework for AI-powered applications and agents.",
-      "stars": 29509,
-      "forks": 3095,
+      "stars": 29512,
+      "forks": 3094,
       "language": "TypeScript",
-      "pushedAt": "2026-11-13T21:42:57Z",
+      "pushedAt": "2026-11-14T04:29:05Z",
       "createdAt": "2024-08-06T20:44:31Z",
       "topics": [
         "agents",
@@ -2430,15 +2430,15 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 758
+      "openIssues": 760
     },
     "agno-agi/agno": {
       "fullName": "agno-agi/agno",
       "description": "The self-managing agent platform",
-      "stars": 43181,
+      "stars": 43183,
       "forks": 6294,
       "language": "Python",
-      "pushedAt": "2026-11-13T18:16:47Z",
+      "pushedAt": "2026-11-14T03:23:58Z",
       "createdAt": "2022-05-04T15:23:02Z",
       "topics": [
         "agents",
@@ -2451,13 +2451,13 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 1897
+      "openIssues": 1870
     },
     "microsoft/semantic-kernel": {
       "fullName": "microsoft/semantic-kernel",
       "description": "Integrate cutting-edge LLM technology quickly and easily into your apps",
-      "stars": 28763,
-      "forks": 4861,
+      "stars": 28764,
+      "forks": 4860,
       "language": "C#",
       "pushedAt": "2026-11-13T16:16:44Z",
       "createdAt": "2023-02-27T17:39:42Z",
@@ -2477,8 +2477,8 @@
     "infiniflow/ragflow": {
       "fullName": "infiniflow/ragflow",
       "description": "RAGFlow is an agent-native database: a Retrieval-Augmented Generation (RAG) engine that grew into context infrastructure.",
-      "stars": 94126,
-      "forks": 11317,
+      "stars": 94131,
+      "forks": 11320,
       "language": "Go",
       "pushedAt": "2026-11-13T13:08:52Z",
       "createdAt": "2023-12-12T06:13:13Z",
@@ -2496,15 +2496,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 1273
+      "openIssues": 1277
     },
     "labring/FastGPT": {
       "fullName": "labring/FastGPT",
       "description": "FastGPT is a knowledge-based platform built on the LLMs, offers a comprehensive suite of out-of-the-box capabilities such as data processing, RAG retrieval, and visual AI workflow orchestration, letting you easily develop and deploy complex question-answering systems without the need for extensive setup or configuration.",
       "stars": 30037,
-      "forks": 7383,
+      "forks": 7384,
       "language": "TypeScript",
-      "pushedAt": "2026-11-13T11:08:34Z",
+      "pushedAt": "2026-11-14T04:08:25Z",
       "createdAt": "2023-02-23T16:53:25Z",
       "topics": [
         "agent",
@@ -2520,15 +2520,15 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 143
+      "openIssues": 142
     },
     "run-llama/llama_index": {
       "fullName": "run-llama/llama_index",
       "description": "LlamaIndex is the document processing platform for AI",
-      "stars": 52894,
-      "forks": 8555,
+      "stars": 52893,
+      "forks": 8558,
       "language": "Python",
-      "pushedAt": "2026-11-13T20:34:33Z",
+      "pushedAt": "2026-11-14T02:26:05Z",
       "createdAt": "2022-11-02T04:24:54Z",
       "topics": [
         "agents",
@@ -2544,15 +2544,15 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 1388
+      "openIssues": 1398
     },
     "deepset-ai/haystack": {
       "fullName": "deepset-ai/haystack",
       "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
-      "stars": 27003,
-      "forks": 3457,
+      "stars": 27004,
+      "forks": 3459,
       "language": "Python",
-      "pushedAt": "2026-11-13T12:05:35Z",
+      "pushedAt": "2026-11-14T02:11:02Z",
       "createdAt": "2019-11-14T09:05:28Z",
       "topics": [
         "agent-framework",
@@ -2568,15 +2568,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 145
+      "openIssues": 150
     },
     "open-webui/open-webui": {
       "fullName": "open-webui/open-webui",
       "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
-      "stars": 158577,
-      "forks": 23055,
+      "stars": 158598,
+      "forks": 23059,
       "language": "Svelte",
-      "pushedAt": "2026-11-13T21:44:57Z",
+      "pushedAt": "2026-11-13T23:28:30Z",
       "createdAt": "2023-10-06T22:08:27Z",
       "topics": [
         "ai",
@@ -2592,15 +2592,15 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 330
+      "openIssues": 327
     },
     "LibreChat-AI/LibreChat": {
       "fullName": "LibreChat-AI/LibreChat",
       "description": "Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active",
-      "stars": 47105,
-      "forks": 9691,
+      "stars": 47112,
+      "forks": 9697,
       "language": "TypeScript",
-      "pushedAt": "2026-11-13T21:23:29Z",
+      "pushedAt": "2026-11-14T02:14:24Z",
       "createdAt": "2023-02-12T01:06:52Z",
       "topics": [
         "ai",
@@ -2616,15 +2616,15 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 1089
+      "openIssues": 1093
     },
     "Mintplex-Labs/anything-llm": {
       "fullName": "Mintplex-Labs/anything-llm",
       "description": "Stop renting your intelligence. Own it with AnythingLLM. Everything you need for a powerful local-first agent experience ",
-      "stars": 68247,
-      "forks": 7704,
+      "stars": 68251,
+      "forks": 7705,
       "language": "JavaScript",
-      "pushedAt": "2026-11-13T20:28:41Z",
+      "pushedAt": "2026-11-13T22:55:56Z",
       "createdAt": "2023-06-04T02:29:14Z",
       "topics": [
         "agent-computer",
@@ -2640,7 +2640,7 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 339
+      "openIssues": 338
     },
     "guardrails-ai/guardrails": {
       "fullName": "guardrails-ai/guardrails",
@@ -2661,15 +2661,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 64
+      "openIssues": 63
     },
     "NVIDIA-NeMo/Guardrails": {
       "fullName": "NVIDIA-NeMo/Guardrails",
       "description": "NeMo Guardrails is an open-source toolkit for easily adding programmable guardrails to LLM-based conversational systems.",
-      "stars": 7490,
+      "stars": 7492,
       "forks": 900,
       "language": "Python",
-      "pushedAt": "2026-11-13T13:01:52Z",
+      "pushedAt": "2026-11-14T01:16:47Z",
       "createdAt": "2023-04-18T12:32:47Z",
       "topics": [
         "agents",
@@ -2705,10 +2705,10 @@
     "promptfoo/promptfoo": {
       "fullName": "promptfoo/promptfoo",
       "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
-      "stars": 27143,
-      "forks": 2727,
+      "stars": 27151,
+      "forks": 2729,
       "language": "TypeScript",
-      "pushedAt": "2026-11-13T19:46:20Z",
+      "pushedAt": "2026-11-14T02:28:37Z",
       "createdAt": "2023-04-28T15:48:49Z",
       "topics": [
         "ci",
@@ -2729,7 +2729,7 @@
     "NVIDIA/garak": {
       "fullName": "NVIDIA/garak",
       "description": "the LLM vulnerability scanner",
-      "stars": 10012,
+      "stars": 10014,
       "forks": 1469,
       "language": "Python",
       "pushedAt": "2026-11-06T23:26:29Z",
@@ -2750,10 +2750,10 @@
     "Giskard-AI/giskard-oss": {
       "fullName": "Giskard-AI/giskard-oss",
       "description": "🐢 Open-Source Evaluation & Testing library for LLM Agents",
-      "stars": 5949,
+      "stars": 5951,
       "forks": 570,
       "language": "Python",
-      "pushedAt": "2026-11-13T10:59:41Z",
+      "pushedAt": "2026-11-14T00:01:04Z",
       "createdAt": "2022-03-06T21:45:37Z",
       "topics": [
         "agent-evaluation",
@@ -2769,15 +2769,15 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 82
+      "openIssues": 83
     },
     "open-policy-agent/opa": {
       "fullName": "open-policy-agent/opa",
       "description": "Open Policy Agent (OPA) is an open source, general-purpose policy engine.",
-      "stars": 12468,
-      "forks": 1714,
+      "stars": 12469,
+      "forks": 1715,
       "language": "Go",
-      "pushedAt": "2026-11-13T18:59:05Z",
+      "pushedAt": "2026-11-14T03:47:52Z",
       "createdAt": "2015-12-28T22:08:25Z",
       "topics": [
         "authorization",
@@ -2793,7 +2793,7 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 269
+      "openIssues": 270
     },
     "cedar-policy/cedar": {
       "fullName": "cedar-policy/cedar",
@@ -2801,20 +2801,20 @@
       "stars": 1869,
       "forks": 191,
       "language": "Rust",
-      "pushedAt": "2026-11-13T20:25:59Z",
+      "pushedAt": "2026-11-14T02:23:42Z",
       "createdAt": "2023-04-25T15:13:59Z",
       "topics": [],
       "url": "https://github.com/cedar-policy/cedar",
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 189
+      "openIssues": 188
     },
     "data-privacy-stack/presidio": {
       "fullName": "data-privacy-stack/presidio",
       "description": "An open-source framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines.",
-      "stars": 11875,
-      "forks": 1430,
+      "stars": 11878,
+      "forks": 1431,
       "language": "Python",
       "pushedAt": "2026-11-12T10:58:05Z",
       "createdAt": "2018-05-04T11:08:58Z",
@@ -2832,12 +2832,12 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 277
+      "openIssues": 278
     },
     "Tencent/AI-Infra-Guard": {
       "fullName": "Tencent/AI-Infra-Guard",
       "description": "A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.",
-      "stars": 7496,
+      "stars": 7497,
       "forks": 757,
       "language": "Python",
       "pushedAt": "2026-11-13T01:37:17Z",
@@ -2882,10 +2882,10 @@
     "langfuse/langfuse": {
       "fullName": "langfuse/langfuse",
       "description": "🪢 Open source AI engineering platform: AI Gateway, agent observability, evals, and prompt/skill management, built on OpenTelemetry. One open platform for every AI call and every agent. Self-host or use Langfuse Cloud.",
-      "stars": 37398,
+      "stars": 37405,
       "forks": 4228,
       "language": "TypeScript",
-      "pushedAt": "2026-11-13T21:00:56Z",
+      "pushedAt": "2026-11-14T03:26:41Z",
       "createdAt": "2023-05-18T17:47:09Z",
       "topics": [
         "ai-gateway",
@@ -2901,15 +2901,15 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 1162
+      "openIssues": 1163
     },
     "Arize-ai/phoenix": {
       "fullName": "Arize-ai/phoenix",
       "description": "AI Observability & Evaluation",
-      "stars": 12274,
+      "stars": 12280,
       "forks": 1293,
       "language": "Python",
-      "pushedAt": "2026-11-13T17:03:04Z",
+      "pushedAt": "2026-11-14T04:28:15Z",
       "createdAt": "2022-11-09T23:44:35Z",
       "topics": [
         "agents",
@@ -2925,15 +2925,15 @@
       "archived": false,
       "fork": false,
       "license": "NOASSERTION",
-      "openIssues": 1282
+      "openIssues": 1283
     },
     "comet-ml/opik": {
       "fullName": "comet-ml/opik",
       "description": "Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.",
-      "stars": 23396,
-      "forks": 1949,
+      "stars": 23400,
+      "forks": 1950,
       "language": "Python",
-      "pushedAt": "2026-11-13T20:38:21Z",
+      "pushedAt": "2026-11-14T02:36:46Z",
       "createdAt": "2023-05-10T12:57:13Z",
       "topics": [
         "evaluation",
@@ -2949,7 +2949,7 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 215
+      "openIssues": 219
     },
     "Helicone/helicone": {
       "fullName": "Helicone/helicone",
@@ -2997,13 +2997,13 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 445
+      "openIssues": 444
     },
     "traceloop/openllmetry": {
       "fullName": "traceloop/openllmetry",
       "description": "Open-source observability for your GenAI or LLM application, based on OpenTelemetry",
       "stars": 7532,
-      "forks": 1193,
+      "forks": 1194,
       "language": "Python",
       "pushedAt": "2026-11-09T13:57:46Z",
       "createdAt": "2023-09-02T14:42:59Z",
@@ -3021,7 +3021,7 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 846
+      "openIssues": 847
     },
     "wandb/wandb": {
       "fullName": "wandb/wandb",
@@ -3029,7 +3029,7 @@
       "stars": 11319,
       "forks": 915,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:21:35Z",
+      "pushedAt": "2026-11-14T04:18:11Z",
       "createdAt": "2017-03-24T05:46:23Z",
       "topics": [
         "ai",
@@ -3045,15 +3045,15 @@
       "archived": false,
       "fork": false,
       "license": "MIT",
-      "openIssues": 1044
+      "openIssues": 1047
     },
     "mlflow/mlflow": {
       "fullName": "mlflow/mlflow",
       "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
-      "stars": 28791,
-      "forks": 6609,
+      "stars": 28798,
+      "forks": 6607,
       "language": "Python",
-      "pushedAt": "2026-11-13T21:42:55Z",
+      "pushedAt": "2026-11-14T00:15:17Z",
       "createdAt": "2018-06-05T16:05:58Z",
       "topics": [
         "agentops",
@@ -3069,13 +3069,13 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 2219
+      "openIssues": 2218
     },
     "confident-ai/deepeval": {
       "fullName": "confident-ai/deepeval",
       "description": "The LLM Evaluation Framework",
-      "stars": 19473,
-      "forks": 2201,
+      "stars": 19474,
+      "forks": 2202,
       "language": "Python",
       "pushedAt": "2026-11-12T23:21:12Z",
       "createdAt": "2023-08-10T05:35:04Z",
@@ -3091,7 +3091,7 @@
       "archived": false,
       "fork": false,
       "license": "Apache-2.0",
-      "openIssues": 839
+      "openIssues": 840
     },
     "evidentlyai/evidently": {
       "fullName": "evidentlyai/evidently",
@@ -3120,10 +3120,10 @@
     "HumanSignal/label-studio": {
       "fullName": "HumanSignal/label-studio",
       "description": "Label Studio is a multi-type data labeling and annotation tool with standardized output format",
-      "stars": 28686,
-      "forks": 3798,
+      "stars": 28687,
+      "forks": 3799,
       "language": "TypeScript",
-      "pushedAt": "2026-11-13T21:24:17Z",
+      "pushedAt": "2026-11-14T01:55:32Z",
       "createdAt": "2019-06-19T02:00:44Z",
       "topics": [
         "annotation",
@@ -3172,8 +3172,8 @@
         {
           "fullName": "open-compass/opencompass",
           "description": "OpenCompass is an LLM evaluation platform, supporting a wide range of models from OpenAI, Anthropic, Gemini, Qwen, GLM, DeepSeek, etc, across 100+ datasets covering knowledge, reasoning, coding, science, language, long-context, and safety.",
-          "stars": 7595,
-          "forks": 911,
+          "stars": 7596,
+          "forks": 912,
           "language": "Python",
           "pushedAt": "2026-11-11T11:08:57Z",
           "createdAt": "2023-06-15T12:42:58Z",
@@ -3188,7 +3188,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 307,
+          "openIssues": 308,
           "curated": true,
           "group": "framework"
         },
@@ -3198,7 +3198,7 @@
           "stars": 3639,
           "forks": 394,
           "language": "Python",
-          "pushedAt": "2026-11-12T10:27:29Z",
+          "pushedAt": "2026-11-14T01:23:23Z",
           "createdAt": "2020-11-02T21:56:45Z",
           "topics": [
             "agent-evaluation",
@@ -3214,14 +3214,14 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 161,
+          "openIssues": 159,
           "curated": true,
           "group": "app-eval"
         },
         {
           "fullName": "ifixai-ai/iFixAi",
           "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
-          "stars": 45226,
+          "stars": 45286,
           "forks": 1793,
           "language": "Python",
           "pushedAt": "2026-11-13T12:13:52Z",
@@ -3347,10 +3347,10 @@
         {
           "fullName": "future-agi/future-agi",
           "description": "Open-source, end-to-end platform for evaluating, observing, and improving LLM and AI agent applications. Tracing · Evals · Simulations · Datasets · Gateway · Guardrails. Self-hostable. Apache 2.0.",
-          "stars": 2275,
-          "forks": 716,
+          "stars": 2276,
+          "forks": 717,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:38:51Z",
+          "pushedAt": "2026-11-14T04:30:58Z",
           "createdAt": "2026-04-23T14:11:31Z",
           "topics": [
             "agent-evaluation",
@@ -3366,14 +3366,14 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1051,
+          "openIssues": 1060,
           "curated": false,
           "group": "app-eval"
         },
         {
           "fullName": "alibaba/skill-up",
           "description": "Evaluate Agent Skills and environments. Evolve Skills with evidence.",
-          "stars": 1472,
+          "stars": 1473,
           "forks": 131,
           "language": "Go",
           "pushedAt": "2026-11-13T01:06:57Z",
@@ -3419,7 +3419,7 @@
         {
           "fullName": "TIGER-AI-Lab/ClawBench",
           "description": "Open-source benchmark for browser AI agents on daily tasks.",
-          "stars": 1287,
+          "stars": 1289,
           "forks": 76,
           "language": "Python",
           "pushedAt": "2026-11-05T13:07:41Z",
@@ -4086,10 +4086,10 @@
         {
           "fullName": "skypilot-org/skypilot",
           "description": "The AI Compute Platform for frontier teams. SkyPilot turns fragmented AI compute into one AI supercomputer, so frontier AI teams build custom intelligence faster.",
-          "stars": 10833,
-          "forks": 1347,
+          "stars": 10834,
+          "forks": 1349,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:22:31Z",
+          "pushedAt": "2026-11-14T03:34:40Z",
           "createdAt": "2021-08-11T23:32:15Z",
           "topics": [
             "cloud-computing",
@@ -4112,7 +4112,7 @@
         {
           "fullName": "Netflix/metaflow",
           "description": "Build, Manage and Deploy AI/ML Systems",
-          "stars": 10347,
+          "stars": 10348,
           "forks": 1394,
           "language": "Python",
           "pushedAt": "2026-11-09T07:55:52Z",
@@ -4139,7 +4139,7 @@
           "fullName": "linux-rdma/rdma-core",
           "description": "RDMA core userspace libraries and daemons",
           "stars": 2424,
-          "forks": 924,
+          "forks": 925,
           "language": "C",
           "pushedAt": "2026-11-12T11:21:04Z",
           "createdAt": "2016-09-17T14:13:20Z",
@@ -4164,7 +4164,7 @@
           "fullName": "hpcaitech/ColossalAI",
           "description": "Making large AI models cheaper, faster and more accessible",
           "stars": 41424,
-          "forks": 4485,
+          "forks": 4486,
           "language": "Python",
           "pushedAt": "2026-11-13T16:26:52Z",
           "createdAt": "2021-10-28T16:19:44Z",
@@ -4190,9 +4190,9 @@
           "fullName": "cupy/cupy",
           "description": "NumPy & SciPy for GPU",
           "stars": 12408,
-          "forks": 1163,
+          "forks": 1164,
           "language": "Python",
-          "pushedAt": "2026-11-13T04:03:52Z",
+          "pushedAt": "2026-11-13T22:43:05Z",
           "createdAt": "2016-11-01T09:54:45Z",
           "topics": [
             "cublas",
@@ -4208,7 +4208,7 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 707,
+          "openIssues": 704,
           "curated": false,
           "group": "network"
         },
@@ -4241,10 +4241,10 @@
         {
           "fullName": "kvcache-ai/Mooncake",
           "description": "Mooncake is the serving platform for Kimi, a leading LLM service provided by Moonshot AI.",
-          "stars": 7033,
+          "stars": 7035,
           "forks": 1481,
           "language": "C++",
-          "pushedAt": "2026-11-13T11:05:21Z",
+          "pushedAt": "2026-11-14T04:20:05Z",
           "createdAt": "2024-06-25T05:21:05Z",
           "topics": [
             "disaggregation",
@@ -4260,17 +4260,17 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1031,
+          "openIssues": 1030,
           "curated": false,
           "group": "network"
         },
         {
           "fullName": "SchedMD/slurm",
           "description": "Slurm: A Highly Scalable Workload Manager",
-          "stars": 4515,
+          "stars": 4516,
           "forks": 905,
           "language": "C",
-          "pushedAt": "2026-11-13T21:05:23Z",
+          "pushedAt": "2026-11-14T04:04:16Z",
           "createdAt": "2011-06-20T16:15:51Z",
           "topics": [
             "slurm",
@@ -4291,7 +4291,7 @@
           "stars": 3637,
           "forks": 534,
           "language": "Python",
-          "pushedAt": "2026-11-13T18:06:07Z",
+          "pushedAt": "2026-11-14T01:41:10Z",
           "createdAt": "2022-02-01T17:17:36Z",
           "topics": [
             "ai",
@@ -4307,7 +4307,7 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 361,
+          "openIssues": 362,
           "curated": false,
           "group": "compute"
         },
@@ -4317,7 +4317,7 @@
           "stars": 3526,
           "forks": 823,
           "language": "Groovy",
-          "pushedAt": "2026-11-13T21:13:33Z",
+          "pushedAt": "2026-11-13T22:13:34Z",
           "createdAt": "2013-03-27T11:17:33Z",
           "topics": [
             "aws",
@@ -4343,7 +4343,7 @@
           "stars": 3497,
           "forks": 242,
           "language": "Rust",
-          "pushedAt": "2026-11-13T13:31:44Z",
+          "pushedAt": "2026-11-14T04:19:55Z",
           "createdAt": "2023-12-21T03:43:49Z",
           "topics": [
             "apache-iceberg",
@@ -4359,7 +4359,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 315,
+          "openIssues": 321,
           "curated": false,
           "group": "compute"
         },
@@ -4418,7 +4418,7 @@
         {
           "fullName": "openlit/openlit",
           "description": "Same agent Smaller bill. The tools and infrastructure to get more work from your AI. Fewer tokens. Less compute. Lower cost.",
-          "stars": 3070,
+          "stars": 3072,
           "forks": 487,
           "language": "TypeScript",
           "pushedAt": "2026-11-11T22:22:13Z",
@@ -4437,7 +4437,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 224,
+          "openIssues": 223,
           "curated": false,
           "group": "gpu-ops"
         },
@@ -4471,7 +4471,7 @@
           "fullName": "kuberay-project/kuberay",
           "description": "A toolkit to run Ray applications on Kubernetes",
           "stars": 2768,
-          "forks": 912,
+          "forks": 913,
           "language": "Go",
           "pushedAt": "2026-11-13T20:00:39Z",
           "createdAt": "2020-10-29T20:42:00Z",
@@ -4488,7 +4488,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 757,
+          "openIssues": 756,
           "curated": false,
           "group": "compute"
         },
@@ -4669,10 +4669,10 @@
         {
           "fullName": "NVIDIA/NVSentinel",
           "description": "NVSentinel detects and remediates GPU faults on Kubernetes nodes",
-          "stars": 437,
-          "forks": 175,
+          "stars": 438,
+          "forks": 176,
           "language": "Go",
-          "pushedAt": "2026-11-13T17:07:44Z",
+          "pushedAt": "2026-11-14T02:25:04Z",
           "createdAt": "2025-09-16T12:43:23Z",
           "topics": [
             "accelerated-computing",
@@ -4688,7 +4688,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 118,
+          "openIssues": 120,
           "curated": false,
           "group": "gpu-ops"
         }
@@ -5312,8 +5312,8 @@
         {
           "fullName": "hiyouga/LlamaFactory",
           "description": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
-          "stars": 76028,
-          "forks": 9366,
+          "stars": 76032,
+          "forks": 9369,
           "language": "Python",
           "pushedAt": "2026-11-13T13:16:48Z",
           "createdAt": "2023-05-28T10:09:12Z",
@@ -5338,7 +5338,7 @@
         {
           "fullName": "axolotl-ai-cloud/axolotl",
           "description": "Go ahead and axolotl questions",
-          "stars": 12691,
+          "stars": 12692,
           "forks": 1475,
           "language": "Python",
           "pushedAt": "2026-11-13T19:28:37Z",
@@ -5384,10 +5384,10 @@
         {
           "fullName": "NVIDIA-NeMo/Curator",
           "description": "Scalable data pre processing and curation toolkit for LLMs",
-          "stars": 1861,
+          "stars": 1860,
           "forks": 375,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:15:18Z",
+          "pushedAt": "2026-11-14T00:38:45Z",
           "createdAt": "2024-03-14T20:41:51Z",
           "topics": [
             "data",
@@ -5403,7 +5403,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 316,
+          "openIssues": 315,
           "curated": true,
           "group": "data"
         },
@@ -5436,10 +5436,10 @@
         {
           "fullName": "modelscope/ms-swift",
           "description": "Use PEFT or Full-parameter to CPT/SFT/DPO/GRPO 600+ LLMs (Qwen3.8, DeepSeek-V4, GLM-5.1, InternLM3, Llama4, ...) and 300+ MLLMs (Qwen3-VL, Qwen3-Omni, InternVL3.5, Ovis2.5, GLM5.3, Gemma4, Llava, Phi4, ...) (AAAI 2025).",
-          "stars": 16101,
+          "stars": 16102,
           "forks": 1801,
           "language": "Python",
-          "pushedAt": "2026-11-13T16:05:12Z",
+          "pushedAt": "2026-11-13T23:28:37Z",
           "createdAt": "2023-08-01T15:06:39Z",
           "topics": [
             "deepseek",
@@ -5455,7 +5455,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 596,
+          "openIssues": 592,
           "curated": false,
           "group": "rl"
         },
@@ -5643,7 +5643,7 @@
         {
           "fullName": "AIDotNet/OpenDeepWiki",
           "description": "OpenDeepWiki is the open-source version of the DeepWiki project, aiming to provide a powerful knowledge management and collaboration platform. The project is mainly developed using C# and TypeScript, supporting modular design, and is easy to expand and customize.",
-          "stars": 3664,
+          "stars": 3663,
           "forks": 467,
           "language": "C#",
           "pushedAt": "2026-10-23T02:26:02Z",
@@ -5692,7 +5692,7 @@
           "fullName": "Farama-Foundation/PettingZoo",
           "description": "A standard API for multi-agent reinforcement learning environments, with popular reference environments and related utilities",
           "stars": 3553,
-          "forks": 553,
+          "forks": 554,
           "language": "Python",
           "pushedAt": "2026-11-11T18:49:44Z",
           "createdAt": "2020-01-20T03:41:08Z",
@@ -5707,7 +5707,7 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 61,
+          "openIssues": 62,
           "curated": false,
           "group": "env"
         },
@@ -5791,10 +5791,10 @@
         {
           "fullName": "Farama-Foundation/Minigrid",
           "description": "Simple and easily configurable grid world environments for reinforcement learning",
-          "stars": 2541,
+          "stars": 2542,
           "forks": 673,
           "language": "Python",
-          "pushedAt": "2026-11-12T08:05:12Z",
+          "pushedAt": "2026-11-14T02:02:40Z",
           "createdAt": "2017-12-13T16:22:37Z",
           "topics": [
             "gridworld-environment",
@@ -5805,7 +5805,7 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 42,
+          "openIssues": 38,
           "curated": false,
           "group": "env"
         },
@@ -5864,7 +5864,7 @@
         {
           "fullName": "sapientinc/HRM-Text",
           "description": "HRM-Text is a 1B text generation model based on the HRM architecture, strengthened by task completion and latent space reasoning.",
-          "stars": 2315,
+          "stars": 2317,
           "forks": 219,
           "language": "Python",
           "pushedAt": "2026-09-21T21:24:01Z",
@@ -5889,7 +5889,7 @@
           "stars": 2112,
           "forks": 460,
           "language": "C++",
-          "pushedAt": "2026-11-12T11:08:16Z",
+          "pushedAt": "2026-11-14T02:30:38Z",
           "createdAt": "2015-06-26T18:38:23Z",
           "topics": [
             "deep-learning",
@@ -5905,7 +5905,7 @@
           "archived": false,
           "fork": false,
           "license": "",
-          "openIssues": 49,
+          "openIssues": 45,
           "curated": false,
           "group": "env"
         },
@@ -5913,7 +5913,7 @@
           "fullName": "Farama-Foundation/Gymnasium-Robotics",
           "description": "A collection of robotics simulation environments for reinforcement learning",
           "stars": 1965,
-          "forks": 165,
+          "forks": 166,
           "language": "Python",
           "pushedAt": "2026-11-12T07:58:18Z",
           "createdAt": "2021-10-25T18:10:57Z",
@@ -5929,7 +5929,7 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 36,
+          "openIssues": 37,
           "curated": false,
           "group": "env"
         },
@@ -5961,7 +5961,7 @@
           "stars": 1768,
           "forks": 84,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:31:52Z",
+          "pushedAt": "2026-11-13T23:56:22Z",
           "createdAt": "2022-10-06T15:30:24Z",
           "topics": [
             "datasets",
@@ -6836,7 +6836,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 191,
+          "openIssues": 186,
           "curated": true,
           "group": "library"
         },
@@ -6862,7 +6862,7 @@
           "archived": false,
           "fork": false,
           "license": "BSD-2-Clause",
-          "openIssues": 237,
+          "openIssues": 238,
           "curated": true,
           "group": "kernels"
         },
@@ -6892,7 +6892,7 @@
         {
           "fullName": "haotian-liu/LLaVA",
           "description": "[NeurIPS'23 Oral] Visual Instruction Tuning (LLaVA) built towards GPT-4V level capabilities and beyond.",
-          "stars": 25078,
+          "stars": 25077,
           "forks": 2772,
           "language": "Python",
           "pushedAt": "2024-08-12T09:52:38Z",
@@ -6964,7 +6964,7 @@
         {
           "fullName": "web-infra-dev/midscene",
           "description": "See interfaces like a human. E2E testing in natural language.",
-          "stars": 15608,
+          "stars": 15610,
           "forks": 1223,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T09:57:51Z",
@@ -6983,14 +6983,14 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 37,
+          "openIssues": 38,
           "curated": false,
           "group": "multimodal"
         },
         {
           "fullName": "bigscience-workshop/petals",
           "description": "🌸 Run LLMs at home, BitTorrent-style. Fine-tuning and inference up to 10x faster than offloading",
-          "stars": 10710,
+          "stars": 10711,
           "forks": 656,
           "language": "Python",
           "pushedAt": "2024-09-07T11:54:28Z",
@@ -7133,7 +7133,7 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 264,
+          "openIssues": 272,
           "curated": false,
           "group": "multimodal"
         },
@@ -7266,7 +7266,7 @@
           "stars": 2575,
           "forks": 553,
           "language": "C++",
-          "pushedAt": "2026-11-13T21:20:48Z",
+          "pushedAt": "2026-11-14T02:25:49Z",
           "createdAt": "2020-09-17T18:58:41Z",
           "topics": [
             "accelerated-computing",
@@ -7282,7 +7282,7 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 1891,
+          "openIssues": 1892,
           "curated": false,
           "group": "kernels"
         },
@@ -7290,7 +7290,7 @@
           "fullName": "flagos-ai/FlagGems",
           "description": "FlagGems is an operator library for large language models implemented in the Triton Language.",
           "stars": 1178,
-          "forks": 618,
+          "forks": 619,
           "language": "Python",
           "pushedAt": "2026-11-13T13:15:15Z",
           "createdAt": "2024-03-21T02:04:53Z",
@@ -7303,7 +7303,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1311,
+          "openIssues": 1312,
           "curated": false,
           "group": "kernels"
         },
@@ -7337,7 +7337,7 @@
           "stars": 945,
           "forks": 135,
           "language": "Cuda",
-          "pushedAt": "2026-11-13T21:27:50Z",
+          "pushedAt": "2026-11-13T23:31:47Z",
           "createdAt": "2021-03-03T19:29:55Z",
           "topics": [
             "benchmark",
@@ -7352,7 +7352,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 87,
+          "openIssues": 84,
           "curated": false,
           "group": "kernels"
         }
@@ -7941,10 +7941,10 @@
         {
           "fullName": "vllm-project/vllm",
           "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
-          "stars": 96870,
-          "forks": 24780,
+          "stars": 96887,
+          "forks": 24794,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:38:32Z",
+          "pushedAt": "2026-11-14T04:20:26Z",
           "createdAt": "2023-02-09T11:23:20Z",
           "topics": [
             "amd",
@@ -7960,17 +7960,17 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 10330,
+          "openIssues": 10320,
           "curated": true,
           "group": "engine"
         },
         {
           "fullName": "BerriAI/litellm",
           "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-          "stars": 63219,
-          "forks": 13267,
+          "stars": 63226,
+          "forks": 13271,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:47:56Z",
+          "pushedAt": "2026-11-14T04:33:38Z",
           "createdAt": "2023-07-27T00:09:52Z",
           "topics": [
             "ai-gateway",
@@ -7986,17 +7986,17 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 5194,
+          "openIssues": 5195,
           "curated": true,
           "group": "gateway"
         },
         {
           "fullName": "NVIDIA/TensorRT-LLM",
           "description": "TensorRT LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and supports state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs. TensorRT LLM also contains components to create Python and C++ runtimes that orchestrate the inference execution in a performant way.",
-          "stars": 15073,
+          "stars": 15074,
           "forks": 2932,
           "language": "Python",
-          "pushedAt": "2026-11-13T20:59:43Z",
+          "pushedAt": "2026-11-14T03:35:23Z",
           "createdAt": "2023-08-16T17:14:27Z",
           "topics": [
             "blackwell",
@@ -8009,14 +8009,14 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 2085,
+          "openIssues": 2077,
           "curated": true,
           "group": "engine"
         },
         {
           "fullName": "Portkey-AI/gateway",
           "description": "A blazing fast AI Gateway with integrated guardrails. Route to 1,600+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.",
-          "stars": 13378,
+          "stars": 13377,
           "forks": 1381,
           "language": "TypeScript",
           "pushedAt": "2026-05-25T13:54:51Z",
@@ -8043,9 +8043,9 @@
           "fullName": "LMCache/LMCache",
           "description": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
           "stars": 12358,
-          "forks": 2162,
+          "forks": 2163,
           "language": "Python",
-          "pushedAt": "2026-11-13T18:58:56Z",
+          "pushedAt": "2026-11-14T04:25:44Z",
           "createdAt": "2024-05-28T21:06:04Z",
           "topics": [
             "amd",
@@ -8094,10 +8094,10 @@
         {
           "fullName": "flashinfer-ai/flashinfer",
           "description": "FlashInfer: Kernel Library for LLM Serving",
-          "stars": 6917,
-          "forks": 1751,
+          "stars": 6918,
+          "forks": 1752,
           "language": "Cuda",
-          "pushedAt": "2026-11-13T21:13:37Z",
+          "pushedAt": "2026-11-14T02:58:24Z",
           "createdAt": "2023-07-22T00:29:04Z",
           "topics": [
             "attention",
@@ -8113,14 +8113,14 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1421,
+          "openIssues": 1420,
           "curated": true,
           "group": "accel"
         },
         {
           "fullName": "kserve/kserve",
           "description": "Standardized Distributed Generative and Predictive AI Inference Platform for Scalable, Multi-Framework Deployment on Kubernetes",
-          "stars": 6227,
+          "stars": 6228,
           "forks": 1788,
           "language": "Go",
           "pushedAt": "2026-11-13T20:04:03Z",
@@ -8149,7 +8149,7 @@
           "stars": 3967,
           "forks": 735,
           "language": "Python",
-          "pushedAt": "2026-11-13T20:58:21Z",
+          "pushedAt": "2026-11-13T22:27:42Z",
           "createdAt": "2024-06-20T20:13:34Z",
           "topics": [
             "compression",
@@ -8166,10 +8166,10 @@
         {
           "fullName": "cheaper-inference/OmniRoute",
           "description": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 900+ contributors",
-          "stars": 87147,
-          "forks": 13342,
+          "stars": 87210,
+          "forks": 13363,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:35:51Z",
+          "pushedAt": "2026-11-14T03:37:31Z",
           "createdAt": "2026-02-13T12:38:31Z",
           "topics": [
             "a2a",
@@ -8185,17 +8185,17 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 540,
+          "openIssues": 541,
           "curated": false,
           "group": "gateway"
         },
         {
           "fullName": "QuantumNous/new-api",
           "description": "Open-source AI gateway. Self-hosted LLM gateway with OpenAI-, Claude- and Gemini-compatible APIs, model routing, access control, usage tracking and cost accounting.",
-          "stars": 51887,
-          "forks": 12658,
+          "stars": 51891,
+          "forks": 12659,
           "language": "Go",
-          "pushedAt": "2026-11-13T17:49:52Z",
+          "pushedAt": "2026-11-14T01:11:33Z",
           "createdAt": "2023-11-10T19:33:36Z",
           "topics": [
             "ai-gateway",
@@ -8218,7 +8218,7 @@
         {
           "fullName": "Kong/kong",
           "description": "🦍 The API and AI Gateway",
-          "stars": 44381,
+          "stars": 44380,
           "forks": 5241,
           "language": "Lua",
           "pushedAt": "2026-10-19T02:45:09Z",
@@ -8244,7 +8244,7 @@
         {
           "fullName": "AlexsJones/llmfit",
           "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
-          "stars": 38975,
+          "stars": 38978,
           "forks": 2523,
           "language": "Rust",
           "pushedAt": "2026-11-12T07:19:38Z",
@@ -8268,7 +8268,7 @@
         {
           "fullName": "mozilla-ai/llamafile",
           "description": "Distribute and run LLMs with a single file.",
-          "stars": 26635,
+          "stars": 26636,
           "forks": 1678,
           "language": "C++",
           "pushedAt": "2026-11-09T00:15:20Z",
@@ -8294,7 +8294,7 @@
         {
           "fullName": "tonhowtf/omniget",
           "description": "A local MCP server that gives your coding agent a desktop toolbox: downloads from YouTube, torrents and every site yt-dlp supports, media conversion, files, chats and system cleanup. One line connects Claude Code, Codex, Cursor or Gemini CLI, and sensitive actions wait for your click. Free and open source for Windows, macOS and Linux.",
-          "stars": 14402,
+          "stars": 14413,
           "forks": 1244,
           "language": "Rust",
           "pushedAt": "2026-11-13T20:37:43Z",
@@ -8345,8 +8345,8 @@
         {
           "fullName": "MakazhanAlpamys/Soup",
           "description": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
-          "stars": 10528,
-          "forks": 1741,
+          "stars": 10532,
+          "forks": 1742,
           "language": "Python",
           "pushedAt": "2026-11-13T19:05:01Z",
           "createdAt": "2026-02-20T11:05:01Z",
@@ -8364,15 +8364,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 272,
+          "openIssues": 273,
           "curated": false,
           "group": "local"
         },
         {
           "fullName": "Tiiny-AI/PowerInfer",
           "description": "High-speed Large Language Model Serving for Local Deployment",
-          "stars": 9884,
-          "forks": 618,
+          "stars": 9885,
+          "forks": 619,
           "language": "C++",
           "pushedAt": "2026-05-11T06:48:06Z",
           "createdAt": "2023-12-15T02:24:10Z",
@@ -8394,10 +8394,10 @@
         {
           "fullName": "LearningCircuit/local-deep-research",
           "description": " ~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
-          "stars": 9579,
-          "forks": 921,
+          "stars": 9580,
+          "forks": 922,
           "language": "Python",
-          "pushedAt": "2026-11-13T19:28:54Z",
+          "pushedAt": "2026-11-14T02:46:39Z",
           "createdAt": "2025-02-09T15:41:32Z",
           "topics": [
             "academia",
@@ -8413,7 +8413,7 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 1489,
+          "openIssues": 1493,
           "curated": false,
           "group": "local"
         },
@@ -8447,7 +8447,7 @@
           "fullName": "bitsandbytes-foundation/bitsandbytes",
           "description": "Accessible large language models via k-bit quantization for PyTorch.",
           "stars": 8538,
-          "forks": 948,
+          "forks": 949,
           "language": "Python",
           "pushedAt": "2026-11-02T14:36:37Z",
           "createdAt": "2021-06-04T00:10:34Z",
@@ -8462,14 +8462,14 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 133,
+          "openIssues": 135,
           "curated": false,
           "group": "accel"
         },
         {
           "fullName": "open-multi-agent/open-multi-agent",
           "description": "Self-hosted TypeScript agent runtime with durable approvals and verifiable run records. Own it, approve it, audit it.",
-          "stars": 7059,
+          "stars": 7058,
           "forks": 2437,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T16:46:59Z",
@@ -8488,7 +8488,7 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 7,
+          "openIssues": 9,
           "curated": false,
           "group": "local"
         },
@@ -8521,10 +8521,10 @@
         {
           "fullName": "raullenchai/Rapid-MLX",
           "description": "Rapid-MLX is an open-source (Apache 2.0) OpenAI- and Anthropic-compatible LLM inference server for Apple Silicon, built on MLX, focused on reliable tool calling for coding agents. Up to 4× faster than Apple's MLX (mlx-lm) on the same weights.",
-          "stars": 4141,
+          "stars": 4144,
           "forks": 442,
           "language": "Python",
-          "pushedAt": "2026-11-13T05:56:21Z",
+          "pushedAt": "2026-11-14T03:59:43Z",
           "createdAt": "2026-02-25T00:41:44Z",
           "topics": [
             "anthropic-api",
@@ -8540,7 +8540,7 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 8,
+          "openIssues": 12,
           "curated": false,
           "group": "accel"
         },
@@ -8573,7 +8573,7 @@
         {
           "fullName": "syv-ai/HyperQwen",
           "description": "Serve large Qwen models fast on the GPUs you actually own. Qwen3.8-27B on a single 24 GB card with vLLM: 127 tok/s single-user (381 when the answer quotes the prompt), ~1,035 tok/s at 64 concurrent, 150k-262k context. vLLM patches, requant pipeline, benchmarks.",
-          "stars": 2696,
+          "stars": 2698,
           "forks": 340,
           "language": "Python",
           "pushedAt": "2026-11-10T04:28:06Z",
@@ -8620,7 +8620,7 @@
         {
           "fullName": "NVIDIA/kvpress",
           "description": "LLM KV cache compression made easy",
-          "stars": 1252,
+          "stars": 1253,
           "forks": 199,
           "language": "Python",
           "pushedAt": "2026-11-11T09:51:54Z",
@@ -9465,8 +9465,8 @@
         {
           "fullName": "anthropics/skills",
           "description": "Public repository for Agent Skills",
-          "stars": 194107,
-          "forks": 22827,
+          "stars": 194194,
+          "forks": 22841,
           "language": "Python",
           "pushedAt": "2026-11-06T22:32:32Z",
           "createdAt": "2025-09-22T15:53:31Z",
@@ -9477,17 +9477,17 @@
           "archived": false,
           "fork": false,
           "license": "",
-          "openIssues": 1527,
+          "openIssues": 1533,
           "curated": true,
           "group": "skills"
         },
         {
           "fullName": "browser-use/browser-use",
           "description": "Open-source Python library for AI browser agents, plus Browser Use Cloud: stealth browsers and a hosted agent API.",
-          "stars": 120950,
-          "forks": 13526,
+          "stars": 120967,
+          "forks": 13529,
           "language": "Python",
-          "pushedAt": "2026-11-13T20:56:59Z",
+          "pushedAt": "2026-11-14T04:27:52Z",
           "createdAt": "2024-10-31T16:00:56Z",
           "topics": [
             "ai-agents",
@@ -9503,15 +9503,15 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 580,
+          "openIssues": 575,
           "curated": true,
           "group": "tools"
         },
         {
           "fullName": "thedotmack/claude-mem",
           "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-          "stars": 116819,
-          "forks": 10136,
+          "stars": 116883,
+          "forks": 10144,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T18:56:42Z",
           "createdAt": "2025-08-31T20:50:03Z",
@@ -9529,17 +9529,17 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 128,
+          "openIssues": 126,
           "curated": true,
           "group": "memory"
         },
         {
           "fullName": "headroomlabs-ai/headroom",
           "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
-          "stars": 79588,
-          "forks": 6228,
+          "stars": 79614,
+          "forks": 6229,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:48:10Z",
+          "pushedAt": "2026-11-14T02:37:40Z",
           "createdAt": "2026-01-07T19:58:51Z",
           "topics": [
             "agent",
@@ -9555,15 +9555,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 323,
+          "openIssues": 331,
           "curated": true,
           "group": "context"
         },
         {
           "fullName": "mem0ai/mem0",
           "description": "The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.",
-          "stars": 68922,
-          "forks": 8199,
+          "stars": 68929,
+          "forks": 8202,
           "language": "Python",
           "pushedAt": "2026-11-06T16:53:07Z",
           "createdAt": "2023-06-20T08:58:36Z",
@@ -9588,8 +9588,8 @@
         {
           "fullName": "github/github-mcp-server",
           "description": "GitHub's official MCP Server",
-          "stars": 34443,
-          "forks": 5345,
+          "stars": 34450,
+          "forks": 5347,
           "language": "Go",
           "pushedAt": "2026-11-13T20:25:40Z",
           "createdAt": "2025-03-04T16:42:04Z",
@@ -9602,17 +9602,17 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 457,
+          "openIssues": 459,
           "curated": true,
           "group": "tools"
         },
         {
           "fullName": "temporalio/temporal",
           "description": "Temporal service",
-          "stars": 24384,
-          "forks": 2115,
+          "stars": 24390,
+          "forks": 2118,
           "language": "Go",
-          "pushedAt": "2026-11-13T21:47:39Z",
+          "pushedAt": "2026-11-14T04:29:08Z",
           "createdAt": "2019-10-16T22:15:35Z",
           "topics": [
             "cronjob-scheduler",
@@ -9628,17 +9628,17 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 1141,
+          "openIssues": 1143,
           "curated": true,
           "group": "durable"
         },
         {
           "fullName": "google/gvisor",
           "description": "Application Kernel for Containers",
-          "stars": 19994,
-          "forks": 2075,
+          "stars": 19998,
+          "forks": 2078,
           "language": "Go",
-          "pushedAt": "2026-11-13T21:44:09Z",
+          "pushedAt": "2026-11-14T04:19:10Z",
           "createdAt": "2018-04-26T21:28:49Z",
           "topics": [
             "containers",
@@ -9653,14 +9653,14 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1210,
+          "openIssues": 1182,
           "curated": true,
           "group": "sandbox"
         },
         {
           "fullName": "camel-ai/camel",
           "description": "🐫 CAMEL: The first and the best multi-agent framework. Finding the Scaling Law of Agents. https://www.camel-ai.org",
-          "stars": 18031,
+          "stars": 18030,
           "forks": 2145,
           "language": "Python",
           "pushedAt": "2026-11-09T10:25:06Z",
@@ -9686,10 +9686,10 @@
         {
           "fullName": "inngest/inngest",
           "description": "The leading workflow orchestration platform.  Run stateful step functions and AI workflows on serverless, servers, or the edge.",
-          "stars": 6034,
-          "forks": 391,
+          "stars": 6035,
+          "forks": 392,
           "language": "Go",
-          "pushedAt": "2026-11-13T21:26:27Z",
+          "pushedAt": "2026-11-14T04:26:32Z",
           "createdAt": "2021-06-07T18:26:33Z",
           "topics": [
             "cli",
@@ -9705,17 +9705,17 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 285,
+          "openIssues": 288,
           "curated": true,
           "group": "durable"
         },
         {
           "fullName": "restatedev/restate",
           "description": "Restate is the platform for building resilient applications that tolerate all infrastructure faults w/o the need for a PhD.",
-          "stars": 4696,
-          "forks": 234,
+          "stars": 4698,
+          "forks": 235,
           "language": "Rust",
-          "pushedAt": "2026-11-13T21:29:43Z",
+          "pushedAt": "2026-11-14T00:48:39Z",
           "createdAt": "2023-01-04T15:03:32Z",
           "topics": [
             "async-await",
@@ -9731,14 +9731,14 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 465,
+          "openIssues": 466,
           "curated": true,
           "group": "durable"
         },
         {
           "fullName": "e2b-dev/code-interpreter",
           "description": "Python & JS/TS SDK for running AI-generated code/code interpreting in your AI app ",
-          "stars": 2427,
+          "stars": 2428,
           "forks": 232,
           "language": "Python",
           "pushedAt": "2026-11-03T16:31:07Z",
@@ -9764,10 +9764,10 @@
         {
           "fullName": "morluto/rea",
           "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-          "stars": 457468,
-          "forks": 112270,
+          "stars": 457958,
+          "forks": 112352,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:28:19Z",
+          "pushedAt": "2026-11-14T04:13:39Z",
           "createdAt": "2026-04-14T00:51:32Z",
           "topics": [
             "agent-skills",
@@ -9783,15 +9783,15 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 1842,
+          "openIssues": 1861,
           "curated": false,
           "group": "skills"
         },
         {
           "fullName": "DietrichGebert/ponytail",
           "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-          "stars": 190326,
-          "forks": 10627,
+          "stars": 190432,
+          "forks": 10636,
           "language": "JavaScript",
           "pushedAt": "2026-10-29T11:59:31Z",
           "createdAt": "2026-06-12T00:52:37Z",
@@ -9809,17 +9809,17 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 227,
+          "openIssues": 229,
           "curated": false,
           "group": "skills"
         },
         {
           "fullName": "addyosmani/agent-skills",
           "description": "Production-grade engineering skills for AI coding agents.",
-          "stars": 117113,
-          "forks": 12245,
+          "stars": 117206,
+          "forks": 12256,
           "language": "JavaScript",
-          "pushedAt": "2026-11-01T19:24:49Z",
+          "pushedAt": "2026-11-14T04:33:56Z",
           "createdAt": "2026-02-15T20:20:26Z",
           "topics": [
             "agent-skills",
@@ -9833,17 +9833,17 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 140,
+          "openIssues": 120,
           "curated": false,
           "group": "skills"
         },
         {
           "fullName": "pbakaus/impeccable",
           "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
-          "stars": 109538,
-          "forks": 6533,
+          "stars": 109704,
+          "forks": 6547,
           "language": "Rust",
-          "pushedAt": "2026-11-13T21:41:58Z",
+          "pushedAt": "2026-11-14T03:54:28Z",
           "createdAt": "2025-11-16T01:52:04Z",
           "topics": [
             "agent-skills",
@@ -9856,17 +9856,17 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 67,
+          "openIssues": 71,
           "curated": false,
           "group": "skills"
         },
         {
           "fullName": "google-gemini/gemini-cli",
           "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-          "stars": 108819,
-          "forks": 14949,
+          "stars": 108822,
+          "forks": 14953,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T20:10:21Z",
+          "pushedAt": "2026-11-14T01:10:53Z",
           "createdAt": "2025-04-17T17:04:31Z",
           "topics": [
             "ai",
@@ -9881,15 +9881,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 723,
+          "openIssues": 721,
           "curated": false,
           "group": "tools"
         },
         {
           "fullName": "D4Vinci/Scrapling",
           "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
-          "stars": 102478,
-          "forks": 10673,
+          "stars": 102545,
+          "forks": 10679,
           "language": "Python",
           "pushedAt": "2026-11-11T19:16:10Z",
           "createdAt": "2024-10-13T20:29:53Z",
@@ -9914,10 +9914,10 @@
         {
           "fullName": "tt-a1i/archify",
           "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
-          "stars": 96210,
-          "forks": 6575,
+          "stars": 96251,
+          "forks": 6582,
           "language": "JavaScript",
-          "pushedAt": "2026-11-13T18:15:49Z",
+          "pushedAt": "2026-11-14T03:05:03Z",
           "createdAt": "2026-04-15T05:27:37Z",
           "topics": [
             "agent-skills",
@@ -9933,17 +9933,17 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 353,
+          "openIssues": 351,
           "curated": false,
           "group": "skills"
         },
         {
           "fullName": "koala73/worldmonitor",
           "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
-          "stars": 90594,
-          "forks": 14052,
+          "stars": 90611,
+          "forks": 14058,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:39:28Z",
+          "pushedAt": "2026-11-14T04:16:47Z",
           "createdAt": "2026-01-08T17:26:06Z",
           "topics": [
             "agent",
@@ -9959,15 +9959,15 @@
           "archived": false,
           "fork": false,
           "license": "AGPL-3.0",
-          "openIssues": 335,
+          "openIssues": 340,
           "curated": false,
           "group": "tools"
         },
         {
           "fullName": "rtk-ai/rtk",
           "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
-          "stars": 86487,
-          "forks": 5543,
+          "stars": 86518,
+          "forks": 5544,
           "language": "Rust",
           "pushedAt": "2026-11-13T17:09:37Z",
           "createdAt": "2026-01-22T16:54:16Z",
@@ -9985,15 +9985,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1696,
+          "openIssues": 1697,
           "curated": false,
           "group": "coding"
         },
         {
           "fullName": "666ghj/MiroFish",
           "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
-          "stars": 85502,
-          "forks": 12968,
+          "stars": 85517,
+          "forks": 12972,
           "language": "Python",
           "pushedAt": "2026-10-16T03:32:19Z",
           "createdAt": "2025-11-26T04:23:02Z",
@@ -10018,10 +10018,10 @@
         {
           "fullName": "lobehub/lobehub",
           "description": "🤯 LobeHub - Super-Agents on Your Team. Add super-agents to the chats your team already uses.They take on work by themselves and get better every week.",
-          "stars": 85364,
-          "forks": 16290,
+          "stars": 85432,
+          "forks": 16301,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:31:41Z",
+          "pushedAt": "2026-11-14T04:32:24Z",
           "createdAt": "2023-05-21T07:19:12Z",
           "topics": [
             "agent",
@@ -10037,17 +10037,17 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 1346,
+          "openIssues": 1345,
           "curated": false,
           "group": "loop"
         },
         {
           "fullName": "bytedance/deer-flow",
           "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
-          "stars": 85319,
-          "forks": 12023,
+          "stars": 85321,
+          "forks": 12025,
           "language": "Python",
-          "pushedAt": "2026-11-13T15:23:29Z",
+          "pushedAt": "2026-11-14T04:22:22Z",
           "createdAt": "2025-05-07T02:50:19Z",
           "topics": [
             "agent",
@@ -10070,8 +10070,8 @@
         {
           "fullName": "ruvnet/ruflo",
           "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-          "stars": 81640,
-          "forks": 9615,
+          "stars": 81654,
+          "forks": 9620,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T21:05:37Z",
           "createdAt": "2025-06-02T21:24:20Z",
@@ -10089,17 +10089,17 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 588,
+          "openIssues": 589,
           "curated": false,
           "group": "memory"
         },
         {
           "fullName": "Fission-AI/OpenSpec",
           "description": "Spec-driven development (SDD) for AI coding assistants.",
-          "stars": 74800,
-          "forks": 5128,
+          "stars": 74817,
+          "forks": 5129,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:46:08Z",
+          "pushedAt": "2026-11-14T00:13:04Z",
           "createdAt": "2025-08-05T10:37:45Z",
           "topics": [
             "ai",
@@ -10115,15 +10115,15 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 207,
+          "openIssues": 206,
           "curated": false,
           "group": "context"
         },
         {
           "fullName": "FoundationAgents/MetaGPT",
           "description": "🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",
-          "stars": 71275,
-          "forks": 9107,
+          "stars": 71274,
+          "forks": 9110,
           "language": "Python",
           "pushedAt": "2026-01-21T10:12:33Z",
           "createdAt": "2023-06-30T09:04:55Z",
@@ -10138,17 +10138,17 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 153,
+          "openIssues": 152,
           "curated": false,
           "group": "multi-agent"
         },
         {
           "fullName": "openinterpreter/openinterpreter",
           "description": "A coding agent for open models like Kimi K3 and GLM 5.3",
-          "stars": 68882,
-          "forks": 5945,
+          "stars": 68884,
+          "forks": 5946,
           "language": "Rust",
-          "pushedAt": "2026-11-13T15:37:52Z",
+          "pushedAt": "2026-11-14T04:25:59Z",
           "createdAt": "2023-07-14T07:10:44Z",
           "topics": [
             "acp",
@@ -10163,15 +10163,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 38,
+          "openIssues": 37,
           "curated": false,
           "group": "coding"
         },
         {
           "fullName": "upstash/context7",
           "description": "Context7 Platform -- Up-to-date docs for AI agents",
-          "stars": 64761,
-          "forks": 3247,
+          "stars": 64770,
+          "forks": 3248,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T19:52:46Z",
           "createdAt": "2025-03-26T23:40:39Z",
@@ -10185,15 +10185,15 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 43,
+          "openIssues": 44,
           "curated": false,
           "group": "tools"
         },
         {
           "fullName": "bmad-code-org/BMAD-METHOD",
           "description": "Breakthrough Method for Agile Ai Driven Development",
-          "stars": 55347,
-          "forks": 6170,
+          "stars": 55352,
+          "forks": 6171,
           "language": "Python",
           "pushedAt": "2026-11-13T08:44:52Z",
           "createdAt": "2025-04-13T14:54:25Z",
@@ -10215,8 +10215,8 @@
         {
           "fullName": "zhayujie/CowAgent",
           "description": "Open-source personal AI assistant & Agent Harness. Plans tasks, runs tools and skills, self-evolves with memory and knowledge. Multi-agent, multi-model, multi-channel. Lightweight, extensible, one-line install.",
-          "stars": 47918,
-          "forks": 10427,
+          "stars": 47922,
+          "forks": 10430,
           "language": "Python",
           "pushedAt": "2026-11-13T02:31:01Z",
           "createdAt": "2022-08-07T08:33:41Z",
@@ -10234,17 +10234,17 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 41,
+          "openIssues": 43,
           "curated": false,
           "group": "multi-agent"
         },
         {
           "fullName": "apache/airflow",
           "description": "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",
-          "stars": 47472,
+          "stars": 47474,
           "forks": 18359,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:47:26Z",
+          "pushedAt": "2026-11-14T04:28:55Z",
           "createdAt": "2015-04-13T18:04:58Z",
           "topics": [
             "airflow",
@@ -10260,15 +10260,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1933,
+          "openIssues": 1931,
           "curated": false,
           "group": "durable"
         },
         {
           "fullName": "wshobson/agents",
           "description": "Plugins, agents, skills, and commands for Claude Code, Codex CLI, Cursor, OpenCode, Antigravity CLI, GitHub Copilot, and Pi, written once in Markdown and adapted to each tool by generators with validation and evals.",
-          "stars": 42486,
-          "forks": 4489,
+          "stars": 42494,
+          "forks": 4490,
           "language": "Python",
           "pushedAt": "2026-11-09T01:08:33Z",
           "createdAt": "2025-07-24T23:28:14Z",
@@ -10294,9 +10294,9 @@
           "fullName": "codewhale-hq/Codewhale",
           "description": "An open-source coding agent for your terminal, written in Rust. It works with any model, can split one task across several agents, and every line of it is yours to read.",
           "stars": 41173,
-          "forks": 3570,
+          "forks": 3569,
           "language": "Rust",
-          "pushedAt": "2026-11-13T21:16:08Z",
+          "pushedAt": "2026-11-14T04:26:24Z",
           "createdAt": "2026-01-19T18:21:01Z",
           "topics": [
             "agent-client-protocol",
@@ -10319,8 +10319,8 @@
         {
           "fullName": "Yeachan-Heo/oh-my-claudecode",
           "description": "Teams-first Multi-agent orchestration for Claude Code",
-          "stars": 40810,
-          "forks": 3645,
+          "stars": 40815,
+          "forks": 3646,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T15:09:16Z",
           "createdAt": "2026-01-09T03:36:29Z",
@@ -10345,10 +10345,10 @@
         {
           "fullName": "VectifyAI/PageIndex",
           "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
-          "stars": 40408,
-          "forks": 3475,
+          "stars": 40410,
+          "forks": 3474,
           "language": "Python",
-          "pushedAt": "2026-11-13T08:42:46Z",
+          "pushedAt": "2026-11-14T02:37:22Z",
           "createdAt": "2025-04-01T10:53:54Z",
           "topics": [
             "agentic-ai",
@@ -10364,15 +10364,15 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 173,
+          "openIssues": 170,
           "curated": false,
           "group": "context"
         },
         {
           "fullName": "agentscope-ai/QwenPaw",
           "description": "Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.",
-          "stars": 37706,
-          "forks": 3284,
+          "stars": 37717,
+          "forks": 3285,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T07:25:45Z",
           "createdAt": "2026-02-24T03:42:56Z",
@@ -10390,17 +10390,17 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1161,
+          "openIssues": 1164,
           "curated": false,
           "group": "loop"
         },
         {
           "fullName": "topoteretes/cognee",
           "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory with small models for free",
-          "stars": 33296,
+          "stars": 33300,
           "forks": 3512,
           "language": "Python",
-          "pushedAt": "2026-11-13T20:35:23Z",
+          "pushedAt": "2026-11-13T23:04:08Z",
           "createdAt": "2023-08-16T16:16:33Z",
           "topics": [
             "agent-memory",
@@ -10416,14 +10416,14 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1124,
+          "openIssues": 1122,
           "curated": false,
           "group": "memory"
         },
         {
           "fullName": "tirth8205/code-review-graph",
           "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
-          "stars": 32753,
+          "stars": 32757,
           "forks": 2978,
           "language": "Python",
           "pushedAt": "2026-11-12T17:19:53Z",
@@ -10449,10 +10449,10 @@
         {
           "fullName": "conductor-oss/conductor",
           "description": "Conductor is an event driven agentic workflow engine providing durable and highly resilient execution engine for applications and AI Agents",
-          "stars": 32469,
-          "forks": 1068,
+          "stars": 32471,
+          "forks": 1069,
           "language": "Java",
-          "pushedAt": "2026-11-13T19:59:10Z",
+          "pushedAt": "2026-11-13T23:00:03Z",
           "createdAt": "2023-12-08T06:06:09Z",
           "topics": [
             "distributed-systems",
@@ -10468,14 +10468,14 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 299,
+          "openIssues": 298,
           "curated": false,
           "group": "durable"
         },
         {
           "fullName": "supermemoryai/supermemory",
           "description": "Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.",
-          "stars": 31612,
+          "stars": 31615,
           "forks": 2775,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T16:03:52Z",
@@ -10501,7 +10501,7 @@
         {
           "fullName": "oraios/serena",
           "description": "A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent",
-          "stars": 31364,
+          "stars": 31367,
           "forks": 2140,
           "language": "Python",
           "pushedAt": "2026-11-09T17:39:00Z",
@@ -10527,10 +10527,10 @@
         {
           "fullName": "QwenLM/qwen-code",
           "description": "An open-source AI coding agent that lives in your terminal.",
-          "stars": 30116,
+          "stars": 30127,
           "forks": 3417,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:47:27Z",
+          "pushedAt": "2026-11-14T04:31:37Z",
           "createdAt": "2025-06-26T01:37:46Z",
           "topics": [
             "agentic",
@@ -10546,7 +10546,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 2252,
+          "openIssues": 2259,
           "curated": false,
           "group": "coding"
         },
@@ -10579,8 +10579,8 @@
         {
           "fullName": "OthmanAdi/planning-with-files",
           "description": "Persistent file-based planning for AI coding agents and long-running tasks. Crash-proof markdown plans, session recovery after /clear and compaction, per-turn re-injection against context rot, deterministic completion gate. Manus-style. Install from npm, the Claude Code plugin marketplace, or npx skills. Codex, Cursor, OpenCode, 60+ agents.",
-          "stars": 28044,
-          "forks": 2314,
+          "stars": 28049,
+          "forks": 2315,
           "language": "Shell",
           "pushedAt": "2026-11-11T20:55:30Z",
           "createdAt": "2026-01-03T07:37:28Z",
@@ -10605,10 +10605,10 @@
         {
           "fullName": "bytecodealliance/wasmtime",
           "description": "A lightweight WebAssembly runtime that is fast, secure, and standards-compliant",
-          "stars": 18854,
-          "forks": 1933,
+          "stars": 18856,
+          "forks": 1934,
           "language": "Rust",
-          "pushedAt": "2026-11-13T21:27:09Z",
+          "pushedAt": "2026-11-14T01:57:31Z",
           "createdAt": "2017-08-29T14:01:55Z",
           "topics": [
             "aot",
@@ -10624,15 +10624,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 871,
+          "openIssues": 879,
           "curated": false,
           "group": "sandbox"
         },
         {
           "fullName": "Canner/WrenAI",
           "description": "GenBI (Generative BI) for AI agents, an open-source, governed text-to-SQL through an open context layer that turns natural-language questions into trusted dashboards, charts, and SQL across 20+ data sources, such as BigQuery, Snowflake, PostgreSQL, ClickHouse, Amazon Redshift, Databricks and more.",
-          "stars": 18159,
-          "forks": 2096,
+          "stars": 18177,
+          "forks": 2098,
           "language": "Python",
           "pushedAt": "2026-11-13T11:25:37Z",
           "createdAt": "2024-03-13T06:18:20Z",
@@ -10657,7 +10657,7 @@
         {
           "fullName": "opensandbox-group/OpenSandbox",
           "description": "Secure, Fast, and Extensible Sandbox runtime for AI agents.",
-          "stars": 17277,
+          "stars": 17284,
           "forks": 1643,
           "language": "Go",
           "pushedAt": "2026-11-13T14:44:01Z",
@@ -10695,7 +10695,7 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 224,
+          "openIssues": 225,
           "curated": false,
           "group": "sandbox"
         },
@@ -10754,10 +10754,10 @@
         {
           "fullName": "omnigent-ai/omnigent",
           "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
-          "stars": 11373,
-          "forks": 1890,
+          "stars": 11374,
+          "forks": 1892,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:48:13Z",
+          "pushedAt": "2026-11-14T04:32:53Z",
           "createdAt": "2026-06-11T12:18:13Z",
           "topics": [
             "agent-framework",
@@ -10773,7 +10773,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 2384,
+          "openIssues": 2380,
           "curated": false,
           "group": "sandbox"
         },
@@ -10783,7 +10783,7 @@
           "stars": 10292,
           "forks": 145,
           "language": "Rust",
-          "pushedAt": "2026-11-13T21:07:45Z",
+          "pushedAt": "2026-11-14T04:13:27Z",
           "createdAt": "2026-02-15T23:27:31Z",
           "topics": [
             "agent-runtime",
@@ -10806,10 +10806,10 @@
         {
           "fullName": "HarnessMD/munder-difflin",
           "description": "an open-source alternative to the dots, bots and muses of the world, run an office of claude code/codex like agents on your laptop, sandboxes or anywhere, uses your existing subscriptions",
-          "stars": 9512,
-          "forks": 1337,
+          "stars": 9514,
+          "forks": 1336,
           "language": "JavaScript",
-          "pushedAt": "2026-11-13T20:38:43Z",
+          "pushedAt": "2026-11-14T04:01:04Z",
           "createdAt": "2026-05-31T15:25:05Z",
           "topics": [
             "agent-harness",
@@ -12222,10 +12222,10 @@
         {
           "fullName": "n8n-io/n8n",
           "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-          "stars": 210402,
-          "forks": 61498,
+          "stars": 210425,
+          "forks": 61495,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:49:04Z",
+          "pushedAt": "2026-11-14T03:25:07Z",
           "createdAt": "2019-06-22T09:24:21Z",
           "topics": [
             "ai",
@@ -12241,17 +12241,17 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 1226,
+          "openIssues": 1222,
           "curated": true,
           "group": "lowcode"
         },
         {
           "fullName": "langgenius/dify",
           "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
-          "stars": 161114,
-          "forks": 25479,
+          "stars": 161128,
+          "forks": 25481,
           "language": "Python",
-          "pushedAt": "2026-11-13T14:54:14Z",
+          "pushedAt": "2026-11-14T04:34:12Z",
           "createdAt": "2023-04-12T07:40:24Z",
           "topics": [
             "agent",
@@ -12267,17 +12267,17 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 1309,
+          "openIssues": 1345,
           "curated": true,
           "group": "lowcode"
         },
         {
           "fullName": "open-webui/open-webui",
           "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
-          "stars": 158577,
-          "forks": 23055,
+          "stars": 158598,
+          "forks": 23059,
           "language": "Svelte",
-          "pushedAt": "2026-11-13T21:44:57Z",
+          "pushedAt": "2026-11-13T23:28:30Z",
           "createdAt": "2023-10-06T22:08:27Z",
           "topics": [
             "ai",
@@ -12293,15 +12293,15 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 330,
+          "openIssues": 327,
           "curated": true,
           "group": "chat"
         },
         {
           "fullName": "infiniflow/ragflow",
           "description": "RAGFlow is an agent-native database: a Retrieval-Augmented Generation (RAG) engine that grew into context infrastructure.",
-          "stars": 94126,
-          "forks": 11317,
+          "stars": 94131,
+          "forks": 11320,
           "language": "Go",
           "pushedAt": "2026-11-13T13:08:52Z",
           "createdAt": "2023-12-12T06:13:13Z",
@@ -12319,17 +12319,17 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1273,
+          "openIssues": 1277,
           "curated": true,
           "group": "rag"
         },
         {
           "fullName": "deepset-ai/haystack",
           "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
-          "stars": 27003,
-          "forks": 3457,
+          "stars": 27004,
+          "forks": 3459,
           "language": "Python",
-          "pushedAt": "2026-11-13T12:05:35Z",
+          "pushedAt": "2026-11-14T02:11:02Z",
           "createdAt": "2019-11-14T09:05:28Z",
           "topics": [
             "agent-framework",
@@ -12345,15 +12345,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 145,
+          "openIssues": 150,
           "curated": true,
           "group": "rag"
         },
         {
           "fullName": "google/adk-python",
           "description": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
-          "stars": 22207,
-          "forks": 4355,
+          "stars": 22209,
+          "forks": 4356,
           "language": "Python",
           "pushedAt": "2026-11-13T20:50:41Z",
           "createdAt": "2025-04-01T20:44:40Z",
@@ -12371,15 +12371,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 445,
+          "openIssues": 450,
           "curated": true,
           "group": "framework"
         },
         {
           "fullName": "Graphify-Labs/graphify",
           "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-          "stars": 147243,
-          "forks": 14111,
+          "stars": 147349,
+          "forks": 14124,
           "language": "Python",
           "pushedAt": "2026-11-12T21:47:45Z",
           "createdAt": "2026-04-03T15:49:07Z",
@@ -12397,17 +12397,17 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1651,
+          "openIssues": 1654,
           "curated": false,
           "group": "rag"
         },
         {
           "fullName": "paperclipai/paperclip",
           "description": "The open-source app everyone uses to manage agents at work",
-          "stars": 113664,
-          "forks": 18864,
+          "stars": 113733,
+          "forks": 18875,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:48:08Z",
+          "pushedAt": "2026-11-14T04:31:30Z",
           "createdAt": "2026-03-02T15:01:51Z",
           "topics": [
             "acpx",
@@ -12423,15 +12423,15 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 6632,
+          "openIssues": 6633,
           "curated": false,
           "group": "lowcode"
         },
         {
           "fullName": "Egonex-AI/Understand-Anything",
           "description": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
-          "stars": 92540,
-          "forks": 7896,
+          "stars": 92559,
+          "forks": 7895,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T03:17:33Z",
           "createdAt": "2026-03-15T02:30:51Z",
@@ -12456,7 +12456,7 @@
         {
           "fullName": "nomic-ai/gpt4all",
           "description": "GPT4All: Run Local LLMs on Any Device. Open-source and available for commercial use.",
-          "stars": 77345,
+          "stars": 77343,
           "forks": 8257,
           "language": "C++",
           "pushedAt": "2025-05-27T20:05:19Z",
@@ -12476,7 +12476,7 @@
         {
           "fullName": "toeverything/AFFiNE",
           "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use. ",
-          "stars": 74510,
+          "stars": 74516,
           "forks": 5521,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T09:54:34Z",
@@ -12502,8 +12502,8 @@
         {
           "fullName": "HKUDS/DeepTutor",
           "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
-          "stars": 58925,
-          "forks": 7151,
+          "stars": 58988,
+          "forks": 7158,
           "language": "Python",
           "pushedAt": "2026-11-07T15:18:10Z",
           "createdAt": "2025-12-28T15:35:54Z",
@@ -12521,17 +12521,17 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 463,
+          "openIssues": 470,
           "curated": false,
           "group": "rag"
         },
         {
           "fullName": "HKUDS/nanobot",
           "description": "Your lightweight open-source personal agent.",
-          "stars": 50067,
-          "forks": 8738,
+          "stars": 50069,
+          "forks": 8743,
           "language": "Python",
-          "pushedAt": "2026-11-13T18:06:56Z",
+          "pushedAt": "2026-11-14T04:13:31Z",
           "createdAt": "2026-02-01T07:16:15Z",
           "topics": [
             "agent-framework",
@@ -12554,8 +12554,8 @@
         {
           "fullName": "jeecgboot/JeecgBoot",
           "description": "一款免费开源的 AI 低代码平台，也是 AI 时代构建复杂业务系统的开源基座！权限、多租户、工作流、报表、大屏、AI 知识库等通用能力开箱即用，AI 只需生成业务差异部分。AI Skills 一句话生成完整系统——建表、前后端代码、菜单权限、BPM 流程、表单、报表、大屏全自动。内置 AI 应用平台（聊天、知识库、流程编排、MCP），兼容主流大模型",
-          "stars": 48460,
-          "forks": 16216,
+          "stars": 48469,
+          "forks": 16217,
           "language": "Java",
           "pushedAt": "2026-11-11T14:09:01Z",
           "createdAt": "2018-11-26T10:40:00Z",
@@ -12573,14 +12573,14 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 6,
+          "openIssues": 7,
           "curated": false,
           "group": "lowcode"
         },
         {
           "fullName": "666ghj/BettaFish",
           "description": "微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。",
-          "stars": 42688,
+          "stars": 42690,
           "forks": 7641,
           "language": "Python",
           "pushedAt": "2026-10-16T03:33:52Z",
@@ -12606,8 +12606,8 @@
         {
           "fullName": "ToolJet/ToolJet",
           "description": "Open-source foundation of ToolJet AI - the enterprise app generation platform for internal tools, dashboards, business applications, workflows and AI agents. Build visually, from a prompt, or from Claude Code, Codex and Cursor over MCP 🚀",
-          "stars": 41228,
-          "forks": 5507,
+          "stars": 41231,
+          "forks": 5508,
           "language": "HTML",
           "pushedAt": "2026-11-13T19:28:15Z",
           "createdAt": "2021-03-30T08:51:34Z",
@@ -12632,10 +12632,10 @@
         {
           "fullName": "onyx-dot-app/onyx",
           "description": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
-          "stars": 33381,
+          "stars": 33384,
           "forks": 4739,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:47:42Z",
+          "pushedAt": "2026-11-14T04:11:25Z",
           "createdAt": "2023-04-27T06:04:01Z",
           "topics": [
             "ai",
@@ -12651,17 +12651,17 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 695,
+          "openIssues": 724,
           "curated": false,
           "group": "chat"
         },
         {
           "fullName": "kestra-io/kestra",
           "description": "Orchestrate everything, everywhere. The open-source control plane for workflows across data, infrastructure, business processes and AI agents. Declarative YAML, event-driven, any language, Git-versioned, scalable to millions of executions.",
-          "stars": 30222,
-          "forks": 3522,
+          "stars": 30225,
+          "forks": 3523,
           "language": "Java",
-          "pushedAt": "2026-11-13T21:11:05Z",
+          "pushedAt": "2026-11-14T01:10:32Z",
           "createdAt": "2019-08-24T13:56:15Z",
           "topics": [
             "ai-agents",
@@ -12677,7 +12677,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 679,
+          "openIssues": 683,
           "curated": false,
           "group": "lowcode"
         },
@@ -12710,7 +12710,7 @@
         {
           "fullName": "rowboatlabs/rowboat",
           "description": "Your agent team, in one group chat.",
-          "stars": 18233,
+          "stars": 18235,
           "forks": 1825,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T17:16:38Z",
@@ -12736,7 +12736,7 @@
         {
           "fullName": "eigent-ai/eigent",
           "description": "Eigent: The Open Source Cowork Desktop - Local and Free Alternative to Claude Cowork and Codex",
-          "stars": 15815,
+          "stars": 15816,
           "forks": 1891,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T19:27:12Z",
@@ -12762,8 +12762,8 @@
         {
           "fullName": "rikkahub/rikkahub",
           "description": "RikkaHub is an Android APP that supports for multiple LLM providers.",
-          "stars": 8831,
-          "forks": 889,
+          "stars": 8834,
+          "forks": 888,
           "language": "Kotlin",
           "pushedAt": "2026-11-13T08:43:40Z",
           "createdAt": "2025-03-11T14:46:55Z",
@@ -13470,10 +13470,10 @@
         {
           "fullName": "promptfoo/promptfoo",
           "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
-          "stars": 27143,
-          "forks": 2727,
+          "stars": 27151,
+          "forks": 2729,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T19:46:20Z",
+          "pushedAt": "2026-11-14T02:28:37Z",
           "createdAt": "2023-04-28T15:48:49Z",
           "topics": [
             "ci",
@@ -13496,7 +13496,7 @@
         {
           "fullName": "NVIDIA/garak",
           "description": "the LLM vulnerability scanner",
-          "stars": 10012,
+          "stars": 10014,
           "forks": 1469,
           "language": "Python",
           "pushedAt": "2026-11-06T23:26:29Z",
@@ -13519,7 +13519,7 @@
         {
           "fullName": "Tencent/AI-Infra-Guard",
           "description": "A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.",
-          "stars": 7496,
+          "stars": 7497,
           "forks": 757,
           "language": "Python",
           "pushedAt": "2026-11-13T01:37:17Z",
@@ -13545,10 +13545,10 @@
         {
           "fullName": "NVIDIA-NeMo/Guardrails",
           "description": "NeMo Guardrails is an open-source toolkit for easily adding programmable guardrails to LLM-based conversational systems.",
-          "stars": 7490,
+          "stars": 7492,
           "forks": 900,
           "language": "Python",
-          "pushedAt": "2026-11-13T13:01:52Z",
+          "pushedAt": "2026-11-14T01:16:47Z",
           "createdAt": "2023-04-18T12:32:47Z",
           "topics": [
             "agents",
@@ -13571,10 +13571,10 @@
         {
           "fullName": "Giskard-AI/giskard-oss",
           "description": "🐢 Open-Source Evaluation & Testing library for LLM Agents",
-          "stars": 5949,
+          "stars": 5951,
           "forks": 570,
           "language": "Python",
-          "pushedAt": "2026-11-13T10:59:41Z",
+          "pushedAt": "2026-11-14T00:01:04Z",
           "createdAt": "2022-03-06T21:45:37Z",
           "topics": [
             "agent-evaluation",
@@ -13590,15 +13590,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 82,
+          "openIssues": 83,
           "curated": true,
           "group": "redteam"
         },
         {
           "fullName": "usestrix/strix",
           "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
-          "stars": 75386,
-          "forks": 8519,
+          "stars": 75428,
+          "forks": 8522,
           "language": "Python",
           "pushedAt": "2026-11-13T17:24:43Z",
           "createdAt": "2025-08-05T21:28:30Z",
@@ -13623,7 +13623,7 @@
         {
           "fullName": "KeygraphHQ/shannon",
           "description": "Shannon is an AI pentester for web applications and APIs. It analyzes your source code, identifies attack vectors, and executes real exploits to prove vulnerabilities before they reach production.",
-          "stars": 51846,
+          "stars": 51857,
           "forks": 6056,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T20:07:39Z",
@@ -13642,17 +13642,17 @@
           "archived": false,
           "fork": false,
           "license": "AGPL-3.0",
-          "openIssues": 27,
+          "openIssues": 30,
           "curated": false,
           "group": "redteam"
         },
         {
           "fullName": "NVIDIA/SkillSpector",
           "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
-          "stars": 25878,
-          "forks": 2294,
+          "stars": 25914,
+          "forks": 2300,
           "language": "Python",
-          "pushedAt": "2026-11-13T19:55:13Z",
+          "pushedAt": "2026-11-13T23:13:59Z",
           "createdAt": "2026-03-21T00:28:43Z",
           "topics": [
             "agent-security",
@@ -13668,7 +13668,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 142,
+          "openIssues": 146,
           "curated": false,
           "group": "guardrails"
         },
@@ -13701,8 +13701,8 @@
         {
           "fullName": "kingcharleslzy-ai/dsh-purge",
           "description": "dsh-purge Community · DeepSeek Harness 社区维护版：宿主兼容、状态诊断、提示词管理、更新与本机备份回滚。基于小杨 / YuJunZhiXue 的 dsh-purge。",
-          "stars": 7906,
-          "forks": 3505,
+          "stars": 7993,
+          "forks": 3526,
           "language": "JavaScript",
           "pushedAt": "2026-11-13T19:04:45Z",
           "createdAt": "2026-10-16T07:44:27Z",
@@ -13720,17 +13720,17 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 16,
+          "openIssues": 17,
           "curated": false,
           "group": "guardrails"
         },
         {
           "fullName": "beenuar/AiSOC",
           "description": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
-          "stars": 7351,
-          "forks": 750,
+          "stars": 7366,
+          "forks": 756,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:39:16Z",
+          "pushedAt": "2026-11-14T03:48:26Z",
           "createdAt": "2026-05-02T03:30:19Z",
           "topics": [
             "agentic-ai",
@@ -13746,7 +13746,7 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 4,
+          "openIssues": 2,
           "curated": false,
           "group": "agent-sec"
         },
@@ -13779,8 +13779,8 @@
         {
           "fullName": "awarexone/Agentic-Bug-Hunter",
           "description": "AI-powered bug bounty hunting toolkit that works with or without subscription.",
-          "stars": 5860,
-          "forks": 1048,
+          "stars": 5866,
+          "forks": 1049,
           "language": "Python",
           "pushedAt": "2026-11-12T05:22:33Z",
           "createdAt": "2026-03-08T05:34:18Z",
@@ -13806,7 +13806,7 @@
           "fullName": "maziyarpanahi/openmed",
           "description": "Local-first healthcare AI: clinical NER and HIPAA PII de-identification on hardware you control. 2,200+ medical models, 35 model-backed PII languages, and Python, MLX, Android and browser runtimes. Apache-2.0 SDK.",
           "stars": 5805,
-          "forks": 762,
+          "forks": 763,
           "language": "Python",
           "pushedAt": "2026-11-13T20:16:04Z",
           "createdAt": "2025-10-04T15:13:34Z",
@@ -13824,15 +13824,15 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 1400,
+          "openIssues": 1402,
           "curated": false,
           "group": "policy"
         },
         {
           "fullName": "qybaihe/bla",
           "description": "🛡️ BLA (bla-agents / Blind LLM Agents) — Open-source Blue Defense MCP server & CLI protecting JS/TS, Electron ASAR, WASM, Python, Native Binaries, SQLite, GGUF/Safetensors & Android DEX against AI reverse-engineering agents (REA).",
-          "stars": 5558,
-          "forks": 676,
+          "stars": 5578,
+          "forks": 681,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T18:28:35Z",
           "createdAt": "2026-10-25T05:25:45Z",
@@ -13860,7 +13860,7 @@
           "stars": 4659,
           "forks": 218,
           "language": "Go",
-          "pushedAt": "2026-11-13T09:26:50Z",
+          "pushedAt": "2026-11-14T03:53:50Z",
           "createdAt": "2021-03-21T13:23:10Z",
           "topics": [
             "abac",
@@ -13876,7 +13876,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 59,
+          "openIssues": 61,
           "curated": false,
           "group": "policy"
         },
@@ -13886,7 +13886,7 @@
           "stars": 4303,
           "forks": 887,
           "language": "Go",
-          "pushedAt": "2026-11-11T10:45:58Z",
+          "pushedAt": "2026-11-14T03:23:06Z",
           "createdAt": "2018-10-26T21:05:57Z",
           "topics": [
             "admission",
@@ -13902,7 +13902,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 201,
+          "openIssues": 200,
           "curated": false,
           "group": "policy"
         },
@@ -13987,7 +13987,7 @@
         {
           "fullName": "microsoft/AI-Red-Teaming-Playground-Labs",
           "description": "AI Red Teaming playground labs to run AI Red Teaming trainings including infrastructure.",
-          "stars": 2127,
+          "stars": 2129,
           "forks": 328,
           "language": "TypeScript",
           "pushedAt": "2026-02-13T14:19:16Z",
@@ -14008,7 +14008,7 @@
         {
           "fullName": "wuyoscar/AISafetyHot",
           "description": "AI Safety HOT: daily AI safety news, papers and incidents in one place — jailbreaks, prompt injection, alignment, evals, governance. Website, daily digest, RSS and MCP.",
-          "stars": 2124,
+          "stars": 2123,
           "forks": 34,
           "language": "TeX",
           "pushedAt": "2026-11-13T15:05:43Z",
@@ -14711,10 +14711,10 @@
         {
           "fullName": "langfuse/langfuse",
           "description": "🪢 Open source AI engineering platform: AI Gateway, agent observability, evals, and prompt/skill management, built on OpenTelemetry. One open platform for every AI call and every agent. Self-host or use Langfuse Cloud.",
-          "stars": 37398,
+          "stars": 37405,
           "forks": 4228,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:00:56Z",
+          "pushedAt": "2026-11-14T03:26:41Z",
           "createdAt": "2023-05-18T17:47:09Z",
           "topics": [
             "ai-gateway",
@@ -14730,17 +14730,17 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 1162,
+          "openIssues": 1163,
           "curated": true,
           "group": "tracing"
         },
         {
           "fullName": "HumanSignal/label-studio",
           "description": "Label Studio is a multi-type data labeling and annotation tool with standardized output format",
-          "stars": 28686,
-          "forks": 3798,
+          "stars": 28687,
+          "forks": 3799,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:24:17Z",
+          "pushedAt": "2026-11-14T01:55:32Z",
           "createdAt": "2019-06-19T02:00:44Z",
           "topics": [
             "annotation",
@@ -14763,10 +14763,10 @@
         {
           "fullName": "comet-ml/opik",
           "description": "Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.",
-          "stars": 23396,
-          "forks": 1949,
+          "stars": 23400,
+          "forks": 1950,
           "language": "Python",
-          "pushedAt": "2026-11-13T20:38:21Z",
+          "pushedAt": "2026-11-14T02:36:46Z",
           "createdAt": "2023-05-10T12:57:13Z",
           "topics": [
             "evaluation",
@@ -14782,7 +14782,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 215,
+          "openIssues": 219,
           "curated": true,
           "group": "tracing"
         },
@@ -14792,7 +14792,7 @@
           "stars": 11319,
           "forks": 915,
           "language": "Python",
-          "pushedAt": "2026-11-13T21:21:35Z",
+          "pushedAt": "2026-11-14T04:18:11Z",
           "createdAt": "2017-03-24T05:46:23Z",
           "topics": [
             "ai",
@@ -14808,7 +14808,7 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 1044,
+          "openIssues": 1047,
           "curated": true,
           "group": "experiment"
         },
@@ -14842,7 +14842,7 @@
           "fullName": "traceloop/openllmetry",
           "description": "Open-source observability for your GenAI or LLM application, based on OpenTelemetry",
           "stars": 7532,
-          "forks": 1193,
+          "forks": 1194,
           "language": "Python",
           "pushedAt": "2026-11-09T13:57:46Z",
           "createdAt": "2023-09-02T14:42:59Z",
@@ -14860,7 +14860,7 @@
           "archived": false,
           "fork": false,
           "license": "Apache-2.0",
-          "openIssues": 846,
+          "openIssues": 847,
           "curated": true,
           "group": "tracing"
         },
@@ -14919,10 +14919,10 @@
         {
           "fullName": "SigNoz/signoz",
           "description": "SigNoz is an open-source, OpenTelemetry-native observability platform for your team and their AI agents. Get logs, metrics, and traces in one tool with features like APM, distributed tracing, log management, infra monitoring, etc. Combined with SigNoz MCP and a native AI teammate (in SigNoz Cloud) it helps you build more resilient apps.",
-          "stars": 32624,
+          "stars": 32633,
           "forks": 2601,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T20:29:31Z",
+          "pushedAt": "2026-11-14T01:24:00Z",
           "createdAt": "2021-01-03T12:44:36Z",
           "topics": [
             "apm",
@@ -14938,17 +14938,17 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 1641,
+          "openIssues": 1644,
           "curated": false,
           "group": "tracing"
         },
         {
           "fullName": "openobserve/openobserve",
           "description": "Open source observability platform for logs, metrics, traces, RUM (web, android, ios), Session replay, pipelines, SLO and LLM observability. A sophisticated, simple and highly performant alternative to Datadog, Splunk, and Elasticsearch with 140x lower storage costs and single binary deployment.",
-          "stars": 23051,
+          "stars": 23055,
           "forks": 1199,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T21:01:29Z",
+          "pushedAt": "2026-11-14T04:27:17Z",
           "createdAt": "2023-02-02T03:29:51Z",
           "topics": [
             "analytics",
@@ -14964,14 +14964,14 @@
           "archived": false,
           "fork": false,
           "license": "AGPL-3.0",
-          "openIssues": 233,
+          "openIssues": 234,
           "curated": false,
           "group": "tracing"
         },
         {
           "fullName": "microsoft/agent-lightning",
           "description": "The absolute trainer to light up AI agents.",
-          "stars": 18949,
+          "stars": 18951,
           "forks": 1721,
           "language": "Python",
           "pushedAt": "2026-11-12T03:27:22Z",
@@ -14994,10 +14994,10 @@
         {
           "fullName": "cvat-ai/cvat",
           "description": "CVAT is a leading data annotation platform for image, video, audio, and 3D datasets. It offers open-source, cloud, and enterprise products, as well as labeling services, with AI-assisted labeling, quality assurance, team collaboration, analytics, and developer APIs.",
-          "stars": 17136,
-          "forks": 4063,
+          "stars": 17135,
+          "forks": 4064,
           "language": "Python",
-          "pushedAt": "2026-11-13T18:03:31Z",
+          "pushedAt": "2026-11-13T23:47:38Z",
           "createdAt": "2018-06-29T14:02:45Z",
           "topics": [
             "annotation",
@@ -15073,7 +15073,7 @@
           "fullName": "aws/amazon-sagemaker-examples",
           "description": "Example 📓 Jupyter notebooks that demonstrate how to build, train, and deploy machine learning models using 🧠 Amazon SageMaker. ",
           "stars": 11011,
-          "forks": 6939,
+          "forks": 6938,
           "language": "Jupyter Notebook",
           "pushedAt": "2026-10-14T18:17:30Z",
           "createdAt": "2017-10-23T05:55:22Z",
@@ -15124,7 +15124,7 @@
         {
           "fullName": "FailproofAI/failproofai",
           "description": "Observability and enforcement for AI agent harnesses. Capture every run and runtime reliability with policy enforcement.  ",
-          "stars": 8842,
+          "stars": 8857,
           "forks": 576,
           "language": "TypeScript",
           "pushedAt": "2026-11-13T20:55:03Z",
@@ -15150,8 +15150,8 @@
         {
           "fullName": "builderz-labs/mission-control",
           "description": "Self-hosted control plane for AI agents: dispatch tasks, review runs, track spend, and operate OpenClaw, Claude Code, Codex, and other runtimes.",
-          "stars": 6490,
-          "forks": 136,
+          "stars": 6491,
+          "forks": 137,
           "language": "TypeScript",
           "pushedAt": "2026-11-09T00:27:24Z",
           "createdAt": "2026-02-13T04:06:19Z",
@@ -15176,7 +15176,7 @@
         {
           "fullName": "aimhubio/aim",
           "description": "Aim 💫 — An easy-to-use & supercharged open-source experiment tracker.",
-          "stars": 6296,
+          "stars": 6297,
           "forks": 414,
           "language": "Python",
           "pushedAt": "2026-11-07T03:07:01Z",
@@ -15202,10 +15202,10 @@
         {
           "fullName": "Agenta-AI/agenta",
           "description": "Agenta is a workspace where you and your team build agents and automations.",
-          "stars": 4906,
-          "forks": 731,
+          "stars": 4907,
+          "forks": 732,
           "language": "TypeScript",
-          "pushedAt": "2026-11-13T15:00:19Z",
+          "pushedAt": "2026-11-13T22:42:37Z",
           "createdAt": "2023-04-26T09:54:28Z",
           "topics": [
             "agent-builder",
@@ -15221,7 +15221,7 @@
           "archived": false,
           "fork": false,
           "license": "NOASSERTION",
-          "openIssues": 300,
+          "openIssues": 301,
           "curated": false,
           "group": "online-eval"
         },
@@ -15231,7 +15231,7 @@
           "stars": 4753,
           "forks": 409,
           "language": "TypeScript",
-          "pushedAt": "2026-11-09T11:05:31Z",
+          "pushedAt": "2026-11-14T03:43:17Z",
           "createdAt": "2024-06-28T11:16:02Z",
           "topics": [
             "agent-monitoring",
@@ -15247,17 +15247,17 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 114,
+          "openIssues": 110,
           "curated": false,
           "group": "online-eval"
         },
         {
           "fullName": "pydantic/logfire",
           "description": "AI observability platform for production LLM and agent systems.",
-          "stars": 4551,
+          "stars": 4552,
           "forks": 366,
           "language": "Python",
-          "pushedAt": "2026-11-13T15:28:32Z",
+          "pushedAt": "2026-11-13T23:30:59Z",
           "createdAt": "2024-04-23T11:50:23Z",
           "topics": [
             "agent-observability",
@@ -15273,7 +15273,7 @@
           "archived": false,
           "fork": false,
           "license": "MIT",
-          "openIssues": 247,
+          "openIssues": 248,
           "curated": false,
           "group": "online-eval"
         },
